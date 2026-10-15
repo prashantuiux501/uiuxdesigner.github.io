@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -26,13 +26,13 @@
           colors: {
             tracto: {
               canvas: '#2d7a6e',
-              deep: '#042F2E',
+              deep: '#0f2d25',
               forest: '#063B3A',
               card: '#0A4F44',
-              mint: '#14B8A6',
+              mint: '#1cb08a',
               lightmint: '#CCFBF1',
               surface: '#f4faf7',
-              coral: '#FF6B4A',
+              coral: '#ff5733',
             }
           }
         }
@@ -48,9 +48,19 @@
       overflow-x: hidden;
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Subtle dot grid for slide placeholders inside Case Study View */
     .slide-placeholder {
-      background-image: radial-gradient(rgba(4, 47, 46, 0.12) 1px, transparent 0);
+      background-image: radial-gradient(rgba(15, 45, 37, 0.12) 1px, transparent 0);
       background-size: 20px 20px;
     }
 
@@ -78,18 +88,19 @@
 
   <!-- =========================================================================
        VIEW 1: HOMEPAGE VIEW (#homepage-view)
-       High-contrast minimalist light mode matching Matt Fredette's layout.
+       Strictly high-contrast minimalist light mode (#f4f4f4 outer canvas,
+       #ffffff inner container, neutral-950 headings, neutral-600 body).
        ========================================================================= -->
   <div id="homepage-view" class="min-h-screen flex flex-col bg-[#f4f4f4] text-neutral-950">
 
-    <!-- Main Inner White Wrapper -->
+    <!-- Pure White Inner Container -->
     <div class="w-full bg-white min-h-screen flex flex-col shadow-sm">
 
       <!-- A. NAVIGATION BAR -->
       <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-neutral-100 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
           
-          <!-- Left: Minimal Circular/Geometric Monogram Icon + Bold Text "Prashant" -->
+          <!-- Left: Minimal Circular Monogram Icon + Bold Text "Prashant" -->
           <a href="#home" class="flex items-center gap-2.5 group focus:outline-none shrink-0">
             <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-950 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
               P
@@ -99,12 +110,12 @@
             </span>
           </a>
 
-          <!-- Right: Navigation Links + Outline Pill Resume Button (Mobile & Desktop Safe) -->
+          <!-- Right: Navigation Links + Outline Pill Resume Button -->
           <nav class="flex items-center gap-3 sm:gap-6 md:gap-8" aria-label="Primary Navigation">
             <a href="#home" class="hidden sm:inline-block text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Home</a>
             <a href="#case-studies" class="text-xs sm:text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Case Studies</a>
             <a href="#about" class="text-xs sm:text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">About Me</a>
-            <a href="Prashant_CV.pdf" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
+            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
               Resume
             </a>
           </nav>
@@ -134,7 +145,7 @@
 
         </section>
 
-        <!-- C. CASE STUDIES SECTION (2x2 Responsive Grid) -->
+        <!-- C. CASE STUDIES SECTION (TRACTO ACTIVE + 3 GRAYED-OUT CARDS) -->
         <section id="case-studies" class="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
           
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 text-center mb-12 sm:mb-16">
@@ -143,7 +154,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
 
-            <!-- CARD 1: TRACTO (Primary Clickable Card) -->
+            <!-- CARD 1: TRACTO (FULLY ACTIVE & CLICKABLE) -->
             <article 
               onclick="showCaseStudyView()" 
               onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCaseStudyView(); }"
@@ -158,7 +169,7 @@
                   src="tracto-poster.png" 
                   alt="Tracto Showcase" 
                   class="w-full h-full object-cover rounded-2xl shadow-md group-hover:scale-[1.02] transition-transform duration-300" 
-                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full rounded-2xl bg-[#1f5c52] border border-white/15 p-6 flex flex-col items-center justify-center text-white text-center shadow-inner\'><span class=\'text-xs font-mono uppercase tracking-widest text-teal-200 mb-2\'>♡ Tracto Healthcare</span><span class=\'text-xl sm:text-2xl font-bold mb-1\'>Tracto UI Showcase Poster</span><span class=\'text-xs text-teal-100/80 max-w-xs\'>Track every beat of your health • Click to view full 13-slide UX Case Study</span></div>'"
+                  onerror="this.parentElement.innerHTML='<div class=\'text-white font-semibold text-center\'>Tracto UI Showcase Poster</div>'"
                 />
               </div>
 
@@ -176,10 +187,17 @@
               </div>
             </article>
 
-            <!-- CARD 2: HEALTHPORTAL WEB -->
-            <article class="group flex flex-col">
-              <!-- Canvas: Warm Caramel-Brown -->
-              <div class="bg-[#784A28] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+            <!-- CARD 2: HEALTHPORTAL WEB (GRAYED-OUT & NON-CLICKABLE) -->
+            <article 
+              aria-disabled="true"
+              class="opacity-60 grayscale cursor-not-allowed pointer-events-none select-none transition-all flex flex-col"
+            >
+              <!-- Canvas with Top-Right "Coming Soon" Badge -->
+              <div class="relative bg-[#784A28] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+                <span class="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  Coming Soon
+                </span>
+
                 <div class="w-full h-full rounded-2xl bg-[#5e381d] border border-white/10 p-5 sm:p-6 flex flex-col justify-between text-white shadow-md">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-1.5">
@@ -219,15 +237,22 @@
                   HealthPortal Web
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A redesign aimed at improving usability and clarifying complex patient data.
+                  A comprehensive redesign aimed at improving usability and clarifying complex patient data.
                 </p>
               </div>
             </article>
 
-            <!-- CARD 3: PULSE FLOW -->
-            <article class="group flex flex-col">
-              <!-- Canvas: Rich Crimson-Magenta -->
-              <div class="bg-[#B01B42] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+            <!-- CARD 3: PULSE FLOW (GRAYED-OUT & NON-CLICKABLE) -->
+            <article 
+              aria-disabled="true"
+              class="opacity-60 grayscale cursor-not-allowed pointer-events-none select-none transition-all flex flex-col"
+            >
+              <!-- Canvas with Top-Right "Coming Soon" Badge -->
+              <div class="relative bg-[#B01B42] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+                <span class="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  Coming Soon
+                </span>
+
                 <div class="w-44 sm:w-48 h-full rounded-2xl bg-[#8e1434] border border-white/15 p-4 flex flex-col justify-between text-white shadow-md">
                   <div class="flex items-center justify-between text-[10px] font-mono text-rose-200">
                     <span>Pulse Flow</span>
@@ -260,27 +285,34 @@
               </div>
             </article>
 
-            <!-- CARD 4: VITALIS -->
-            <article class="group flex flex-col">
-              <!-- Canvas: Olive-Moss -->
-              <div class="bg-[#546244] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+            <!-- CARD 4: VITALIS DESIGN SYSTEM (GRAYED-OUT & NON-CLICKABLE) -->
+            <article 
+              aria-disabled="true"
+              class="opacity-60 grayscale cursor-not-allowed pointer-events-none select-none transition-all flex flex-col"
+            >
+              <!-- Canvas with Top-Right "Coming Soon" Badge -->
+              <div class="relative bg-[#546244] rounded-3xl aspect-[16/11] p-6 sm:p-8 flex items-center justify-center overflow-hidden shadow-sm">
+                <span class="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  Coming Soon
+                </span>
+
                 <div class="w-full h-full rounded-2xl bg-[#414d34] border border-white/15 p-5 sm:p-6 flex flex-col justify-between text-white shadow-md">
                   <div class="flex items-center justify-between">
-                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-200">Vitalis System</span>
-                    <span class="px-2.5 py-0.5 rounded-full bg-white/15 text-[10px] font-semibold">Coming Soon</span>
+                    <span class="text-[10px] font-mono uppercase tracking-widest text-stone-200">Vitalis Tokens</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-white/15 text-[10px] font-semibold">v2.0</span>
                   </div>
                   <div class="my-auto space-y-2">
                     <div class="h-8 rounded-xl bg-white/10 px-3 flex items-center justify-between text-xs">
-                      <span>Daily Habit Streak</span>
-                      <span class="font-mono text-stone-200">14 Days</span>
+                      <span>WCAG AAA Contrast</span>
+                      <span class="font-mono text-stone-200">10 / 10</span>
                     </div>
                     <div class="h-8 rounded-xl bg-white/10 px-3 flex items-center justify-between text-xs">
-                      <span>Preventive Insights</span>
+                      <span>Multi-Platform Tokens</span>
                       <span class="font-mono text-stone-200">Active</span>
                     </div>
                   </div>
                   <div class="text-[10px] font-mono text-stone-300/80">
-                    Mobile-First Responsive Architecture
+                    Tokenized Component Architecture
                   </div>
                 </div>
               </div>
@@ -288,13 +320,13 @@
               <!-- Text Block -->
               <div class="text-left">
                 <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  MOBILE FIRST RESPONSIVE DESIGN
+                  DESIGN SYSTEM
                 </p>
                 <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
-                  Vitalis (Coming Soon)
+                  Vitalis Design System
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A preventive health companion focusing on habit formation and personalized insights.
+                  A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.
                 </p>
               </div>
             </article>
@@ -302,35 +334,35 @@
           </div>
         </section>
 
-        <!-- D. ABOUT ME SECTION (Video-Accurate Float/Wrap Layout) -->
+        <!-- D. ABOUT ME SECTION -->
         <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-100">
           
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 mb-8 sm:mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 mb-8">
             About Me
           </h2>
 
           <div class="clearfix text-base sm:text-lg text-neutral-600 leading-relaxed space-y-6">
             
-            <!-- Right-Floated Responsive Portrait Card matching video -->
-            <div class="w-full sm:w-64 md:w-72 aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 border border-neutral-200 shadow-sm mb-6 sm:mb-4 sm:ml-8 sm:float-right flex items-center justify-center">
+            <!-- Right Float Photo -->
+            <div class="float-right w-48 sm:w-64 md:w-72 aspect-[4/5] rounded-3xl overflow-hidden ml-6 mb-6 shadow-sm border border-neutral-200">
               <img 
                 src="prashant-photo.png" 
                 alt="Prashant" 
-                class="w-full h-full object-cover"
-                onerror="this.parentElement.innerHTML='<span class=\'text-xs font-medium text-neutral-400 px-4 text-center\'>Prashant Portrait (prashant-photo.png)</span>'"
+                class="w-full h-full object-cover" 
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-neutral-100 text-neutral-400 text-xs\'>Photo</div>'"
               />
             </div>
 
             <p>
-              I'm Prashant, a UI/UX Designer and Product Thinker dedicated to turning complex, high-friction digital problems into calm, intuitive, and accessible user experiences. My approach starts with listening closely to how real people think and feel—especially when navigating high-stakes environments like healthcare and daily wellness.
+              I'm Prashant, a UI/UX Designer and Product Thinker dedicated to turning complex, high-friction digital problems into calm, intuitive, and accessible user experiences. My journey into product design grew from a deep fascination with how people make decisions under pressure—and how thoughtful interface architecture can replace user anxiety with effortless clarity.
             </p>
 
             <p>
-              When users are overwhelmed by clinical jargon, cluttered directories, or tedious manual logging, they lose trust in the product. I specialize in stripping away unnecessary cognitive load through grounded user research, rapid ideation, low-to-high fidelity wireframing, and tokenized design systems that adhere to WCAG accessibility standards.
+              I specialize in healthcare and consumer digital products where empathy isn't optional. When someone is tracking daily vitals or trying to book the right doctor while feeling unwell, clinical jargon and cluttered directories erode trust. Through foundational user research, rapid Crazy 8s ideation, and iterative usability testing, I strip away unnecessary cognitive load so the next step always feels natural.
             </p>
 
             <p>
-              Whether I am mapping end-to-end symptom triage flows, refining micro-interactions for tactile clarity, or partnering with engineers to ship responsive web and mobile interfaces, my goal remains constant: craft thoughtful digital solutions that empower users and drive measurable product outcomes.
+              From architecting scalable, WCAG-compliant design systems and micro-interactions in Figma to collaborating closely with engineering teams during implementation, I focus on bridging human needs with measurable business outcomes.
             </p>
 
           </div>
@@ -338,45 +370,44 @@
 
       </main>
 
-      <!-- E. FOOTER / CONTACT SECTION (Centered "Let's Connect!") -->
+      <!-- E. FOOTER / CONTACT SECTION -->
       <footer id="contact" class="py-20 sm:py-28 border-t border-neutral-100 text-center px-4 sm:px-6 bg-white">
         <div class="max-w-3xl mx-auto">
           
-          <span class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3 sm:mb-4 block">
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3 block text-center">
             LIKE WHAT YOU SEE?
           </span>
 
-          <h2 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-neutral-950 mb-8">
+          <h2 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-neutral-950 mb-8 text-center">
             Let's Connect!
           </h2>
 
-          <!-- Two Rounded Pill Buttons Side-by-Side -->
-          <div class="flex flex-wrap justify-center items-center gap-3.5 sm:gap-4 mb-8">
+          <!-- Pill Buttons: Resume (Download) + Working LinkedIn URL -->
+          <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
             <a 
               href="Prashant_CV.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              download 
               class="bg-neutral-950 text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-neutral-800 transition-colors"
             >
               Resume
             </a>
             <a 
-              href="https://www.linkedin.com" 
+              href="https://www.linkedin.com/in/prashant-kumar-89b822142/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:bg-neutral-50 hover:border-neutral-900 transition-colors"
+              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:bg-neutral-50 hover:border-neutral-900 transition-colors"
             >
               LinkedIn
             </a>
           </div>
 
           <!-- Centered Email Link -->
-          <div class="mb-12">
+          <div class="mb-10">
             <a 
               href="mailto:prashantkumar.pr501@gmail.com" 
-              class="inline-flex items-center gap-2 text-sm sm:text-base md:text-lg font-medium text-neutral-600 hover:text-neutral-950 transition-colors break-all"
+              class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors inline-flex items-center gap-2"
             >
-              <span aria-hidden="true">&#9993;</span>
+              <span>&#9993;</span>
               <span>prashantkumar.pr501@gmail.com</span>
             </a>
           </div>
@@ -393,49 +424,75 @@
 
 
   <!-- =========================================================================
-       VIEW 2: ISOLATED CASE STUDY VIEW (#casestudy-view)
-       Dedicated Mint & Teal healthcare palette containing the 13-slide
-       Tracto UX Case Study breakdown and a sticky "← Back to Home" bar.
+       VIEW 2: ISOLATED TRACTO CASE STUDY VIEW (#casestudy-view)
+       Isolated Mint & Teal healthcare theme (bg-[#f4faf7] text-neutral-900).
+       Uses hash-free <button> smooth scrolling so sub-nav clicks never reset
+       back to the homepage.
        ========================================================================= -->
-  <div id="casestudy-view" class="hidden min-h-screen bg-tracto-surface text-neutral-900">
+  <div id="casestudy-view" class="hidden bg-[#f4faf7] text-neutral-900 min-h-screen">
 
-    <!-- Sticky Top Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-tracto-deep/95 backdrop-blur-md border-b border-white/10 text-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-3">
-        
+    <!-- STICKY SUB-NAV BAR (Buttons with scrollIntoView — Zero URL Hash Mutation) -->
+    <header class="bg-[#0f2d25] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono overflow-x-auto whitespace-nowrap gap-4 scrollbar-none border-b border-white/10">
+      
+      <!-- Left: Back to Home Button -->
+      <button 
+        type="button" 
+        onclick="showHomeView()" 
+        class="bg-[#1cb08a] hover:bg-[#179675] text-[#08201a] font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0"
+      >
+        &larr; Back to Home
+      </button>
+
+      <!-- Center: Sub-Navigation Buttons (Do NOT change hash or trigger router) -->
+      <div class="flex items-center gap-5 sm:gap-7">
         <button 
           type="button" 
-          onclick="hideCaseStudyView()" 
-          class="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-tracto-mint text-tracto-deep hover:bg-teal-300 font-bold text-xs sm:text-sm transition-all shadow-sm focus:outline-none shrink-0"
+          onclick="document.getElementById('phase-overview').scrollIntoView({ behavior: 'smooth' }); return false;" 
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
         >
-          <span>&larr; Back to Home</span>
+          01. OVERVIEW &amp; METRICS
         </button>
-
-        <nav class="hidden lg:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-teal-200" aria-label="Case Study Phases">
-          <a href="#cs-overview" class="hover:text-white transition-colors">01. Overview &amp; Metrics</a>
-          <a href="#cs-research" class="hover:text-white transition-colors">02. User Research</a>
-          <a href="#cs-ideation" class="hover:text-white transition-colors">03. Wireframes &amp; UX Laws</a>
-          <a href="#cs-final" class="hover:text-white transition-colors">04. Final UI &amp; Testing</a>
-        </nav>
-
-        <a 
-          href="https://www.figma.com/proto/h148aRBXVXXRIVFytQ0Akm/Switch?node-id=440-345&t=10UMIYysR7fuuc3C-1" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-tracto-coral hover:bg-[#ff5530] text-white font-semibold text-xs sm:text-sm transition-all shrink-0"
+        <button 
+          type="button" 
+          onclick="document.getElementById('phase-research').scrollIntoView({ behavior: 'smooth' }); return false;" 
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
         >
-          <span>Figma Prototype &nearr;</span>
-        </a>
+          02. USER RESEARCH
+        </button>
+        <button 
+          type="button" 
+          onclick="document.getElementById('phase-wireframes').scrollIntoView({ behavior: 'smooth' }); return false;" 
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+        >
+          03. WIREFRAMES &amp; UX LAWS
+        </button>
+        <button 
+          type="button" 
+          onclick="document.getElementById('phase-final-ui').scrollIntoView({ behavior: 'smooth' }); return false;" 
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+        >
+          04. FINAL UI &amp; TESTING
+        </button>
       </div>
+
+      <!-- Right: Figma Prototype CTA -->
+      <a 
+        href="https://www.figma.com/proto/h148aRBXVXXRIVFytQ0Akm/Switch?node-id=440-345&t=10UMIYysR7fuuc3C-1" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="bg-[#ff5733] hover:bg-[#e04826] text-white font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
+      >
+        Figma Prototype &nearr;
+      </a>
     </header>
 
-    <!-- Case Study Hero Banner -->
-    <section class="bg-tracto-deep text-white py-16 sm:py-24 border-b border-white/10">
+    <!-- CASE STUDY HERO BANNER -->
+    <section class="bg-[#0f2d25] text-white py-16 sm:py-24 border-b border-white/10">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           <div class="lg:col-span-7 space-y-5">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-tracto-mint/20 border border-tracto-mint/30 text-tracto-lightmint font-mono text-xs uppercase tracking-widest">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1cb08a]/20 border border-[#1cb08a]/30 text-teal-200 font-mono text-xs uppercase tracking-widest">
               Mobile Application • 13-Slide UX Case Study
             </div>
 
@@ -457,7 +514,7 @@
 
           <!-- Live Heart Rate Preview Card -->
           <div class="lg:col-span-5">
-            <div class="rounded-3xl bg-tracto-card p-6 sm:p-8 border border-white/15 shadow-2xl">
+            <div class="rounded-3xl bg-[#0A4F44] p-6 sm:p-8 border border-white/15 shadow-2xl">
               <div class="flex items-center justify-between mb-4">
                 <div>
                   <span class="font-display font-bold text-white text-base block">Today’s Vitals Rhythm</span>
@@ -466,12 +523,12 @@
                 <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-teal-400/20 text-teal-200">Live</span>
               </div>
 
-              <div class="bg-tracto-deep rounded-2xl p-5 border border-white/10 mb-4">
+              <div class="bg-[#0f2d25] rounded-2xl p-5 border border-white/10 mb-4">
                 <div class="flex items-baseline gap-2 mb-2">
                   <span class="font-display font-extrabold text-4xl text-white">72</span>
-                  <span class="font-mono text-sm text-tracto-mint">bpm • Calm Resting Zone</span>
+                  <span class="font-mono text-sm text-[#1cb08a]">bpm • Calm Resting Zone</span>
                 </div>
-                <svg class="w-full h-12 text-tracto-mint overflow-visible" viewBox="0 0 300 50" fill="none">
+                <svg class="w-full h-12 text-[#1cb08a] overflow-visible" viewBox="0 0 300 50" fill="none">
                   <path class="ecg-path" d="M0 25 L50 25 L65 15 L75 35 L90 5 L105 45 L118 20 L130 25 L190 25 L205 12 L218 38 L230 25 L300 25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
@@ -480,11 +537,11 @@
                 <div class="bg-white/5 rounded-xl p-3.5 border border-white/10">
                   <span class="font-mono text-[11px] text-teal-200 block">Daily Activity</span>
                   <span class="font-display font-bold text-lg">8,420 steps</span>
-                  <span class="text-xs text-tracto-mint block">540 kcal • 7h 42m sleep</span>
+                  <span class="text-xs text-[#1cb08a] block">540 kcal • 7h 42m sleep</span>
                 </div>
                 <div class="bg-white/5 rounded-xl p-3.5 border border-white/10">
                   <span class="font-mono text-[11px] text-teal-200 block">Symptom Triage</span>
-                  <span class="font-display font-bold text-lg text-tracto-coral">&lt; 2 mins</span>
+                  <span class="font-display font-bold text-lg text-[#ff5733]">&lt; 2 mins</span>
                   <span class="text-xs text-teal-100 block">5-screen guided booking</span>
                 </div>
               </div>
@@ -495,22 +552,24 @@
       </div>
     </section>
 
-    <!-- Main Deep-Dive Case Study Content -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 space-y-20 sm:space-y-24">
+    <!-- MAIN 13-SLIDE CASE STUDY CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
       <!-- =====================================================
-           PHASE 1: OVERVIEW, THE PROBLEM & HIGH-IMPACT METRICS
+           01. PHASE OVERVIEW & METRICS (id="phase-overview")
            ===================================================== -->
-      <section id="cs-overview" class="scroll-mt-24">
-        <span class="font-mono text-xs font-bold uppercase tracking-widest text-tracto-card block mb-2">
-          Phase 01 • Poster &amp; Slides 1, 2, 4
-        </span>
-        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950 mb-8">
-          Overview, The Problem &amp; High-Impact Metrics
-        </h2>
+      <section id="phase-overview" class="scroll-mt-24 mb-20 space-y-6">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
+            01. Overview &amp; Metrics • Poster &amp; Slides 1, 2, 4
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">
+            Overview, The Problem &amp; High-Impact Metrics
+          </h2>
+        </div>
 
-        <!-- Featured Tracto Poster Showcase -->
-        <div class="rounded-3xl overflow-hidden bg-[#2d7a6e] p-4 sm:p-8 mb-10 shadow-md">
+        <!-- Tracto Showcase Poster -->
+        <div class="rounded-3xl overflow-hidden bg-[#2d7a6e] p-4 sm:p-8 shadow-md">
           <img 
             src="tracto-poster.png" 
             alt="Tracto Showcase" 
@@ -520,23 +579,23 @@
         </div>
 
         <!-- 4 High-Impact Metrics Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-10">
-          <div class="bg-tracto-deep text-white rounded-3xl p-5 sm:p-6 shadow-sm">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="bg-[#0f2d25] text-white rounded-3xl p-5 sm:p-6 shadow-sm">
             <span class="font-mono text-[11px] sm:text-xs text-teal-200 uppercase">Task Success Lift</span>
-            <p class="font-display text-2xl sm:text-4xl font-extrabold text-tracto-mint mt-2">40% &rarr; 81%</p>
+            <p class="font-display text-2xl sm:text-4xl font-extrabold text-[#1cb08a] mt-2">40% &rarr; 81%</p>
             <p class="text-xs text-teal-100/80 mt-1">+41% surge in end-to-end task completion</p>
           </div>
-          <div class="bg-tracto-deep text-white rounded-3xl p-5 sm:p-6 shadow-sm">
+          <div class="bg-[#0f2d25] text-white rounded-3xl p-5 sm:p-6 shadow-sm">
             <span class="font-mono text-[11px] sm:text-xs text-teal-200 uppercase">Usability Rating</span>
             <p class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-2">4.1 &rarr; 4.8<span class="text-base text-teal-300">/5</span></p>
             <p class="text-xs text-teal-100/80 mt-1">Validated across usability tests &amp; surveys</p>
           </div>
-          <div class="bg-tracto-deep text-white rounded-3xl p-5 sm:p-6 shadow-sm">
+          <div class="bg-[#0f2d25] text-white rounded-3xl p-5 sm:p-6 shadow-sm">
             <span class="font-mono text-[11px] sm:text-xs text-teal-200 uppercase">Agile Velocity</span>
-            <p class="font-display text-2xl sm:text-4xl font-extrabold text-tracto-coral mt-2">5.6x</p>
+            <p class="font-display text-2xl sm:text-4xl font-extrabold text-[#ff5733] mt-2">5.6x</p>
             <p class="text-xs text-teal-100/80 mt-1">77% Agile-Scrum efficiency &amp; 1.8x faster testing</p>
           </div>
-          <div class="bg-tracto-deep text-white rounded-3xl p-5 sm:p-6 shadow-sm">
+          <div class="bg-[#0f2d25] text-white rounded-3xl p-5 sm:p-6 shadow-sm">
             <span class="font-mono text-[11px] sm:text-xs text-teal-200 uppercase">WCAG Audit</span>
             <p class="font-display text-2xl sm:text-4xl font-extrabold text-emerald-400 mt-2">10 / 10</p>
             <p class="text-xs text-teal-100/80 mt-1">Full AAA/AA contrast &amp; keyboard compliance</p>
@@ -544,7 +603,7 @@
         </div>
 
         <!-- Problem & Solution Split -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-red-200 shadow-sm">
             <span class="font-mono text-xs font-bold uppercase text-red-600 tracking-wider">The Problem Statement</span>
             <h3 class="font-display text-xl font-bold text-neutral-950 mt-2 mb-3">
@@ -561,7 +620,7 @@
           </div>
 
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-teal-200 shadow-sm">
-            <span class="font-mono text-xs font-bold uppercase text-tracto-card tracking-wider">The Tracto Solution</span>
+            <span class="font-mono text-xs font-bold uppercase text-[#0A4F44] tracking-wider">The Tracto Solution</span>
             <h3 class="font-display text-xl font-bold text-neutral-950 mt-2 mb-3">
               Agile-Scrum UX &amp; a 5-step human-first health rhythm
             </h3>
@@ -569,49 +628,51 @@
               Delivered via an iterative <strong>Agile-Scrum workflow</strong>, Tracto unifies wearable sync, live heart-rate zone trends, 1-tap workout/nutrition presets, and a 5-screen symptom-to-doctor booking flow.
             </p>
             <ul class="space-y-2 text-sm text-neutral-700">
-              <li class="flex items-start gap-2"><span class="text-tracto-mint font-bold">&check;</span> <span><strong>5-Step Core Loop:</strong> 01 Onboard (&lt;1 min) &rarr; 02 Monitor &rarr; 03 Move &rarr; 04 Eat &rarr; 05 Improve.</span></li>
-              <li class="flex items-start gap-2"><span class="text-tracto-mint font-bold">&check;</span> <span><strong>Symptom-First Triage:</strong> Matches the right doctor from symptom chips in under 2 minutes.</span></li>
-              <li class="flex items-start gap-2"><span class="text-tracto-mint font-bold">&check;</span> <span><strong>Zero Dark Patterns:</strong> 56px thumb-zone primary actions and 10/10 WCAG compliance.</span></li>
+              <li class="flex items-start gap-2"><span class="text-[#1cb08a] font-bold">&check;</span> <span><strong>5-Step Core Loop:</strong> 01 Onboard (&lt;1 min) &rarr; 02 Monitor &rarr; 03 Move &rarr; 04 Eat &rarr; 05 Improve.</span></li>
+              <li class="flex items-start gap-2"><span class="text-[#1cb08a] font-bold">&check;</span> <span><strong>Symptom-First Triage:</strong> Matches the right doctor from symptom chips in under 2 minutes.</span></li>
+              <li class="flex items-start gap-2"><span class="text-[#1cb08a] font-bold">&check;</span> <span><strong>Zero Dark Patterns:</strong> 56px thumb-zone primary actions and 10/10 WCAG compliance.</span></li>
             </ul>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-white slide-placeholder border-2 border-dashed border-teal-800/20 rounded-3xl aspect-[16/10] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 01 Visual</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 01 Visual</span>
             <p class="font-display font-bold text-sm text-neutral-800">[Insert Slide 1: Portfolio Grid Thumbnail, Cover Page, 6-Layer "Every Beat Counts" Illustration &amp; 3 Dynamic Mockup Posters]</p>
           </div>
           <div class="bg-white slide-placeholder border-2 border-dashed border-teal-800/20 rounded-3xl aspect-[16/10] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 02 &amp; Slide 04 Visual</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 02 &amp; Slide 04 Visual</span>
             <p class="font-display font-bold text-sm text-neutral-800">[Insert Slide 2 &amp; Slide 4: Agile vs. Waterfall Sprint Roadmap &amp; 13-Module Case Study Architecture Overview]</p>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-           PHASE 2: USER RESEARCH & KEY INSIGHTS (Slides 3 & 4)
+           02. USER RESEARCH (id="phase-research")
            ===================================================== -->
-      <section id="cs-research" class="scroll-mt-24 pt-16 border-t border-teal-900/10">
-        <span class="font-mono text-xs font-bold uppercase tracking-widest text-tracto-card block mb-2">
-          Phase 02 • Slides 3 &amp; 4
-        </span>
-        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950 mb-4">
-          User Research &amp; Key Insights
-        </h2>
-        <p class="text-neutral-600 max-w-3xl mb-8 text-sm sm:text-base leading-relaxed">
-          Discovery research involved <strong>12 participants stratified across three age brackets</strong> (3 aged 18–29, 4 aged 30–49, and 5 aged 50–65) under strict informed-consent protocols, paired with persona modeling (Maja, 25), empathy mapping, and a competitive audit of Practo.
-        </p>
+      <section id="phase-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
+            02. User Research • Slides 3 &amp; 4
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950 mb-4">
+            User Research &amp; Key Insights
+          </h2>
+          <p class="text-neutral-600 max-w-3xl text-sm sm:text-base leading-relaxed">
+            Discovery research involved <strong>12 participants stratified across three age brackets</strong> (3 aged 18–29, 4 aged 30–49, and 5 aged 50–65) under strict informed-consent protocols, paired with persona modeling (Maja, 25), empathy mapping, and a competitive audit of Practo.
+          </p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm">
-            <span class="font-mono text-xs font-bold text-tracto-mint uppercase">Insight 01 • Effort</span>
+            <span class="font-mono text-xs font-bold text-[#1cb08a] uppercase">Insight 01 • Effort</span>
             <h3 class="font-display font-bold text-lg text-neutral-950 mt-1 mb-2">Logging Friction Drives Quit</h3>
             <p class="text-sm text-neutral-600 leading-relaxed">
               Manual typing for meals and workouts is the primary reason users abandon trackers early. Replacing text inputs with 1-tap presets and wearable sync keeps daily logging effortless.
             </p>
           </div>
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm">
-            <span class="font-mono text-xs font-bold text-tracto-coral uppercase">Insight 02 • Trust</span>
+            <span class="font-mono text-xs font-bold text-[#ff5733] uppercase">Insight 02 • Trust</span>
             <h3 class="font-display font-bold text-lg text-neutral-950 mt-1 mb-2">Clinical Jargon Erodes Trust</h3>
             <p class="text-sm text-neutral-600 leading-relaxed">
               Raw resting heart-rate numbers presented with clinical terminology trigger anxiety rather than clarity, eroding user trust in the entire app.
@@ -628,46 +689,48 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-white slide-placeholder border-2 border-dashed border-teal-800/20 rounded-3xl aspect-[16/9] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 03 Visual</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 03 Visual</span>
             <p class="font-display font-bold text-sm text-neutral-800">[Insert Slide 3: Research Plan, 12-Participant Age Cohorts, Ethics/Privacy Protocol &amp; Core Findings Preview]</p>
           </div>
           <div class="bg-white slide-placeholder border-2 border-dashed border-teal-800/20 rounded-3xl aspect-[16/9] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 04 Research Visuals</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 04 Research Visuals</span>
             <p class="font-display font-bold text-sm text-neutral-800">[Insert Slide 4: Persona (Maja, 25), Empathy Map, User Journey Map &amp; Practo Competitor Benchmark]</p>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-           PHASE 3: IDEATION, WIREFRAMES & LAWS OF UX (Slides 5, 6 & 7)
+           03. WIREFRAMES & UX LAWS (id="phase-wireframes")
            ===================================================== -->
-      <section id="cs-ideation" class="scroll-mt-24 pt-16 border-t border-teal-900/10">
-        <span class="font-mono text-xs font-bold uppercase tracking-widest text-tracto-card block mb-2">
-          Phase 03 • Slides 5, 6 &amp; 7
-        </span>
-        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950 mb-8">
-          Crazy 8s Ideation, Wireframes &amp; Laws of UX Iterations
-        </h2>
+      <section id="phase-wireframes" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
+            03. Wireframes &amp; UX Laws • Slides 5, 6 &amp; 7
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">
+            Crazy 8s Ideation, Wireframes &amp; Laws of UX Iterations
+          </h2>
+        </div>
 
         <!-- Slide 5: Crazy 8s -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-teal-900/10 shadow-sm mb-10">
-          <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slide 05 • "Eight Ideas, Eight Minutes"</span>
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-teal-900/10 shadow-sm">
+          <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slide 05 • "Eight Ideas, Eight Minutes"</span>
           <h3 class="font-display text-xl sm:text-2xl font-bold text-neutral-950 mt-1 mb-3">
             Merging Quick Wins &amp; Big Bets into a 6-Frame Solution Sketch
           </h3>
           <p class="text-sm text-neutral-600 leading-relaxed mb-6">
             Framing the problem around <em>"How might we help someone who doesn't know which doctor to see book the right appointment in under 2 minutes, starting from how they feel?"</em>, I sketched 8 rapid concepts: <strong>(1) Body map tap, (2) Triage chat, (3) Symptom chips + severity slider, (4) Voice input, (5) Photo of skin issue, (6) Wearable nudge, (7) Calendar-first, and (8) Nearby clinics map</strong>. Evaluating them on an <strong>Impact vs. Effort Matrix</strong> highlighted #1 and #3 as Quick Wins and #6 and #2 as Big Bets—merging them into a 6-frame storyboard.
           </p>
-          <div class="bg-tracto-surface slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 05 Visual</span>
+          <div class="bg-[#f4faf7] slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-6 text-center">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 05 Visual</span>
             <p class="font-display font-bold text-sm sm:text-base text-neutral-800">[Insert Slide 5: Crazy 8s Sheet, Quick Wins vs. Big Bets Impact/Effort Matrix &amp; 6-Frame Merged Solution Sketch]</p>
           </div>
         </div>
 
         <!-- Slide 6: Lo-Fi to Hi-Fi Wireframes -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-4">
           <div class="lg:col-span-5 space-y-4">
-            <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slide 06 • "From Symptom to Booked"</span>
+            <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slide 06 • "From Symptom to Booked"</span>
             <h3 class="font-display text-xl sm:text-2xl font-bold text-neutral-950">5-Screen Lo-Fi to Hi-Fi Wireframe Flow</h3>
             <p class="text-sm text-neutral-600 leading-relaxed">
               Designed first as greyscale low-fidelity wireframes to validate structure before applying visual tokens:
@@ -680,21 +743,21 @@
           </div>
           <div class="lg:col-span-7">
             <div class="bg-white slide-placeholder border-2 border-dashed border-teal-800/20 rounded-3xl aspect-[16/9] flex flex-col items-center justify-center p-6 text-center">
-              <span class="font-mono text-xs uppercase tracking-widest text-tracto-card font-bold mb-1">Slide 06 Visual</span>
+              <span class="font-mono text-xs uppercase tracking-widest text-[#0A4F44] font-bold mb-1">Slide 06 Visual</span>
               <p class="font-display font-bold text-sm sm:text-base text-neutral-800">[Insert Slide 6: 5-Screen Low-Fidelity Wireframes vs. High-Fidelity Symptom-to-Booked Mockup Flow]</p>
             </div>
           </div>
         </div>
 
         <!-- Slide 7: Laws of UX Interactive Comparison -->
-        <div class="bg-tracto-deep text-white rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div class="bg-[#0f2d25] text-white rounded-3xl p-6 sm:p-8 shadow-xl">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
-              <span class="font-mono text-xs uppercase text-tracto-mint">Slide 07 • Laws of UX ("Same Task. Two Outcomes.")</span>
+              <span class="font-mono text-xs uppercase text-[#1cb08a]">Slide 07 • Laws of UX ("Same Task. Two Outcomes.")</span>
               <h3 class="font-display text-xl sm:text-2xl font-bold mt-1">Workout Logging: Tracto UX vs. Broken Dark-Pattern UX</h3>
             </div>
             <div class="inline-flex rounded-full bg-white/10 p-1 self-start">
-              <button id="btn-good-ux" type="button" onclick="switchUxTab('good')" class="px-4 py-2 rounded-full font-mono text-xs font-bold bg-tracto-mint text-tracto-deep transition-all">
+              <button id="btn-good-ux" type="button" onclick="switchUxTab('good')" class="px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all">
                 &check; Tracto Good UX
               </button>
               <button id="btn-bad-ux" type="button" onclick="switchUxTab('bad')" class="px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all">
@@ -705,15 +768,15 @@
 
           <div id="panel-good-ux" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
-              <span class="font-mono text-xs text-tracto-mint font-bold">Fitts’s &amp; Hick’s Law</span>
+              <span class="font-mono text-xs text-[#1cb08a] font-bold">Fitts’s &amp; Hick’s Law</span>
               <p class="text-sm text-teal-50/90 mt-1.5">Full-width 56px Save button in the thumb zone; 4 activity chips, 3 intensities, and 4 duration presets prevent decision paralysis.</p>
             </div>
             <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
-              <span class="font-mono text-xs text-tracto-mint font-bold">Common Region &amp; Jakob’s Law</span>
+              <span class="font-mono text-xs text-[#1cb08a] font-bold">Common Region &amp; Jakob’s Law</span>
               <p class="text-sm text-teal-50/90 mt-1.5">Related controls sit in clean white cards using familiar top-left close icons and standard segmented controls.</p>
             </div>
             <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
-              <span class="font-mono text-xs text-tracto-mint font-bold">Doherty Threshold (&lt;400ms)</span>
+              <span class="font-mono text-xs text-[#1cb08a] font-bold">Doherty Threshold (&lt;400ms)</span>
               <p class="text-sm text-teal-50/90 mt-1.5">Calorie estimate updates live on tap; Save shows immediate progress and an Undo confirmation toast.</p>
             </div>
           </div>
@@ -734,35 +797,37 @@
           </div>
 
           <div class="bg-white/5 slide-placeholder border-2 border-dashed border-white/20 rounded-2xl aspect-[16/8] flex flex-col items-center justify-center p-6 text-center">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-mint font-bold mb-1">Slide 07 Visual</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#1cb08a] font-bold mb-1">Slide 07 Visual</span>
             <p class="font-display font-bold text-sm sm:text-base text-white">[Insert Slide 7: Side-by-Side Annotated Workout Logging Screens &amp; 6 Laws of UX Comparison Matrix]</p>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-           PHASE 4: HIGH-FIDELITY UI, WCAG AUDIT & TESTING (Slides 8–13)
+           04. FINAL UI & TESTING (id="phase-final-ui")
            ===================================================== -->
-      <section id="cs-final" class="scroll-mt-24 pt-16 border-t border-teal-900/10">
-        <span class="font-mono text-xs font-bold uppercase tracking-widest text-tracto-card block mb-2">
-          Phase 04 • Slides 8–13
-        </span>
-        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950 mb-8">
-          Final High-Fidelity UI, Accessibility &amp; Validation
-        </h2>
+      <section id="phase-final-ui" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
+            04. Final UI &amp; Testing • Slides 8–13
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">
+            Final High-Fidelity UI, Accessibility &amp; Validation
+          </h2>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <!-- Slide 8: Micro-Interactions -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm flex flex-col justify-between">
             <div>
-              <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slide 08 • Micro-Interactions ("Choose with Confidence")</span>
+              <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slide 08 • Micro-Interactions ("Choose with Confidence")</span>
               <h3 class="font-display text-xl font-bold text-neutral-950 mt-1 mb-2">200ms Spring Radio States &amp; 3-Step Signup</h3>
               <p class="text-sm text-neutral-600 mb-5 leading-relaxed">
                 Built on native radio inputs for keyboard and screen-reader accessibility, selection updates three visual cues simultaneously (filled dot, mint surface tint, and teal border) so state never depends on color alone. Integrated into a 3-step signup prototype with live validation, 4-bar password strength meter, and reduced-motion support.
               </p>
             </div>
-            <div class="bg-tracto-surface slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
+            <div class="bg-[#f4faf7] slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
               <p class="font-display font-bold text-xs text-neutral-800">[Insert Slide 8: Radio Component Variants, 3-Step Signup Prototype &amp; Micro-Interaction Spec Table]</p>
             </div>
           </div>
@@ -770,13 +835,13 @@
           <!-- Slide 9: Style Guide -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm flex flex-col justify-between">
             <div>
-              <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slide 09 • Style Guide ("Calm Data. Confident Care.")</span>
+              <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slide 09 • Style Guide ("Calm Data. Confident Care.")</span>
               <h3 class="font-display text-xl font-bold text-neutral-950 mt-1 mb-2">60-30-10 Color Harmony &amp; Typography System</h3>
               <p class="text-sm text-neutral-600 mb-5 leading-relaxed">
                 Inspired by Apple Health and Headspace, the visual system balances 60% Deep Teal/Mint, 30% Soft Neutrals, and 10% Coral/Amber accents with <strong>Bricolage Grotesque</strong> headings, <strong>Figtree</strong> body copy, and <strong>JetBrains Mono</strong> for tracked data metrics.
               </p>
             </div>
-            <div class="bg-tracto-surface slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
+            <div class="bg-[#f4faf7] slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
               <p class="font-display font-bold text-xs text-neutral-800">[Insert Slide 9: Tracto Color Scheme, Typography Scale, Iconography &amp; Modular UI Components]</p>
             </div>
           </div>
@@ -784,13 +849,13 @@
           <!-- Slide 10: WCAG Accessibility Audit -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm flex flex-col justify-between">
             <div>
-              <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slide 10 • Accessibility ("Signup for Everyone")</span>
+              <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slide 10 • Accessibility ("Signup for Everyone")</span>
               <h3 class="font-display text-xl font-bold text-neutral-950 mt-1 mb-2">Before &amp; After WCAG Contrast Audit (0/10 &rarr; 10/10)</h3>
               <p class="text-sm text-neutral-600 mb-5 leading-relaxed">
                 Remediated an inaccessible signup screen while keeping the exact same layout and brand feel: elevated contrast up to 15:1 AAA, bound explicit `<label for>` attributes, added 2px keyboard focus rings, linked inline `role="alert"` error summaries, and enforced 44px minimum touch targets.
               </p>
             </div>
-            <div class="bg-tracto-surface slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
+            <div class="bg-[#f4faf7] slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
               <p class="font-display font-bold text-xs text-neutral-800">[Insert Slide 10: Before &amp; After Signup Screen, Live Contrast Audit Table &amp; Screen Reader Simulator]</p>
             </div>
           </div>
@@ -798,35 +863,35 @@
           <!-- Slides 11–13: Usability Testing & Campaign Poster -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-teal-900/10 shadow-sm flex flex-col justify-between">
             <div>
-              <span class="font-mono text-xs uppercase text-tracto-card font-bold">Slides 11–13 • Validation &amp; Multi-Format Campaign</span>
+              <span class="font-mono text-xs uppercase text-[#0A4F44] font-bold">Slides 11–13 • Validation &amp; Multi-Format Campaign</span>
               <h3 class="font-display text-xl font-bold text-neutral-950 mt-1 mb-2">"Test It, Rate It, Fix It" &amp; Nine Graphic Principles</h3>
               <p class="text-sm text-neutral-600 mb-5 leading-relaxed">
                 Triangulated findings across <strong>8 moderated usability test participants</strong>, <strong>3 heuristic evaluators</strong>, and <strong>120 user surveys</strong>. Packaged the product into a responsive campaign poster ("Know your heart") annotated against 9 graphic design principles across 3:4 Print, 1:1 Square, and 9:16 Story formats.
               </p>
             </div>
-            <div class="bg-tracto-surface slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
+            <div class="bg-[#f4faf7] slide-placeholder border-2 border-dashed border-teal-800/20 rounded-2xl aspect-[16/9] flex flex-col items-center justify-center p-4 text-center">
               <p class="font-display font-bold text-xs text-neutral-800">[Insert Slides 11–13: Usability Testing Synthesis &amp; "One Poster, Nine Principles" Responsive Artboards]</p>
             </div>
           </div>
 
         </div>
 
-        <!-- Bottom Return Banner -->
-        <div class="bg-tracto-deep text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <!-- Bottom Return Banner with Working LinkedIn & Email Links -->
+        <div class="bg-[#0f2d25] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
           <div class="space-y-2 max-w-xl">
-            <span class="font-mono text-xs uppercase tracking-widest text-tracto-mint">Case Study Complete</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[#1cb08a]">Case Study Complete</span>
             <h3 class="font-display text-2xl sm:text-3xl font-bold">
               Calm defaults and symptom-first flows build lasting patient trust.
             </h3>
-            <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-tracto-lightmint">
+            <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-teal-200">
               <a href="mailto:prashantkumar.pr501@gmail.com" class="underline hover:text-white">prashantkumar.pr501@gmail.com</a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">LinkedIn &nearr;</a>
+              <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">LinkedIn &nearr;</a>
             </div>
           </div>
           <button 
             type="button" 
-            onclick="hideCaseStudyView()" 
-            class="px-7 py-3.5 rounded-full bg-tracto-mint text-tracto-deep hover:bg-teal-300 font-bold text-sm transition-colors shadow-md shrink-0"
+            onclick="showHomeView()" 
+            class="px-7 py-3.5 rounded-full bg-[#1cb08a] text-[#08201a] hover:bg-[#179675] font-bold text-sm transition-colors shadow-md shrink-0"
           >
             &larr; Back to Home
           </button>
@@ -839,40 +904,42 @@
 
 
   <!-- =========================================================================
-       VANILLA JAVASCRIPT: TWO-VIEW ROUTER (showCaseStudyView + popstate)
+       VANILLA JAVASCRIPT: BUG-FREE TWO-VIEW ROUTER & UX TABS
        ========================================================================= -->
   <script>
     const homepageView = document.getElementById('homepage-view');
     const casestudyView = document.getElementById('casestudy-view');
 
-    function showCaseStudyView(updateHash = true) {
+    // Open Tracto Case Study View
+    function showCaseStudyView(pushState = true) {
       homepageView.classList.add('hidden');
       casestudyView.classList.remove('hidden');
-      window.scrollTo(0, 0);
-      if (updateHash && window.location.hash !== '#tracto') {
-        window.location.hash = 'tracto';
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (pushState && window.location.hash !== '#tracto') {
+        history.pushState({ view: 'tracto' }, '', '#tracto');
       }
     }
 
-    function hideCaseStudyView(updateHash = true) {
+    // Return to Homepage View
+    function showHomeView(pushState = true) {
       casestudyView.classList.add('hidden');
       homepageView.classList.remove('hidden');
-      window.scrollTo(0, 0);
-      if (updateHash && window.location.hash === '#tracto') {
-        history.pushState('', document.title, window.location.pathname + window.location.search);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (pushState && window.location.hash === '#tracto') {
+        history.pushState({ view: 'home' }, '', window.location.pathname + window.location.search);
       }
     }
 
-    // Browser Back/Forward Support
+    // Listen to Browser Back/Forward Navigation
     window.addEventListener('popstate', () => {
       if (window.location.hash === '#tracto') {
         showCaseStudyView(false);
       } else {
-        hideCaseStudyView(false);
+        showHomeView(false);
       }
     });
 
-    // Initial Hash Check on Page Load
+    // Check Initial URL Hash on Load
     window.addEventListener('DOMContentLoaded', () => {
       if (window.location.hash === '#tracto') {
         showCaseStudyView(false);
@@ -892,7 +959,7 @@
         badPanel.classList.add('hidden');
         badPanel.classList.remove('grid');
 
-        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-tracto-mint text-tracto-deep transition-all';
+        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all';
         badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all';
       } else {
         badPanel.classList.remove('hidden');
@@ -900,7 +967,7 @@
         goodPanel.classList.add('hidden');
         goodPanel.classList.remove('grid');
 
-        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-tracto-coral text-white transition-all';
+        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#ff5733] text-white transition-all';
         goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all';
       }
     }
