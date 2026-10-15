@@ -74,6 +74,21 @@
       animation: pulseLine 4s linear infinite;
     }
 
+    /* Smooth Mobile Dropdown Unfold Animation */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .mobile-dropdown-open {
+      animation: slideDown 0.2s ease-out forwards;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
         animation-duration: 0.01ms !important;
@@ -97,7 +112,7 @@
     <div class="w-full bg-white min-h-screen flex flex-col shadow-sm">
 
       <!-- A. NAVIGATION BAR -->
-      <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-neutral-100 z-50">
+      <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-neutral-100 z-50 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
           
           <!-- Left: Minimal Circular Monogram Icon + Bold Text "Prashant" -->
@@ -110,17 +125,60 @@
             </span>
           </a>
 
-          <!-- Right: Navigation Links + Outline Pill Resume Button -->
-          <nav class="flex items-center gap-3 sm:gap-6 md:gap-8" aria-label="Primary Navigation">
-            <a href="#home" class="hidden sm:inline-block text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Home</a>
-            <a href="#case-studies" class="text-xs sm:text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Case Studies</a>
-            <a href="#about" class="text-xs sm:text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">About Me</a>
+          <!-- Right (Desktop md: and up): Horizontal Navigation Links + Outline Pill Resume Button -->
+          <nav class="hidden md:flex items-center gap-8" aria-label="Primary Navigation">
+            <a href="#home" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Home</a>
+            <a href="#case-studies" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Case Studies</a>
+            <a href="#about" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">About Me</a>
             <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
               Resume
             </a>
           </nav>
 
+          <!-- Right (Mobile < md): Clean Hamburger / Close Toggle Button -->
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            aria-label="Toggle navigation menu" 
+            aria-expanded="false" 
+            aria-controls="mobile-dropdown"
+            class="md:hidden w-10 h-10 inline-flex items-center justify-center rounded-xl text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 transition-colors focus:outline-none"
+          >
+            <!-- Three Bars Hamburger Icon -->
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- "✕" Close Icon -->
+            <svg id="close-menu-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
         </div>
+
+        <!-- Mobile Centered Dropdown Menu (< md) -->
+        <nav 
+          id="mobile-dropdown" 
+          aria-label="Mobile Navigation"
+          class="hidden md:hidden absolute top-full left-0 right-0 bg-white border border-neutral-100 rounded-b-3xl shadow-lg py-6 px-6 text-center z-50"
+        >
+          <div class="flex flex-col items-center space-y-5">
+            <a href="#home" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+              Home
+            </a>
+            <a href="#case-studies" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+              Case Studies
+            </a>
+            <a href="#about" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+              About Me
+            </a>
+            <div class="pt-1">
+              <a href="Prashant_CV.pdf" download class="mobile-nav-link inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all">
+                Resume
+              </a>
+            </div>
+          </div>
+        </nav>
       </header>
 
       <main class="flex-grow">
@@ -426,13 +484,13 @@
   <!-- =========================================================================
        VIEW 2: ISOLATED TRACTO CASE STUDY VIEW (#casestudy-view)
        Isolated Mint & Teal healthcare theme (bg-[#f4faf7] text-neutral-900).
-       Uses hash-free <button> smooth scrolling so sub-nav clicks never reset
-       back to the homepage.
+       On mobile (< md), the 01-04 section buttons are hidden so only
+       "← Back to Home" and "Figma Prototype ↗" remain visible.
        ========================================================================= -->
   <div id="casestudy-view" class="hidden bg-[#f4faf7] text-neutral-900 min-h-screen">
 
-    <!-- STICKY SUB-NAV BAR (Buttons with scrollIntoView — Zero URL Hash Mutation) -->
-    <header class="bg-[#0f2d25] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono overflow-x-auto whitespace-nowrap gap-4 scrollbar-none border-b border-white/10">
+    <!-- STICKY SUB-NAV BAR (01-04 Links Hidden on Mobile via hidden md:flex) -->
+    <header class="bg-[#0f2d25] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
       
       <!-- Left: Back to Home Button -->
       <button 
@@ -443,8 +501,8 @@
         &larr; Back to Home
       </button>
 
-      <!-- Center: Sub-Navigation Buttons (Do NOT change hash or trigger router) -->
-      <div class="flex items-center gap-5 sm:gap-7">
+      <!-- Center: Sub-Navigation Buttons (Hidden on mobile < md, visible on desktop md:flex) -->
+      <div class="hidden md:flex items-center gap-5 lg:gap-7 overflow-x-auto scrollbar-none">
         <button 
           type="button" 
           onclick="document.getElementById('phase-overview').scrollIntoView({ behavior: 'smooth' }); return false;" 
@@ -904,14 +962,54 @@
 
 
   <!-- =========================================================================
-       VANILLA JAVASCRIPT: BUG-FREE TWO-VIEW ROUTER & UX TABS
+       VANILLA JAVASCRIPT: MOBILE HAMBURGER MENU, ROUTER & UX TABS
        ========================================================================= -->
   <script>
     const homepageView = document.getElementById('homepage-view');
     const casestudyView = document.getElementById('casestudy-view');
 
+    // Mobile Hamburger Menu Elements
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDropdown = document.getElementById('mobile-dropdown');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeMenuIcon = document.getElementById('close-menu-icon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function closeMobileMenu() {
+      if (!mobileDropdown.classList.contains('hidden')) {
+        mobileDropdown.classList.add('hidden');
+        mobileDropdown.classList.remove('mobile-dropdown-open');
+        hamburgerIcon.classList.remove('hidden');
+        closeMenuIcon.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const isHidden = mobileDropdown.classList.contains('hidden');
+      if (isHidden) {
+        mobileDropdown.classList.remove('hidden');
+        mobileDropdown.classList.add('mobile-dropdown-open');
+        hamburgerIcon.classList.add('hidden');
+        closeMenuIcon.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close Mobile Menu Automatically When Any Link is Clicked
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
     // Open Tracto Case Study View
     function showCaseStudyView(pushState = true) {
+      closeMobileMenu();
       homepageView.classList.add('hidden');
       casestudyView.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'instant' });
