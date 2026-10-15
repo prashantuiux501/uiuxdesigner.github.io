@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,21 +74,6 @@
       animation: pulseLine 4s linear infinite;
     }
 
-    /* Smooth Mobile Dropdown Unfold Animation */
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .mobile-dropdown-open {
-      animation: slideDown 0.2s ease-out forwards;
-    }
-
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
         animation-duration: 0.01ms !important;
@@ -116,20 +101,30 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
           
           <!-- Left: Minimal Circular Monogram Icon + Bold Text "Prashant" -->
-          <a href="#home" class="flex items-center gap-2.5 group focus:outline-none shrink-0">
+          <button 
+            type="button" 
+            onclick="scrollToSection('hero')" 
+            class="flex items-center gap-2.5 group focus:outline-none shrink-0 cursor-pointer"
+          >
             <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-950 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
               P
             </span>
             <span class="font-bold text-base sm:text-lg tracking-tight text-neutral-950">
               Prashant
             </span>
-          </a>
+          </button>
 
-          <!-- Right (Desktop md: and up): Horizontal Navigation Links + Outline Pill Resume Button -->
+          <!-- Right (Desktop md: and up): Horizontal Navigation Buttons + Outline Pill Resume Link -->
           <nav class="hidden md:flex items-center gap-8" aria-label="Primary Navigation">
-            <a href="#home" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Home</a>
-            <a href="#case-studies" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">Case Studies</a>
-            <a href="#about" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors">About Me</a>
+            <button type="button" onclick="scrollToSection('hero')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              Home
+            </button>
+            <button type="button" onclick="scrollToSection('case-studies')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              Case Studies
+            </button>
+            <button type="button" onclick="scrollToSection('about-me')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              About Me
+            </button>
             <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
               Resume
             </a>
@@ -139,18 +134,14 @@
           <button 
             id="mobile-menu-btn" 
             type="button" 
+            onclick="toggleMobileMenu()"
             aria-label="Toggle navigation menu" 
             aria-expanded="false" 
-            aria-controls="mobile-dropdown"
+            aria-controls="mobile-menu"
             class="md:hidden w-10 h-10 inline-flex items-center justify-center rounded-xl text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 transition-colors focus:outline-none"
           >
-            <!-- Three Bars Hamburger Icon -->
-            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!-- "✕" Close Icon -->
-            <svg id="close-menu-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
 
@@ -158,22 +149,22 @@
 
         <!-- Mobile Centered Dropdown Menu (< md) -->
         <nav 
-          id="mobile-dropdown" 
+          id="mobile-menu" 
           aria-label="Mobile Navigation"
           class="hidden md:hidden absolute top-full left-0 right-0 bg-white border border-neutral-100 rounded-b-3xl shadow-lg py-6 px-6 text-center z-50"
         >
           <div class="flex flex-col items-center space-y-5">
-            <a href="#home" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+            <button type="button" onclick="scrollToSection('hero')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
               Home
-            </a>
-            <a href="#case-studies" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+            </button>
+            <button type="button" onclick="scrollToSection('case-studies')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
               Case Studies
-            </a>
-            <a href="#about" class="mobile-nav-link text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1">
+            </button>
+            <button type="button" onclick="scrollToSection('about-me')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
               About Me
-            </a>
+            </button>
             <div class="pt-1">
-              <a href="Prashant_CV.pdf" download class="mobile-nav-link inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all">
+              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all">
                 Resume
               </a>
             </div>
@@ -183,8 +174,8 @@
 
       <main class="flex-grow">
 
-        <!-- B. HERO SECTION -->
-        <section id="home" class="py-20 sm:py-28 md:py-36 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+        <!-- B. HERO SECTION (id="hero") -->
+        <section id="hero" class="scroll-mt-24 py-20 sm:py-28 md:py-36 px-4 sm:px-6 max-w-4xl mx-auto text-center">
           
           <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-neutral-950 leading-[1.15]">
             <span>Hi, </span><span class="inline-flex items-center justify-center align-middle w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden mx-1.5 sm:mx-2 border border-neutral-200 shadow-sm bg-neutral-100"><img src="prashant-avatar.png" alt="Prashant" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<span class=\'text-xs text-neutral-400\'>Photo</span>'"></span><span> I'm Prashant!</span>
@@ -196,15 +187,20 @@
 
           <!-- Centered Downward Arrow Scroll Indicator -->
           <div class="mt-10 sm:mt-14 flex justify-center">
-            <a href="#case-studies" aria-label="Scroll to Case Studies" class="text-neutral-400 hover:text-neutral-950 text-lg animate-bounce transition-colors p-2">
+            <button 
+              type="button" 
+              onclick="scrollToSection('case-studies')" 
+              aria-label="Scroll to Case Studies" 
+              class="text-neutral-400 hover:text-neutral-950 text-lg animate-bounce transition-colors p-2 cursor-pointer focus:outline-none"
+            >
               &darr;
-            </a>
+            </button>
           </div>
 
         </section>
 
-        <!-- C. CASE STUDIES SECTION (TRACTO ACTIVE + 3 GRAYED-OUT CARDS) -->
-        <section id="case-studies" class="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
+        <!-- C. CASE STUDIES SECTION (id="case-studies") -->
+        <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto px-4 sm:px-6 pb-24">
           
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 text-center mb-12 sm:mb-16">
             Case Studies
@@ -392,8 +388,8 @@
           </div>
         </section>
 
-        <!-- D. ABOUT ME SECTION -->
-        <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-100">
+        <!-- D. ABOUT ME SECTION (id="about-me") -->
+        <section id="about-me" class="scroll-mt-24 max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-100">
           
           <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 mb-8">
             About Me
@@ -428,8 +424,8 @@
 
       </main>
 
-      <!-- E. FOOTER / CONTACT SECTION -->
-      <footer id="contact" class="py-20 sm:py-28 border-t border-neutral-100 text-center px-4 sm:px-6 bg-white">
+      <!-- E. FOOTER / CONTACT SECTION (id="contact") -->
+      <footer id="contact" class="scroll-mt-24 py-20 sm:py-28 border-t border-neutral-100 text-center px-4 sm:px-6 bg-white">
         <div class="max-w-3xl mx-auto">
           
           <span class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3 block text-center">
@@ -484,8 +480,7 @@
   <!-- =========================================================================
        VIEW 2: ISOLATED TRACTO CASE STUDY VIEW (#casestudy-view)
        Isolated Mint & Teal healthcare theme (bg-[#f4faf7] text-neutral-900).
-       On mobile (< md), the 01-04 section buttons are hidden so only
-       "← Back to Home" and "Figma Prototype ↗" remain visible.
+       Zero transition delays on container so view switches are instantaneous.
        ========================================================================= -->
   <div id="casestudy-view" class="hidden bg-[#f4faf7] text-neutral-900 min-h-screen">
 
@@ -496,7 +491,7 @@
       <button 
         type="button" 
         onclick="showHomeView()" 
-        class="bg-[#1cb08a] hover:bg-[#179675] text-[#08201a] font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0"
+        class="bg-[#1cb08a] hover:bg-[#179675] text-[#08201a] font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0 cursor-pointer"
       >
         &larr; Back to Home
       </button>
@@ -506,28 +501,28 @@
         <button 
           type="button" 
           onclick="document.getElementById('phase-overview').scrollIntoView({ behavior: 'smooth' }); return false;" 
-          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer"
         >
           01. OVERVIEW &amp; METRICS
         </button>
         <button 
           type="button" 
           onclick="document.getElementById('phase-research').scrollIntoView({ behavior: 'smooth' }); return false;" 
-          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer"
         >
           02. USER RESEARCH
         </button>
         <button 
           type="button" 
           onclick="document.getElementById('phase-wireframes').scrollIntoView({ behavior: 'smooth' }); return false;" 
-          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer"
         >
           03. WIREFRAMES &amp; UX LAWS
         </button>
         <button 
           type="button" 
           onclick="document.getElementById('phase-final-ui').scrollIntoView({ behavior: 'smooth' }); return false;" 
-          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none"
+          class="hover:text-[#1cb08a] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer"
         >
           04. FINAL UI &amp; TESTING
         </button>
@@ -815,10 +810,10 @@
               <h3 class="font-display text-xl sm:text-2xl font-bold mt-1">Workout Logging: Tracto UX vs. Broken Dark-Pattern UX</h3>
             </div>
             <div class="inline-flex rounded-full bg-white/10 p-1 self-start">
-              <button id="btn-good-ux" type="button" onclick="switchUxTab('good')" class="px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all">
+              <button id="btn-good-ux" type="button" onclick="switchUxTab('good')" class="px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all cursor-pointer">
                 &check; Tracto Good UX
               </button>
-              <button id="btn-bad-ux" type="button" onclick="switchUxTab('bad')" class="px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all">
+              <button id="btn-bad-ux" type="button" onclick="switchUxTab('bad')" class="px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all cursor-pointer">
                 &times; Broken Dark-Pattern UX
               </button>
             </div>
@@ -949,7 +944,7 @@
           <button 
             type="button" 
             onclick="showHomeView()" 
-            class="px-7 py-3.5 rounded-full bg-[#1cb08a] text-[#08201a] hover:bg-[#179675] font-bold text-sm transition-colors shadow-md shrink-0"
+            class="px-7 py-3.5 rounded-full bg-[#1cb08a] text-[#08201a] hover:bg-[#179675] font-bold text-sm transition-colors shadow-md shrink-0 cursor-pointer"
           >
             &larr; Back to Home
           </button>
@@ -962,89 +957,96 @@
 
 
   <!-- =========================================================================
-       VANILLA JAVASCRIPT: MOBILE HAMBURGER MENU, ROUTER & UX TABS
+       VANILLA JAVASCRIPT: INSTANT VIEW ROUTER, SECTION SCROLL & MOBILE MENU
        ========================================================================= -->
   <script>
-    const homepageView = document.getElementById('homepage-view');
-    const casestudyView = document.getElementById('casestudy-view');
-
-    // Mobile Hamburger Menu Elements
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileDropdown = document.getElementById('mobile-dropdown');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeMenuIcon = document.getElementById('close-menu-icon');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function closeMobileMenu() {
-      if (!mobileDropdown.classList.contains('hidden')) {
-        mobileDropdown.classList.add('hidden');
-        mobileDropdown.classList.remove('mobile-dropdown-open');
-        hamburgerIcon.classList.remove('hidden');
-        closeMenuIcon.classList.add('hidden');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
+    // 1. Mobile Menu Toggle Helper
     function toggleMobileMenu() {
-      const isHidden = mobileDropdown.classList.contains('hidden');
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu || !icon) return;
+
+      const isHidden = menu.classList.contains('hidden');
       if (isHidden) {
-        mobileDropdown.classList.remove('hidden');
-        mobileDropdown.classList.add('mobile-dropdown-open');
-        hamburgerIcon.classList.add('hidden');
-        closeMenuIcon.classList.remove('hidden');
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        menu.classList.remove('hidden');
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+        if (btn) btn.setAttribute('aria-expanded', 'true');
       } else {
-        closeMobileMenu();
+        menu.classList.add('hidden');
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       }
     }
 
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    // 2. Smooth Scroll to Homepage Section Without Mutating URL Hash
+    function scrollToSection(id) {
+      // Close mobile dropdown first if open
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (menu) menu.classList.add('hidden');
+      if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+      if (btn) btn.setAttribute('aria-expanded', 'false');
 
-    // Close Mobile Menu Automatically When Any Link is Clicked
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        closeMobileMenu();
-      });
-    });
+      // Smooth scroll to the target section with top padding offset
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
 
-    // Open Tracto Case Study View
-    function showCaseStudyView(pushState = true) {
-      closeMobileMenu();
-      homepageView.classList.add('hidden');
-      casestudyView.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if (pushState && window.location.hash !== '#tracto') {
+    // 3. Instant Switch to Case Study View (Zero Touch Freeze)
+    function showCaseStudyView() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu) menu.classList.add('hidden');
+      if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+
+      const homeView = document.getElementById('homepage-view');
+      const csView = document.getElementById('casestudy-view');
+      if (homeView) homeView.classList.add('hidden');
+      if (csView) csView.classList.remove('hidden');
+
+      // Instant reset without touch-blocking animation:
+      window.scrollTo(0, 0);
+
+      if (window.location.hash !== '#tracto') {
         history.pushState({ view: 'tracto' }, '', '#tracto');
       }
     }
 
-    // Return to Homepage View
-    function showHomeView(pushState = true) {
-      casestudyView.classList.add('hidden');
-      homepageView.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if (pushState && window.location.hash === '#tracto') {
-        history.pushState({ view: 'home' }, '', window.location.pathname + window.location.search);
-      }
+    // 4. Instant Switch Back to Home View (Zero Touch Freeze)
+    function showHomeView() {
+      const csView = document.getElementById('casestudy-view');
+      const homeView = document.getElementById('homepage-view');
+      if (csView) csView.classList.add('hidden');
+      if (homeView) homeView.classList.remove('hidden');
+      
+      // Instant reset without touch-blocking animation:
+      window.scrollTo(0, 0);
+      
+      // Clean URL without triggering hashchange or popstate reload loops:
+      history.replaceState(null, '', window.location.pathname);
     }
 
-    // Listen to Browser Back/Forward Navigation
+    // 5. Clean Hash Router (Only listens for #tracto)
     window.addEventListener('popstate', () => {
       if (window.location.hash === '#tracto') {
-        showCaseStudyView(false);
+        showCaseStudyView();
       } else {
-        showHomeView(false);
+        showHomeView();
       }
     });
 
     // Check Initial URL Hash on Load
     window.addEventListener('DOMContentLoaded', () => {
       if (window.location.hash === '#tracto') {
-        showCaseStudyView(false);
+        showCaseStudyView();
       }
     });
 
-    // Slide 7 Interactive Good UX vs. Bad UX Switcher
+    // 6. Slide 7 Interactive Good UX vs. Bad UX Switcher
     function switchUxTab(mode) {
       const goodPanel = document.getElementById('panel-good-ux');
       const badPanel = document.getElementById('panel-bad-ux');
@@ -1057,16 +1059,16 @@
         badPanel.classList.add('hidden');
         badPanel.classList.remove('grid');
 
-        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all';
-        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all';
+        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#1cb08a] text-[#08201a] transition-all cursor-pointer';
+        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all cursor-pointer';
       } else {
         badPanel.classList.remove('hidden');
         badPanel.classList.add('grid');
         goodPanel.classList.add('hidden');
         goodPanel.classList.remove('grid');
 
-        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#ff5733] text-white transition-all';
-        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all';
+        badBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#ff5733] text-white transition-all cursor-pointer';
+        goodBtn.className = 'px-4 py-2 rounded-full font-mono text-xs font-bold text-teal-100 hover:text-white transition-all cursor-pointer';
       }
     }
   </script>
