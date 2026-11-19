@@ -774,7 +774,50 @@
 
 <!-- END OF #homepage-view -->
 
-  <div id="casestudy-view" class="hidden bg-[#f4faf7] text-neutral-900 min-h-screen">
+  <div id="casestudy-view" class="hidden min-h-screen">
+<style data-cs-style="csTracto">
+#casestudy-view{background-color:#FFF8EC!important;background-image:radial-gradient(rgba(32,32,30,.055) 1px,transparent 1.15px),linear-gradient(rgba(32,32,30,.024) 1px,transparent 1px);background-size:24px 24px,100% 34px;color:#20201E!important;overflow-x:clip}
+#casestudy-view main{background:transparent}
+#casestudy-view h1,#casestudy-view h2{font-family:'Caveat','Gaegu',cursive!important;letter-spacing:-.025em!important}
+#casestudy-view h1{font-size:clamp(3.4rem,8vw,6.4rem)!important;line-height:.92!important}
+#casestudy-view h2{font-size:clamp(2.7rem,6vw,4.7rem)!important;line-height:.95!important}
+#casestudy-view h3{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:0!important}
+#casestudy-view .font-mono{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:.04em!important}
+#casestudy-view section{position:relative}
+#casestudy-view .rounded-3xl{border-radius:28px 10px 30px 12px/12px 30px 11px 28px!important}
+#casestudy-view .rounded-2xl{border-radius:22px 8px 24px 10px/10px 24px 9px 22px!important}
+#casestudy-view .bg-white{border:2px solid #20201E!important;box-shadow:5px 6px 0 rgba(32,32,30,.88)}
+#casestudy-view .slide-placeholder{border:2px dashed rgba(32,32,30,.55)!important;background-color:rgba(255,253,247,.72)!important}
+#casestudy-view header{border-bottom:2px solid #20201E!important;box-shadow:0 4px 0 rgba(32,32,30,.18)}
+#casestudy-view .cs-beat{margin:0 0 1.25rem}
+#casestudy-view .cs-kicker{display:inline-block;font-family:'Gaegu','Caveat',cursive;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:#0F2D25;background:#E6F4F0;border:2px solid #20201E;border-radius:999px 920px 980px 940px/920px 980px 940px 999px;box-shadow:3px 4px 0 #20201E;padding:.42rem .8rem;transform:rotate(-1deg)}
+#casestudy-view .cs-question{font-family:'Caveat','Gaegu',cursive;font-weight:700;font-size:clamp(2.15rem,5vw,4.2rem);line-height:.98;color:#20201E;margin-top:1rem;max-width:58rem}
+#casestudy-view .cs-goal,#casestudy-view .cs-note{position:relative;border:2px solid #20201E;border-radius:28px 10px 30px 12px/12px 30px 11px 28px;box-shadow:6px 7px 0 rgba(32,32,30,.92);padding:1.35rem 1.5rem;background:#FFFDF7;margin:1.5rem 0}
+#casestudy-view .cs-goal{background:#E6F4F0;transform:rotate(-.35deg)}
+#casestudy-view .cs-note{transform:rotate(.25deg)}
+#casestudy-view .cs-goal p,#casestudy-view .cs-note p{color:#20201E}
+#casestudy-view .cs-tape{position:absolute;width:92px;height:26px;background:rgba(255,211,77,.78);top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);border-left:1px dashed rgba(32,32,30,.35);border-right:1px dashed rgba(32,32,30,.35);z-index:2}
+#casestudy-view .cs-table-wrap{overflow-x:auto;margin-top:1.5rem}
+#casestudy-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;box-shadow:5px 6px 0 rgba(32,32,30,.9);background:#FFFDF7;overflow:hidden}
+#casestudy-view .cs-table th,#casestudy-view .cs-table td{border-bottom:2px solid rgba(32,32,30,.22);padding:1rem;text-align:left;vertical-align:top;color:#20201E}
+#casestudy-view .cs-table th{font-family:'Gaegu','Caveat',cursive;background:#E6F4F0;color:#0F2D25;font-size:1rem}
+#casestudy-view .cs-table tr:last-child td{border-bottom:0}
+#casestudy-view .cs-marquee{overflow:hidden;border-bottom:2px solid #20201E;background:#FFFDF7;padding:1rem 0 1.2rem}
+#casestudy-view .cs-track{display:flex;width:max-content;animation:csTractoScroll 32s linear infinite}
+#casestudy-view .cs-marquee:hover .cs-track{animation-play-state:paused}
+#casestudy-view .cs-strip-group{display:flex;gap:1rem;padding-right:1rem}
+#casestudy-view .cs-card{width:280px;flex:0 0 auto;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;overflow:hidden;background:#fff;box-shadow:4px 5px 0 #20201E;transform:rotate(-.6deg);margin:0}
+#casestudy-view .cs-strip-group .cs-card:nth-child(even){transform:rotate(.7deg)}
+#casestudy-view .cs-card img{width:100%;height:170px;object-fit:cover;display:block}
+#casestudy-view .cs-card figcaption{font-family:'Caveat','Gaegu',cursive;font-size:1.55rem;font-weight:700;line-height:1;padding:.65rem .8rem .8rem;color:#20201E}
+#casestudy-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:#E6F4F0;color:#20201E}
+#casestudy-view .cs-text-card strong{font-family:'Caveat','Gaegu',cursive;font-size:2rem;line-height:.95;color:#0F2D25}
+#casestudy-view .cs-text-card span{font-size:.95rem;line-height:1.35}
+#casestudy-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:2px solid #20201E;border-radius:999px;background:#0F2D25;color:#fff!important;font-weight:800;box-shadow:3px 4px 0 #20201E}
+@keyframes csTractoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){#casestudy-view .cs-track{animation:none}}
+</style>
+
 
     <!-- STICKY SUB-NAV BAR (01-04 Links Hidden on Mobile via hidden md:flex) -->
     <header class="bg-[#0f2d25] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
@@ -895,6 +938,8 @@
       </div>
     </section>
 
+    <div class="cs-added cs-marquee" aria-label="Tracto screens and feature highlights"><div class="cs-track"><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><img src="important.jpg" alt="Tracto: Track every beat of your health — Hero Poster"><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><img src="mockup-1.png" alt="Know your rhythm - Vitals Dashboard"><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><img src="mockup-2.png" alt="Eat with intention - Meal Log"><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><img src="mockup-3.png" alt="Close your rings - Activity Tracking"><figcaption>Close your rings - Activity Tracking</figcaption></figure></div><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><img src="important.jpg" alt="Tracto: Track every beat of your health — Hero Poster"><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><img src="mockup-1.png" alt="Know your rhythm - Vitals Dashboard"><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><img src="mockup-2.png" alt="Eat with intention - Meal Log"><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><img src="mockup-3.png" alt="Close your rings - Activity Tracking"><figcaption>Close your rings - Activity Tracking</figcaption></figure></div></div></div>
+
     <!-- MAIN 13-SLIDE CASE STUDY CONTENT -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
@@ -905,6 +950,8 @@
            01. OVERVIEW & METRICS (id="phase-overview")
            ===================================================== -->
       <section id="phase-overview" class="scroll-mt-24 mb-20 space-y-6">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Core Question</span><p class="cs-question">&ldquo;How might we help someone who doesn&rsquo;t know which doctor to see book the right appointment in under 2 minutes, starting from how they feel?&rdquo;</p></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
             Project Overview &amp; Impact
@@ -947,6 +994,8 @@
           </div>
         </div>
 
+        <aside class="cs-added cs-goal"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Goal</span><p class="cs-question">Calm defaults and symptom-first flows build lasting patient trust.</p></aside>
+
         <!-- Problem & Solution Split -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-red-200 shadow-sm">
@@ -979,6 +1028,12 @@
             </ul>
           </div>
         </div>
+
+        <div class="cs-added cs-table-wrap"><table class="cs-table"><thead><tr><th>Problem</th><th>Design principle</th><th>Feature it produced</th></tr></thead><tbody>
+        <tr><td><strong>High Logging Friction</strong></td><td>Keep daily logging effortless</td><td>1-tap presets and wearable sync</td></tr>
+        <tr><td><strong>Anxiety &amp; Jargon</strong></td><td>Plain language with reassuring context</td><td>Live heart-rate zone trends</td></tr>
+        <tr><td><strong>Specialty Guesswork</strong></td><td>Start from symptoms, not directories</td><td>Symptom-First Triage</td></tr>
+        </tbody></table></div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="rounded-3xl overflow-hidden bg-[#063B3A] border border-white/10 p-3 sm:p-5 shadow-sm">
@@ -1024,6 +1079,8 @@
            02. USER RESEARCH (id="phase-research")
            ===================================================== -->
       <section id="phase-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div class="cs-added cs-beat"><span class="cs-kicker">What the research found</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
             Discovery &amp; User Research
@@ -1076,6 +1133,10 @@
            03. WIREFRAMES & UX LAWS (id="phase-wireframes")
            ===================================================== -->
       <section id="phase-wireframes" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Why symptom-first?</span></div>
+
+        <div class="cs-added cs-beat"><span class="cs-kicker">Logic behind the prototype</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
             Ideation &amp; Architecture
@@ -1121,6 +1182,12 @@
             </div>
           </div>
         </div>
+
+        <div class="cs-added cs-table-wrap"><table class="cs-table"><thead><tr><th>System rule</th><th>How it works</th></tr></thead><tbody>
+        <tr><td><strong>Emergency Guardrail</strong></td><td>Selecting &quot;Chest pain&quot; immediately surfaces an accessible <code>aria-live</code> emergency notice above the primary button.</td></tr>
+        <tr><td><strong>Progressive Disclosure</strong></td><td>Doctors are filtered and badged by selected symptoms (&quot;Dr. Meera Iyer — Best match for Headache &amp; Fever&quot;).</td></tr>
+        <tr><td><strong>Fitts&rsquo;s Law &amp; Error Prevention</strong></td><td>Full-width 56px bottom Continue CTA stays muted until required choices are made; booked slots are locked.</td></tr>
+        </tbody></table></div>
 
         <!-- Laws of UX Interactive Comparison -->
         <div class="bg-[#0f2d25] text-white rounded-3xl p-6 sm:p-8 shadow-xl">
@@ -1180,6 +1247,8 @@
            04. FINAL UI & TESTING (id="phase-final-ui")
            ===================================================== -->
       <section id="phase-final-ui" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-teal-900/10">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Reflection &amp; Testing Results</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0A4F44] block mb-2">
             Execution &amp; Validation
@@ -1249,9 +1318,14 @@
 
         </div>
 
+        <aside class="cs-added cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Final Product / Prototype</span><br>
+          <a href="https://www.figma.com/proto/h148aRBXVXXRIVFytQ0Akm/Switch?node-id=440-345&t=10UMIYysR7fuuc3C-1" target="_blank" rel="noopener noreferrer" class="cs-final-link">Figma Prototype &nearr;</a>
+        </aside>
+
         <!-- Bottom Return Banner with Working LinkedIn & Email Links -->
         <div class="bg-[#0f2d25] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
           <div class="space-y-2 max-w-xl">
+            <span class="cs-added cs-kicker">Takeaways</span>
             <span class="font-mono text-xs uppercase tracking-widest text-[#1cb08a]">Case Study Complete</span>
             <h3 class="font-display text-2xl sm:text-3xl font-bold">
               Calm defaults and symptom-first flows build lasting patient trust.
@@ -1280,7 +1354,50 @@
        Concept project. Light sky-tinted theme matching the homepage, with a
        midnight-navy fintech hero — a blue finance theme, distinct from Tracto’s teal health theme.
        ========================================================================= -->
-  <div id="clearspend-view" class="hidden bg-[#f4f7ff] text-neutral-900 min-h-screen">
+  <div id="clearspend-view" class="hidden min-h-screen">
+<style data-cs-style="csClear">
+#clearspend-view{background-color:#FFF8EC!important;background-image:radial-gradient(rgba(32,32,30,.055) 1px,transparent 1.15px),linear-gradient(rgba(32,32,30,.024) 1px,transparent 1px);background-size:24px 24px,100% 34px;color:#20201E!important;overflow-x:clip}
+#clearspend-view main{background:transparent}
+#clearspend-view h1,#clearspend-view h2{font-family:'Caveat','Gaegu',cursive!important;letter-spacing:-.025em!important}
+#clearspend-view h1{font-size:clamp(3.4rem,8vw,6.4rem)!important;line-height:.92!important}
+#clearspend-view h2{font-size:clamp(2.7rem,6vw,4.7rem)!important;line-height:.95!important}
+#clearspend-view h3{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:0!important}
+#clearspend-view .font-mono{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:.04em!important}
+#clearspend-view section{position:relative}
+#clearspend-view .rounded-3xl{border-radius:28px 10px 30px 12px/12px 30px 11px 28px!important}
+#clearspend-view .rounded-2xl{border-radius:22px 8px 24px 10px/10px 24px 9px 22px!important}
+#clearspend-view .bg-white{border:2px solid #20201E!important;box-shadow:5px 6px 0 rgba(32,32,30,.88)}
+#clearspend-view .slide-placeholder{border:2px dashed rgba(32,32,30,.55)!important;background-color:rgba(255,253,247,.72)!important}
+#clearspend-view header{border-bottom:2px solid #20201E!important;box-shadow:0 4px 0 rgba(32,32,30,.18)}
+#clearspend-view .cs-beat{margin:0 0 1.25rem}
+#clearspend-view .cs-kicker{display:inline-block;font-family:'Gaegu','Caveat',cursive;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:#0A1730;background:#EEF4FF;border:2px solid #20201E;border-radius:999px 920px 980px 940px/920px 980px 940px 999px;box-shadow:3px 4px 0 #20201E;padding:.42rem .8rem;transform:rotate(-1deg)}
+#clearspend-view .cs-question{font-family:'Caveat','Gaegu',cursive;font-weight:700;font-size:clamp(2.15rem,5vw,4.2rem);line-height:.98;color:#20201E;margin-top:1rem;max-width:58rem}
+#clearspend-view .cs-goal,#clearspend-view .cs-note{position:relative;border:2px solid #20201E;border-radius:28px 10px 30px 12px/12px 30px 11px 28px;box-shadow:6px 7px 0 rgba(32,32,30,.92);padding:1.35rem 1.5rem;background:#FFFDF7;margin:1.5rem 0}
+#clearspend-view .cs-goal{background:#EEF4FF;transform:rotate(-.35deg)}
+#clearspend-view .cs-note{transform:rotate(.25deg)}
+#clearspend-view .cs-goal p,#clearspend-view .cs-note p{color:#20201E}
+#clearspend-view .cs-tape{position:absolute;width:92px;height:26px;background:rgba(255,211,77,.78);top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);border-left:1px dashed rgba(32,32,30,.35);border-right:1px dashed rgba(32,32,30,.35);z-index:2}
+#clearspend-view .cs-table-wrap{overflow-x:auto;margin-top:1.5rem}
+#clearspend-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;box-shadow:5px 6px 0 rgba(32,32,30,.9);background:#FFFDF7;overflow:hidden}
+#clearspend-view .cs-table th,#clearspend-view .cs-table td{border-bottom:2px solid rgba(32,32,30,.22);padding:1rem;text-align:left;vertical-align:top;color:#20201E}
+#clearspend-view .cs-table th{font-family:'Gaegu','Caveat',cursive;background:#EEF4FF;color:#0A1730;font-size:1rem}
+#clearspend-view .cs-table tr:last-child td{border-bottom:0}
+#clearspend-view .cs-marquee{overflow:hidden;border-bottom:2px solid #20201E;background:#FFFDF7;padding:1rem 0 1.2rem}
+#clearspend-view .cs-track{display:flex;width:max-content;animation:csClearScroll 32s linear infinite}
+#clearspend-view .cs-marquee:hover .cs-track{animation-play-state:paused}
+#clearspend-view .cs-strip-group{display:flex;gap:1rem;padding-right:1rem}
+#clearspend-view .cs-card{width:280px;flex:0 0 auto;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;overflow:hidden;background:#fff;box-shadow:4px 5px 0 #20201E;transform:rotate(-.6deg);margin:0}
+#clearspend-view .cs-strip-group .cs-card:nth-child(even){transform:rotate(.7deg)}
+#clearspend-view .cs-card img{width:100%;height:170px;object-fit:cover;display:block}
+#clearspend-view .cs-card figcaption{font-family:'Caveat','Gaegu',cursive;font-size:1.55rem;font-weight:700;line-height:1;padding:.65rem .8rem .8rem;color:#20201E}
+#clearspend-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:#EEF4FF;color:#20201E}
+#clearspend-view .cs-text-card strong{font-family:'Caveat','Gaegu',cursive;font-size:2rem;line-height:.95;color:#0A1730}
+#clearspend-view .cs-text-card span{font-size:.95rem;line-height:1.35}
+#clearspend-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:2px solid #20201E;border-radius:999px;background:#0A1730;color:#fff!important;font-weight:800;box-shadow:3px 4px 0 #20201E}
+@keyframes csClearScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){#clearspend-view .cs-track{animation:none}}
+</style>
+
 
     <!-- STICKY SUB-NAV BAR -->
     <header class="bg-[#0A1730] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
@@ -1363,6 +1480,8 @@
       </div>
     </section>
 
+    <div class="cs-added cs-marquee" aria-label="ClearSpend screens and feature highlights"><div class="cs-track"><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card" style="width:420px"><img src="clearspend-poster.svg" alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount of ₹1,240 and recent UPI transactions"><figcaption>ClearSpend: Safe to spend, today.</figcaption></figure><div class="cs-card cs-text-card"><strong>Today</strong><span>SAFE TO SPEND TODAY</span><span>&#8377;1,240</span><span>On track &mdash; &#8377;18,650 left for the next 15 days</span></div><div class="cs-card cs-text-card"><strong>Consent first, always</strong><span>Swiggy</span><span>-&#8377;420</span></div><div class="cs-card cs-text-card"><strong>Review in 60 seconds</strong><span>Uber</span><span>-&#8377;185</span></div><div class="cs-card cs-text-card"><strong>Honest by design</strong><span>3 transactions need review</span><span>Review &rarr;</span></div></div><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card" style="width:420px"><img src="clearspend-poster.svg" alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount of ₹1,240 and recent UPI transactions"><figcaption>ClearSpend: Safe to spend, today.</figcaption></figure><div class="cs-card cs-text-card"><strong>Today</strong><span>SAFE TO SPEND TODAY</span><span>&#8377;1,240</span><span>On track &mdash; &#8377;18,650 left for the next 15 days</span></div><div class="cs-card cs-text-card"><strong>Consent first, always</strong><span>Swiggy</span><span>-&#8377;420</span></div><div class="cs-card cs-text-card"><strong>Review in 60 seconds</strong><span>Uber</span><span>-&#8377;185</span></div><div class="cs-card cs-text-card"><strong>Honest by design</strong><span>3 transactions need review</span><span>Review &rarr;</span></div></div></div></div>
+
     <!-- MAIN CONTENT -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
@@ -1377,6 +1496,8 @@
 
       <!-- 01. THE PROBLEM -->
       <section id="cs-problem" class="scroll-mt-24 mb-20 space-y-6">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Core Question</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">01 &mdash; The Problem</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">Paying is effortless. Seeing where it went is not.</h2>
@@ -1388,6 +1509,8 @@
           the end of the month. Existing trackers ask users to fix this with manual entry, which
           is exactly the habit that breaks first.
         </p>
+        <aside class="cs-added cs-goal"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Goal</span><p class="cs-question">A UPI-first expense tracker for young salaried users in India, designed around one clear number &mdash; what is safe to spend today &mdash; instead of backward-looking charts that only explain a low balance after the money is gone.</p></aside>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
             <h3 class="font-display text-lg font-bold text-neutral-950 mb-2">Manual entry fatigue</h3>
@@ -1406,6 +1529,8 @@
 
       <!-- 02. RESEARCH -->
       <section id="cs-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
+        <div class="cs-added cs-beat"><span class="cs-kicker">What the research found</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">02 &mdash; Research Highlights</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">Secondary research, from sources anyone can check</h2>
@@ -1433,6 +1558,10 @@
 
       <!-- 03. DESIGN PROCESS -->
       <section id="cs-process" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Problem &rarr; Principle &rarr; Feature</span></div>
+
+        <div class="cs-added cs-beat"><span class="cs-kicker">Logic behind the prototype</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">03 &mdash; Design Process</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">From blur to one number, in five moves</h2>
@@ -1455,10 +1584,30 @@
             <p class="text-sm text-neutral-600 leading-relaxed mt-2">13 Figma frames with linked prototype flows. Usability testing is a written 5-person plan with pass marks set in advance &mdash; it has not been run yet, and no results are claimed.</p>
           </div>
         </div>
+        <div class="cs-added cs-table-wrap"><table class="cs-table"><thead><tr><th>Problem</th><th>Design principle</th><th>Feature it produced</th></tr></thead><tbody>
+        <tr><td><strong>Manual entry fatigue</strong></td><td>Automation handles the certain transactions</td><td>Review in 60 seconds</td></tr>
+        <tr><td><strong>Fragmented spending</strong></td><td>A complete cross-bank picture</td><td>Consent-first account linking via the Account Aggregator framework</td></tr>
+        <tr><td><strong>Data without guidance</strong></td><td>Guidance at the moment of spending</td><td>&ldquo;Safe to spend today&rdquo;</td></tr>
+        </tbody></table></div>
+
+      </section>
+
+
+      <!-- Reflection, testing plan and future considerations (existing honesty notes, reframed) -->
+      <section class="cs-added scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Reflection &amp; Current Tensions</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">ClearSpend is a self-initiated concept project by Prashant Kumar, UI/UX Designer (Fresher). It is not a shipped product, has no client, and claims no user metrics.</p>
+        </div>
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Testing Plan &amp; Future Considerations</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">Usability testing is a written 5-person plan with pass marks set in advance &mdash; it has not been run yet, and no results are claimed.</p>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">ClearSpend is a concept project, so its research is desk research &mdash; published data and a competitor audit &mdash; not invented interviews.</p>
+        </div>
       </section>
 
       <!-- 04. SAFE TO SPEND TODAY -->
       <section id="cs-concept" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
+        <div class="cs-added cs-beat"><span class="cs-kicker">Why a daily number?</span></div>
+
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">04 &mdash; The Concept</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">&ldquo;Safe to spend today&rdquo;</h2>
@@ -1484,6 +1633,8 @@
             <p class="text-sm text-neutral-600 leading-relaxed">ClearSpend is a self-initiated concept project by Prashant Kumar, UI/UX Designer (Fresher). It is not a shipped product, has no client, and claims no user metrics.</p>
           </div>
         </div>
+        <div class="cs-added cs-beat"><span class="cs-kicker">Final Product / Prototype</span></div>
+
         <div class="flex flex-wrap gap-3 pt-2">
           <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2F6BFF] hover:bg-[#245BDB] text-white font-bold text-sm transition-colors">Open the Figma File &nearr;</a>
           <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-[#0A1730] hover:bg-[#0B1B3A] text-white font-bold text-sm transition-colors">Download Full Case Study (PDF)</a>
@@ -1493,6 +1644,7 @@
       <!-- Bottom Return Banner -->
       <div class="bg-[#0A1730] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
         <div class="space-y-2 max-w-xl">
+          <span class="cs-added cs-kicker">Takeaways</span>
           <span class="font-mono text-xs uppercase tracking-widest text-sky-300">Case Study Complete</span>
           <h3 class="font-display text-2xl sm:text-3xl font-bold">Designed by Prashant Kumar, UI/UX Designer (Fresher).</h3>
           <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-sky-100">
