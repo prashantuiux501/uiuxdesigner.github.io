@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#FFF8EC" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Prashant — UI/UX Designer & Product Thinker</title>
   <meta name="description" content="Portfolio of Prashant, a UI/UX Designer & Product Thinker transforming complex digital ecosystems into calm, intuitive, and accessible experiences." />
 
   <!-- Google Fonts: Figtree (Primary UI), Bricolage Grotesque & JetBrains Mono (Tracto Case Study) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Caveat:wght@500;600;700&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Gaegu:wght@400;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -155,363 +156,243 @@
     }
     .work-row:hover .work-arrow { transform: translate(4px, -4px); }
   </style>
-
-  <style>
-    /* ===== Prashant's hand-drawn desk homepage ===== */
-    #homepage-view {
-      background-color: #FFF8EC;
-      background-image:
-        radial-gradient(rgba(32, 32, 30, 0.055) 1px, transparent 1.15px),
-        linear-gradient(rgba(32, 32, 30, 0.024) 1px, transparent 1px);
-      background-size: 24px 24px, 100% 34px;
-      color: #20201E;
-      overflow-x: clip;
-    }
-    #homepage-view .font-hand { font-family: 'Caveat', 'Gaegu', cursive; }
-    #homepage-view .font-doodle { font-family: 'Gaegu', 'Caveat', cursive; }
-    #homepage-view .ink-card {
-      border: 2px solid #20201E;
-      border-radius: 28px 9px 30px 11px / 11px 30px 10px 28px;
-      box-shadow: 6px 7px 0 rgba(32, 32, 30, 0.92);
-    }
-    #homepage-view .ink-button {
-      border: 2px solid #20201E;
-      border-radius: 999px 920px 980px 940px / 920px 980px 940px 999px;
-      box-shadow: 3px 4px 0 #20201E;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    }
-    #homepage-view .ink-button:hover {
-      transform: translate(-1px, -2px) rotate(-0.5deg);
-      box-shadow: 5px 6px 0 #20201E;
-    }
-    #homepage-view .tape {
-      position: absolute;
-      z-index: 20;
-      top: -14px;
-      left: 50%;
-      width: 104px;
-      height: 29px;
-      transform: translateX(-50%) rotate(-4deg);
-      background: rgba(255, 211, 77, 0.76);
-      border-left: 2px dashed rgba(32, 32, 30, 0.16);
-      border-right: 2px dashed rgba(32, 32, 30, 0.16);
-      box-shadow: 0 2px 5px rgba(32, 32, 30, 0.12);
-      pointer-events: none;
-    }
-    #homepage-view .tape-left { left: 12%; transform: rotate(-8deg); }
-    #homepage-view .tape-right { left: auto; right: 9%; transform: rotate(7deg); }
-    #homepage-view .pin {
-      position: absolute;
-      z-index: 20;
-      top: 12px;
-      left: 50%;
-      width: 19px;
-      height: 19px;
-      transform: translateX(-50%);
-      border: 2px solid #20201E;
-      border-radius: 50%;
-      background: #FF6B57;
-      box-shadow: 2px 3px 0 rgba(32, 32, 30, 0.75);
-    }
-    #homepage-view .wavy-link {
-      text-decoration-line: underline;
-      text-decoration-style: wavy;
-      text-decoration-color: #FF6B57;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 7px;
-    }
-    #desk-loader {
-      animation: deskLoaderHide 0.45s ease 1.15s forwards;
-    }
-    #desk-loader .font-hand { font-family: 'Caveat', 'Gaegu', cursive; }
-    @keyframes deskLoaderHide {
-      to { opacity: 0; visibility: hidden; transform: translateY(-10px) rotate(-1deg); }
-    }
-    #homepage-view .desk-float { animation: deskFloat 5s ease-in-out infinite; transform-origin: center; }
-    @keyframes deskFloat {
-      0%, 100% { transform: translateY(0) rotate(-0.2deg); }
-      50% { transform: translateY(-7px) rotate(0.35deg); }
-    }
-    #homepage-view #case-studies article.project-card {
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
-    }
-    #homepage-view #case-studies article.project-card.tilt-left { transform: rotate(-1.15deg); }
-    #homepage-view #case-studies article.project-card.tilt-right { transform: rotate(1.05deg); }
-    #homepage-view #case-studies article.project-card.tilt-soft { transform: rotate(-0.55deg); }
-    #homepage-view #case-studies article.project-card:hover {
-      transform: rotate(0deg) translateY(-6px);
-      animation: deskWiggle 0.35s ease;
-    }
-    @keyframes deskWiggle {
-      0%, 100% { rotate: 0deg; }
-      30% { rotate: 0.45deg; }
-      65% { rotate: -0.45deg; }
-    }
-    #homepage-view .sketch-note {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    #homepage-view .sketch-note:hover { transform: rotate(0deg) translateY(-5px) !important; }
-    #homepage-view .surprise-circle {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 4px 5px 0 #20201E;
-    }
-    #homepage-view .surprise-circle:hover { transform: translateY(-5px) rotate(-4deg) scale(1.05); }
-    #homepage-view .surprise-circle.is-active {
-      transform: translateY(-4px) scale(1.12) rotate(5deg);
-      box-shadow: 2px 3px 0 #20201E;
-    }
-    #homepage-view .speech-bubble::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: -15px;
-      width: 26px;
-      height: 26px;
-      transform: translateX(-50%) rotate(45deg);
-      background: #fffdf7;
-      border-right: 2px solid #20201E;
-      border-bottom: 2px solid #20201E;
-    }
-    #homepage-view .bubble-pop { animation: bubblePop 0.32s cubic-bezier(0.22, 1, 0.36, 1); }
-    @keyframes bubblePop {
-      0% { transform: scale(0.96) rotate(-0.5deg); }
-      70% { transform: scale(1.015) rotate(0.3deg); }
-      100% { transform: scale(1) rotate(0deg); }
-    }
-    #homepage-view .marquee-shell { overflow: hidden; }
-    #homepage-view .marquee-track {
-      display: flex;
-      width: max-content;
-      white-space: nowrap;
-      animation: deskMarquee 24s linear infinite;
-    }
-    #homepage-view .marquee-shell:hover .marquee-track { animation-play-state: paused; }
-    @keyframes deskMarquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    #homepage-view .sharing-row { transition: transform 0.22s ease, background-color 0.22s ease; }
-    #homepage-view .sharing-row:hover { transform: translateX(6px) rotate(-0.2deg); }
-    #homepage-view ::selection { background: #FFD34D; color: #20201E; }
-  </style>
 </head>
-
-
 <body class="antialiased selection:bg-neutral-950 selection:text-white">
 
-  <!-- Prashant's hand-drawn desk homepage: original code and original inline SVG artwork. -->
-  <div id="desk-loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#FFF8EC] text-[#20201E] pointer-events-none" aria-hidden="true">
-    <p class="font-hand text-4xl sm:text-6xl font-bold -rotate-2">Getting Prashant&rsquo;s desk ready.</p>
-  </div>
+  <!-- =========================================================================
+       VIEW 1: HOMEPAGE VIEW (#homepage-view)
+       Editorial minimal rebuild: off-white canvas, near-black type,
+       hairline dividers, very large display type, one neutral accent.
+       ========================================================================= -->
+  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#fbfbfa] text-neutral-950">
 
-  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#FFF8EC] text-[#20201E]">
-    <div class="w-full min-h-screen flex flex-col relative">
-      <div class="absolute top-24 left-[4%] text-[#FF6B57] text-3xl rotate-[-12deg] select-none" aria-hidden="true">✦</div>
-      <div class="absolute top-[34rem] right-[3%] text-[#2A9D8F] text-4xl rotate-12 select-none" aria-hidden="true">✳</div>
-      <div class="absolute bottom-[38rem] left-[2%] text-[#57B8FF] text-3xl rotate-12 select-none" aria-hidden="true">⌒</div>
+    <!-- Off-White Inner Container -->
+    <div class="w-full bg-[#fbfbfa] min-h-screen flex flex-col">
 
-      <!-- A. DOODLE NAVIGATION -->
-      <header class="sticky top-3 sm:top-5 z-50 px-3 sm:px-6 lg:px-10">
-        <div class="relative max-w-7xl mx-auto bg-[#FFFDF7]/95 backdrop-blur-md ink-card !rounded-[26px_10px_28px_12px/12px_28px_11px_26px] px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-          <button type="button" onclick="scrollToSection('hero')" class="flex items-center gap-3 text-left cursor-pointer min-w-0" aria-label="Prashant Kumar — back to top">
-            <svg class="w-11 h-11 shrink-0 -rotate-3" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <rect x="7" y="9" width="42" height="34" rx="7" fill="#BFE3FF" stroke="#20201E" stroke-width="3"/>
-              <circle cx="21" cy="24" r="2.6" fill="#20201E"/><circle cx="35" cy="24" r="2.6" fill="#20201E"/>
-              <path d="M21 33c4 4 10 4 14 0" stroke="#20201E" stroke-width="3" stroke-linecap="round"/>
-              <path d="M28 43v7M18 54h22" stroke="#20201E" stroke-width="3" stroke-linecap="round"/>
-              <path d="M45 39l10-5-3 11-4 4-5-3 2-7Z" fill="#FFD34D" stroke="#20201E" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M50 48l2 5 4-4" fill="#FF6B57" stroke="#20201E" stroke-width="2.4" stroke-linejoin="round"/>
-            </svg>
-            <span class="font-hand text-3xl sm:text-4xl font-bold leading-none truncate">Prashant Kumar</span>
+      <!-- A. NAVIGATION BAR -->
+      <header class="sticky top-0 bg-[#fbfbfa]/85 backdrop-blur-xl border-b border-neutral-900/10 z-50 relative">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+
+          <!-- Left: Text Wordmark -->
+          <button
+            type="button"
+            onclick="scrollToSection('hero')"
+            class="flex items-center group focus:outline-none shrink-0 cursor-pointer"
+            aria-label="Prashant Kumar — back to top"
+          >
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-neutral-950">
+              Prashant Kumar<span class="text-neutral-400">.</span>
+            </span>
           </button>
 
-          <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-            <button type="button" onclick="scrollToSection('case-studies')" class="hidden sm:inline-flex font-doodle text-lg font-bold px-4 py-2 hover:text-[#E65343] transition-colors cursor-pointer">Work</button>
-            <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="ink-button bg-[#FFD34D] px-4 sm:px-5 py-2 font-doodle text-lg font-bold inline-flex items-center gap-2 cursor-pointer">
-              <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-              <span>Menu</span>
+          <!-- Right (Desktop md: and up): Editorial Nav Links + Resume Pill -->
+          <nav class="hidden md:flex items-center gap-8" aria-label="Primary Navigation">
+            <button type="button" onclick="scrollToSection('case-studies')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              Work
             </button>
-          </div>
-
-          <nav id="mobile-menu" aria-label="Site navigation" class="hidden absolute top-[calc(100%+14px)] left-0 right-0 bg-[#FFFDF7] ink-card p-5 sm:p-6 z-50">
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-center">
-              <button type="button" onclick="scrollToSection('case-studies')" class="ink-button bg-[#FFD6D0] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">Work</button>
-              <button type="button" onclick="scrollToSection('what-i-do')" class="ink-button bg-[#FFF1A8] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">Sketchbook</button>
-              <button type="button" onclick="scrollToSection('surprise')" class="ink-button bg-[#CDEFF2] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">Surprise</button>
-              <button type="button" onclick="scrollToSection('about-me')" class="ink-button bg-[#DDF3D8] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">About</button>
-              <button type="button" onclick="scrollToSection('sharing')" class="ink-button bg-[#E7DCFF] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">Sharing</button>
-              <button type="button" onclick="scrollToSection('contact')" class="ink-button bg-[#FFE5B4] px-4 py-3 font-doodle text-lg font-bold cursor-pointer">Contact</button>
-            </div>
-            <a href="Prashant_CV.pdf" download class="mt-4 flex justify-center ink-button bg-[#20201E] text-white px-5 py-3 font-doodle text-lg font-bold">Download Resume ↓</a>
+            <button type="button" onclick="scrollToSection('what-i-do')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              What I Do
+            </button>
+            <button type="button" onclick="scrollToSection('about-me')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              About
+            </button>
+            <button type="button" onclick="scrollToSection('contact')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              Contact
+            </button>
+            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-950 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
+              Resume
+            </a>
           </nav>
+
+          <!-- Right (Mobile < md): Clean Hamburger / Close Toggle Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden w-10 h-10 inline-flex items-center justify-center rounded-xl text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 transition-colors focus:outline-none"
+          >
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+
         </div>
+
+        <!-- Mobile Centered Dropdown Menu (< md) -->
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile Navigation"
+          class="hidden md:hidden absolute top-full left-0 right-0 bg-[#fbfbfa]/95 backdrop-blur-xl border-b border-neutral-900/10 shadow-[0_24px_48px_-20px_rgba(16,24,40,0.25)] py-6 px-6 text-center z-50"
+        >
+          <div class="flex flex-col items-center space-y-5">
+            <button type="button" onclick="scrollToSection('case-studies')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              Work
+            </button>
+            <button type="button" onclick="scrollToSection('what-i-do')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              What I Do
+            </button>
+            <button type="button" onclick="scrollToSection('about-me')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              About
+            </button>
+            <button type="button" onclick="scrollToSection('contact')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              Contact
+            </button>
+            <div class="pt-1">
+              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-950 hover:bg-neutral-950 hover:text-white transition-all">
+                Resume
+              </a>
+            </div>
+          </div>
+        </nav>
       </header>
 
-      <main class="flex-grow relative">
-        <!-- B. HERO: PRASHANT'S DESK -->
-        <section id="hero" class="scroll-mt-32 max-w-7xl mx-auto w-full px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24">
-          <div class="text-center relative">
-            <p class="font-doodle inline-block bg-white border-2 border-[#20201E] rounded-full px-4 py-1 text-sm sm:text-base font-bold rotate-[-2deg] shadow-[3px_3px_0_#20201E]">✎ welcome to my little design corner</p>
-            <h1 class="font-hand text-[clamp(5rem,15vw,12rem)] leading-[0.82] font-bold tracking-tight mt-6 -rotate-1">Prashant&rsquo;s desk.</h1>
-            <p class="font-hand text-3xl sm:text-4xl text-[#4B4B47] mt-4 rotate-[0.4deg]">complete with sketches, sticky notes &amp; one very helpful phone</p>
-          </div>
+      <main class="flex-grow">
 
-          <div class="relative max-w-6xl mx-auto mt-10 sm:mt-14 bg-[#FFFDF7] ink-card px-3 py-4 sm:p-6 -rotate-[0.4deg]">
-            <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
-            <svg class="desk-float w-full h-auto block" viewBox="0 0 1200 640" role="img" aria-labelledby="desk-title desk-desc">
-              <title id="desk-title">An original doodle of Prashant&rsquo;s design desk</title>
-              <desc id="desk-desc">A smiling computer, a phone showing a safe-to-spend amount of ₹1,240, papers, sticky notes, pencils, coffee, glasses and a plant on a wooden desk.</desc>
-              <defs>
-                <pattern id="deskDots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" fill="#20201E" opacity="0.08"/></pattern>
-              </defs>
-              <rect x="28" y="26" width="1144" height="520" rx="34" fill="#FFF3D6"/>
-              <rect x="28" y="26" width="1144" height="520" rx="34" fill="url(#deskDots)"/>
-              <path d="M72 106c45-28 92 18 138-4M964 82c38 22 76-12 116 8" stroke="#57B8FF" stroke-width="5" stroke-linecap="round" fill="none" stroke-dasharray="1 14"/>
-              <path d="M104 70l7 16 17 2-13 11 4 17-15-9-15 9 4-17-13-11 17-2 7-16Z" fill="#FFD34D" stroke="#20201E" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M1065 150l5 13 14 1-10 9 3 14-12-8-12 7 3-13-10-10 14-1 5-12Z" fill="#FF6B57" stroke="#20201E" stroke-width="4" stroke-linejoin="round"/>
+        <!-- B. HERO SECTION (id="hero") -->
+        <section id="hero" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 pt-20 sm:pt-28 lg:pt-36 pb-16 sm:pb-20">
 
-              <!-- Sticky notes and sketches -->
-              <g transform="rotate(-5 172 178)">
-                <rect x="105" y="116" width="138" height="128" rx="8" fill="#FFF1A8" stroke="#20201E" stroke-width="5"/>
-                <path d="M128 154h88M128 182h70M128 210h80" stroke="#20201E" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="174" cy="132" r="7" fill="#FF6B57" stroke="#20201E" stroke-width="3"/>
-              </g>
-              <g transform="rotate(4 966 172)">
-                <rect x="900" y="108" width="132" height="122" rx="8" fill="#FFD6D0" stroke="#20201E" stroke-width="5"/>
-                <path d="M925 151c18-18 36 12 54-2s28 8 36-4M925 190h76" stroke="#20201E" stroke-width="5" stroke-linecap="round" fill="none"/>
-                <circle cx="966" cy="124" r="7" fill="#57B8FF" stroke="#20201E" stroke-width="3"/>
-              </g>
-              <g transform="rotate(-2 274 318)">
-                <path d="M196 246h164l-8 142H204l-8-142Z" fill="#FFFFFF" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M224 282h104M224 314h82M224 346h94" stroke="#20201E" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="320" cy="278" r="17" fill="#CDEFF2" stroke="#20201E" stroke-width="4"/>
-                <path d="M308 278h24M320 266v24" stroke="#20201E" stroke-width="4" stroke-linecap="round"/>
-              </g>
+          <h1 class="font-display text-[2.9rem] leading-[1.04] sm:text-7xl lg:text-[6.5rem] font-extrabold tracking-tight text-neutral-950">
+            Designer based in India. Shaping digital products, websites and design systems with clarity and character.
+          </h1>
 
-              <!-- Smiling monitor mascot -->
-              <g>
-                <rect x="405" y="112" width="330" height="246" rx="28" fill="#BFE3FF" stroke="#20201E" stroke-width="6"/>
-                <rect x="429" y="136" width="282" height="174" rx="18" fill="#FFFDF7" stroke="#20201E" stroke-width="4"/>
-                <circle cx="526" cy="213" r="11" fill="#20201E"/><circle cx="614" cy="213" r="11" fill="#20201E"/>
-                <path d="M528 252c25 24 59 24 84 0" stroke="#20201E" stroke-width="7" stroke-linecap="round" fill="none"/>
-                <circle cx="486" cy="246" r="14" fill="#FFB3A7"/><circle cx="654" cy="246" r="14" fill="#FFB3A7"/>
-                <path d="M452 164h62M452 282h42M646 282h42" stroke="#2A9D8F" stroke-width="6" stroke-linecap="round"/>
-                <path d="M570 358v48M516 424h108" stroke="#20201E" stroke-width="7" stroke-linecap="round"/>
-                <path d="M405 270c-38 8-55 34-50 65M735 268c38-5 59 19 61 48" stroke="#20201E" stroke-width="7" stroke-linecap="round" fill="none"/>
-              </g>
-
-              <!-- Plant -->
-              <g>
-                <path d="M844 190c-4-48-36-62-62-58 8 34 30 55 62 58ZM850 184c10-42 42-52 66-42-10 30-34 46-66 42ZM850 196c-28-24-58-14-70 4 22 18 48 16 70-4Z" fill="#7AC74F" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M812 202h84l-10 70h-64l-10-70Z" fill="#FF8A5B" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M812 224h82" stroke="#20201E" stroke-width="4"/>
-              </g>
-
-              <!-- Desk surface -->
-              <path d="M70 430c280-20 760-24 1060 0l-22 72H94L70 430Z" fill="#D99A5B" stroke="#20201E" stroke-width="6" stroke-linejoin="round"/>
-              <path d="M112 522h58l10 78H126l-14-78ZM1032 522h58l14 78h-54l-18-78Z" fill="#B97843" stroke="#20201E" stroke-width="6" stroke-linejoin="round"/>
-              <path d="M130 462h250M842 466h190" stroke="#8A542D" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 12"/>
-
-              <!-- Books -->
-              <g transform="rotate(-2 194 398)">
-                <rect x="118" y="380" width="154" height="34" rx="7" fill="#57B8FF" stroke="#20201E" stroke-width="5"/>
-                <rect x="128" y="348" width="142" height="34" rx="7" fill="#FF6B57" stroke="#20201E" stroke-width="5"/>
-                <path d="M148 365h72M140 397h84" stroke="#FFFDF7" stroke-width="6" stroke-linecap="round"/>
-              </g>
-
-              <!-- Pencil cup and pencils -->
-              <g>
-                <path d="M300 356h92l-10 78h-72l-10-78Z" fill="#FFD34D" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M324 356l-18-76 14-14 20 72M354 356l18-82 16 8-12 76M338 356V282" stroke="#20201E" stroke-width="6" stroke-linecap="round"/>
-                <path d="M306 280l14-14 8 20-22-6ZM372 274l16 8-14 16-2-24Z" fill="#FF6B57" stroke="#20201E" stroke-width="4" stroke-linejoin="round"/>
-              </g>
-
-              <!-- Phone with ClearSpend-style app -->
-              <g transform="rotate(3 846 392)">
-                <rect x="782" y="282" width="128" height="224" rx="24" fill="#0B1B3A" stroke="#20201E" stroke-width="6"/>
-                <rect x="797" y="306" width="98" height="158" rx="13" fill="#EEF4FF"/>
-                <path d="M812 330h68M812 348h42" stroke="#0B1B3A" stroke-width="6" stroke-linecap="round"/>
-                <text x="846" y="397" text-anchor="middle" font-family="Figtree, sans-serif" font-size="27" font-weight="800" fill="#22C55E">₹1,240</text>
-                <text x="846" y="421" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#0B1B3A">safe today</text>
-                <path d="M812 438h18v14h-18zM840 430h18v22h-18zM868 424h18v28h-18z" fill="#2F6BFF"/>
-                <circle cx="846" cy="484" r="7" fill="#FFFDF7"/>
-              </g>
-
-              <!-- Keyboard, glasses and coffee -->
-              <g transform="rotate(-1 570 462)">
-                <rect x="442" y="430" width="258" height="58" rx="15" fill="#FFFDF7" stroke="#20201E" stroke-width="5"/>
-                <path d="M466 450h28M510 450h28M554 450h28M598 450h28M642 450h28M488 470h142" stroke="#20201E" stroke-width="5" stroke-linecap="round"/>
-              </g>
-              <g fill="none" stroke="#20201E" stroke-width="6">
-                <circle cx="258" cy="472" r="34"/><circle cx="342" cy="472" r="34"/>
-                <path d="M292 472h16M224 462l-34-18M376 462l38-22" stroke-linecap="round"/>
-              </g>
-              <g>
-                <path d="M950 402h94l-10 76h-74l-10-76Z" fill="#FFFFFF" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M1044 420c34-8 42 34 4 42" fill="none" stroke="#20201E" stroke-width="5"/>
-                <path d="M968 438h58" stroke="#FF6B57" stroke-width="7" stroke-linecap="round"/>
-                <path d="M972 374c-10-14 10-20 0-36M1008 374c-10-14 10-20 0-36" stroke="#57B8FF" stroke-width="5" stroke-linecap="round" fill="none"/>
-              </g>
-              <path d="M724 516c28-16 58 14 88-2M352 532c38 12 72-10 108 2" stroke="#20201E" stroke-width="5" stroke-linecap="round" fill="none" stroke-dasharray="1 12"/>
-            </svg>
-          </div>
-
-          <div class="max-w-4xl mx-auto text-center mt-12 sm:mt-16 relative">
-            <p class="text-2xl sm:text-4xl leading-snug font-semibold">Prashant Kumar; UI/UX designer from India, crafting calm, clear digital products.</p>
-            <div class="inline-block relative mt-7 bg-[#FFF1A8] ink-card px-6 py-4 rotate-[-1.5deg]">
-              <span class="pin" aria-hidden="true"></span>
-              <p class="font-doodle text-xl sm:text-2xl font-bold pt-2">Open for fresher UI/UX Designer roles</p>
+          <!-- Info Row (4 columns, hairlines) -->
+          <div class="mt-16 sm:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-neutral-900/10 pt-6 sm:pt-8">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Based</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">India</p>
             </div>
             <div>
-              <button type="button" onclick="scrollToSection('case-studies')" class="mt-9 ink-button bg-[#FF6B57] text-white px-7 py-3 font-doodle text-xl font-bold cursor-pointer">See what&rsquo;s on the desk ↓</button>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Focus</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">Product UX/UI, User Research, Design Systems</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Contact</p>
+              <a href="mailto:prashantkumar.pr501@gmail.com" class="text-[13px] sm:text-sm font-semibold text-neutral-900 break-all underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-950 transition-colors">prashantkumar.pr501@gmail.com</a>
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Open for</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">Fresher UI/UX Designer roles</p>
             </div>
           </div>
+
         </section>
 
-        <!-- C. FEATURED PROJECTS -->
-        <section id="case-studies" class="scroll-mt-32 max-w-7xl mx-auto w-full px-4 sm:px-8 py-16 sm:py-24">
-          <div class="flex flex-wrap items-end justify-between gap-5 mb-10 sm:mb-14">
-            <div>
-              <p class="font-doodle font-bold text-lg text-[#E65343] rotate-[-1deg]">pinned, taped &amp; ready to open</p>
-              <h2 class="font-hand text-6xl sm:text-7xl lg:text-8xl font-bold leading-none mt-2">Featured projects</h2>
-            </div>
-            <p class="font-hand text-3xl text-[#55554F] max-w-xs leading-tight rotate-1">Five projects, fresh from the desk.</p>
-          </div>
+        <!-- C. SELECTED WORK SECTION (id="case-studies") -->
+        <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-            <article onclick="showCaseStudyView()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCaseStudyView(); }" tabindex="0" role="button" aria-label="Open Tracto Mobile Application Case Study" class="project-card tilt-left group relative cursor-pointer bg-[#FFFDF7] ink-card p-4 sm:p-5 focus:outline-none">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="w-full rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#0f2d25] bg-[#dff7ef]">
-                <img src="important.jpg" alt="Tracto Showcase" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" onerror="this.parentElement.innerHTML='<div class=\'text-[#0f2d25] font-bold text-center py-20 px-6\'>Tracto UI Showcase Poster</div>'" />
-              </div>
-              <div class="px-2 sm:px-3 pt-6 pb-3">
-                <div class="flex items-center justify-between gap-4">
-                  <p class="font-doodle font-bold uppercase tracking-wide text-[#0A6B57]">01 · Mobile Application · Healthcare</p><span class="text-3xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            Selected work
+          </h2>
+
+          <div class="border-t border-neutral-900/10">
+
+            <!-- ROW 01: TRACTO (FULLY ACTIVE & CLICKABLE) -->
+            <article
+              onclick="showCaseStudyView()"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCaseStudyView(); }"
+              tabindex="0"
+              role="button"
+              aria-label="Open Tracto Mobile Application Case Study"
+              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">01</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#0A4F44] mb-3">
+                    Mobile Application &middot; Healthcare
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#0A4F44] transition-colors">
+                    Tracto
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A calm, human-first health companion that empowers patients and elevates task success metrics from 40% to 81%.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Case Study
+                  </p>
                 </div>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">Tracto</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A calm, human-first health companion that empowers patients and elevates task success metrics from 40% to 81%.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#CCFBF1] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</p>
+                <div class="md:col-span-4">
+                  <div class="w-full rounded-xl overflow-hidden border border-[#0f2d25]/15 shadow-sm">
+                    <img
+                      src="important.jpg"
+                      alt="Tracto Showcase"
+                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                      onerror="this.parentElement.innerHTML='<div class=\'text-white font-semibold text-center\'>Tracto UI Showcase Poster</div>'"
+                    />
+                  </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#0A4F44]">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <article onclick="showClearSpendView()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showClearSpendView(); }" tabindex="0" role="button" aria-label="Open ClearSpend Fintech Mobile Application Case Study" class="project-card tilt-right group relative cursor-pointer bg-[#FFFDF7] ink-card p-4 sm:p-5 focus:outline-none lg:mt-14">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="w-full rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#0B1B3A] bg-[#EEF4FF]">
-                <img src="clearspend-poster.svg" alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" />
-              </div>
-              <div class="px-2 sm:px-3 pt-6 pb-3">
-                <div class="flex items-center justify-between gap-4">
-                  <p class="font-doodle font-bold uppercase tracking-wide text-[#245BDB]">02 · Mobile Application · Fintech</p><span class="text-3xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
+            <!-- ROW 02: CLEARSPEND (FULLY ACTIVE & CLICKABLE) -->
+            <article
+              onclick="showClearSpendView()"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showClearSpendView(); }"
+              tabindex="0"
+              role="button"
+              aria-label="Open ClearSpend Fintech Mobile Application Case Study"
+              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">02</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#2F6BFF] mb-3">
+                    Mobile Application &middot; Fintech
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#2F6BFF] transition-colors">
+                    ClearSpend
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.
+                  </p>
+                  <p class="mt-4 flex flex-wrap items-center gap-3">
+                    <span class="inline-block bg-[#0A1730] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Concept Project</span>
+                    <span class="text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">2026</span>
+                  </p>
                 </div>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">ClearSpend</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.</p>
-                <p class="mt-5 flex flex-wrap gap-3"><span class="font-doodle font-bold bg-[#0A1730] text-white border-2 border-[#20201E] rounded-full px-4 py-1">Concept Project</span><span class="font-doodle font-bold bg-[#DCE9FF] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</span></p>
+                <div class="md:col-span-4">
+                  <div class="w-full rounded-xl overflow-hidden border border-[#0B1B3A]/25 shadow-sm">
+                    <img
+                      src="clearspend-poster.svg"
+                      alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
+                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#2F6BFF]">&#8599;</span>
+                </div>
               </div>
             </article>
-
-            <article aria-disabled="true" class="project-card tilt-right relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+            <!-- ROW 03: HEALTHPORTAL WEB -->
+            <article
+              aria-disabled="true"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">03</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Website Redesign
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    HealthPortal Web
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A comprehensive redesign aimed at improving usability and clarifying complex patient data.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Q4 2026
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row: Category & Coming Soon Pill -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-sky-400/90 font-medium">Web Platform</span>
@@ -539,18 +420,37 @@
 
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
-              <div class="px-2 sm:px-3 pt-6 pb-3">
-                <p class="font-doodle font-bold uppercase tracking-wide text-[#39728C]">03 · Website Redesign</p>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">HealthPortal Web</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A comprehensive redesign aimed at improving usability and clarifying complex patient data.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#FFF1A8] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Q4 2026</p>
+              </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <article aria-disabled="true" class="project-card tilt-left relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none lg:mt-14">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+            <!-- ROW 04: PULSE FLOW -->
+            <article
+              aria-disabled="true"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">04</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Mobile Application
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    Pulse Flow
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    Streamlined daily biometric logging designed for fast 15-second interactions.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Q1 2027
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-rose-400/90 font-medium">iOS &amp; WatchOS</span>
@@ -578,19 +478,37 @@
 
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
-              <div class="px-2 sm:px-3 pt-6 pb-3">
-                <p class="font-doodle font-bold uppercase tracking-wide text-[#B5444C]">04 · Mobile Application</p>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">Pulse Flow</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">Streamlined daily biometric logging designed for fast 15-second interactions.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#FFD6D0] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Q1 2027</p>
+              </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <article aria-disabled="true" class="project-card tilt-soft relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none lg:col-span-2">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+            <!-- ROW 05: VITALIS DESIGN SYSTEM -->
+            <article
+              aria-disabled="true"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">05</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Design System
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    Vitalis Design System
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Tokens v2.0
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-400/90 font-medium">Design System</span>
@@ -618,95 +536,143 @@
 
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
-                <div class="px-2 sm:px-3 py-3">
-                  <p class="font-doodle font-bold uppercase tracking-wide text-[#0A6B57]">05 · Design System</p>
-                  <h3 class="font-hand text-6xl font-bold leading-none mt-3">Vitalis Design System</h3>
-                  <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.</p>
-                  <p class="mt-5 inline-block font-doodle font-bold bg-[#DDF3D8] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Tokens v2.0</p>
+              </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
                 </div>
               </div>
             </article>
+
+
           </div>
         </section>
 
-        <!-- D. FROM MY SKETCHBOOK -->
-        <section id="what-i-do" class="scroll-mt-32 max-w-7xl mx-auto w-full px-4 sm:px-8 py-16 sm:py-24">
-          <div class="text-center max-w-3xl mx-auto">
-            <p class="font-doodle text-lg font-bold text-[#39728C]">notes to self, now pinned in public</p>
-            <h2 class="font-hand text-6xl sm:text-7xl lg:text-8xl font-bold leading-none mt-3 -rotate-1">From my sketchbook</h2>
-            <p class="font-hand text-3xl text-[#55554F] mt-4">The things I practise, prototype and keep improving.</p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-12 sm:mt-16">
-            <article class="sketch-note relative bg-[#FFF1A8] ink-card p-7 pt-10 rotate-[-1.4deg]"><span class="pin" aria-hidden="true"></span><p class="font-doodle font-bold text-[#8A6D00]">01</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Product design</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">End-to-end UX and UI for digital products — from research and flows to polished Figma interfaces that turn complex, high-friction problems into calm, intuitive experiences.</p></article>
-            <article class="sketch-note relative bg-[#CDEFF2] ink-card p-7 pt-10 rotate-[1.2deg] lg:mt-8"><span class="pin" style="background:#57B8FF" aria-hidden="true"></span><p class="font-doodle font-bold text-[#39728C]">02</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Design systems</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">Tokenized, WCAG-compliant design systems with reusable components — like the Vitalis Design System — built for accessibility, consistency and rapid feature delivery.</p></article>
-            <article class="sketch-note relative bg-[#FFD6D0] ink-card p-7 pt-10 rotate-[-0.8deg]"><span class="pin" style="background:#FFD34D" aria-hidden="true"></span><p class="font-doodle font-bold text-[#A33B32]">03</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Interface direction</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">Setting the visual direction of an interface — typography, layout, colour and micro-interactions — so every screen feels clear, consistent and unmistakably part of the same product.</p></article>
-            <article class="sketch-note relative bg-[#DDF3D8] ink-card p-7 pt-10 rotate-[1.1deg]"><span class="pin" style="background:#2A9D8F" aria-hidden="true"></span><p class="font-doodle font-bold text-[#28705B]">04</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Web design</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">Responsive website design and redesign, like the HealthPortal Web project — clarifying complex information and making it easy to find, understand and act on, on any screen size.</p></article>
-            <article class="sketch-note relative bg-[#E7DCFF] ink-card p-7 pt-10 rotate-[-1.2deg] lg:mt-8"><span class="pin" style="background:#8B7CF6" aria-hidden="true"></span><p class="font-doodle font-bold text-[#6753B8]">05</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Brand identity</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">The foundations of product branding — logo direction, colour and typography — carried through into the interface, so a product looks and feels like one coherent brand.</p></article>
-            <article class="sketch-note relative bg-[#FFE5B4] ink-card p-7 pt-10 rotate-[0.9deg]"><span class="pin" style="background:#FF6B57" aria-hidden="true"></span><p class="font-doodle font-bold text-[#96600A]">06</p><h3 class="font-hand text-5xl font-bold leading-none mt-2">Advisory &amp; audits</h3><p class="mt-4 text-lg leading-relaxed text-[#3F3F3B]">Structured UX reviews and heuristic audits of existing interfaces — pinpointing friction, jargon and cognitive load, with practical recommendations for what to fix first.</p></article>
-          </div>
-        </section>
+        <!-- D2. WHAT I DO SECTION (id="what-i-do") -->
+        <section id="what-i-do" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
 
-        <!-- E. INTERACTIVE CIRCLES -->
-        <section id="surprise" class="scroll-mt-32 max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 sm:py-24 text-center">
-          <p class="font-doodle font-bold text-lg text-[#E65343]">a tiny interactive corner</p>
-          <h2 class="font-hand text-6xl sm:text-7xl font-bold leading-none mt-3 rotate-[-0.6deg]">Click the circles for a surprise!</h2>
-          <div id="surprise-bubble" class="speech-bubble relative max-w-2xl mx-auto mt-12 bg-[#FFFDF7] ink-card px-6 sm:px-10 py-7 text-xl sm:text-2xl font-semibold leading-relaxed" role="status" aria-live="polite">Pick a circle and I&rsquo;ll share a little note from my desk.</div>
-          <div class="flex flex-wrap justify-center items-center gap-5 sm:gap-7 mt-16" aria-label="Surprise message circles">
-            <button type="button" class="surprise-circle w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#20201E] bg-[#FF6B57] cursor-pointer" onclick="showSurprise(0)" aria-label="Reveal surprise note one" aria-pressed="false"></button>
-            <button type="button" class="surprise-circle w-14 h-14 sm:w-[4.5rem] sm:h-[4.5rem] rounded-full border-2 border-[#20201E] bg-[#1CB08A] cursor-pointer sm:mt-10" onclick="showSurprise(1)" aria-label="Reveal surprise note two" aria-pressed="false"></button>
-            <button type="button" class="surprise-circle w-[4.5rem] h-[4.5rem] sm:w-24 sm:h-24 rounded-full border-2 border-[#20201E] bg-[#FFD34D] cursor-pointer" onclick="showSurprise(2)" aria-label="Reveal surprise note three" aria-pressed="false"></button>
-            <button type="button" class="surprise-circle w-14 h-14 sm:w-[4.5rem] sm:h-[4.5rem] rounded-full border-2 border-[#20201E] bg-[#57B8FF] cursor-pointer sm:mt-10" onclick="showSurprise(3)" aria-label="Reveal surprise note four" aria-pressed="false"></button>
-            <button type="button" class="surprise-circle w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#20201E] bg-[#8B7CF6] cursor-pointer" onclick="showSurprise(4)" aria-label="Reveal surprise note five" aria-pressed="false"></button>
-          </div>
-          <p class="font-hand text-3xl text-[#55554F] mt-9">Psst — click the same circle again to keep cycling.</p>
-        </section>
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            What I do
+          </h2>
 
-        <script>
-          const deskSurpriseMessages = [
-            'I turn complex, high-friction digital problems into calm, intuitive, accessible experiences — where empathy isn’t optional, and the next step always feels natural.',
-            'Currently designing: ClearSpend — a UPI-first expense tracker concept.',
-            'Figma is my sketchbook that talks back.',
-            'Open to fresher UI/UX roles — say hello!',
-            'Tracto is my reminder that health products should feel calm, human and easy to trust.'
-          ];
-          let deskSurpriseIndex = -1;
-          function showSurprise(index) {
-            const bubble = document.getElementById('surprise-bubble');
-            if (!bubble) return;
-            deskSurpriseIndex = deskSurpriseIndex === index
-              ? (index + 1) % deskSurpriseMessages.length
-              : index;
-            bubble.textContent = deskSurpriseMessages[deskSurpriseIndex];
-            document.querySelectorAll('.surprise-circle').forEach((circle, circleIndex) => {
-              const active = circleIndex === deskSurpriseIndex;
-              circle.classList.toggle('is-active', active);
-              circle.setAttribute('aria-pressed', active ? 'true' : 'false');
-            });
-            bubble.classList.remove('bubble-pop');
-            void bubble.offsetWidth;
-            bubble.classList.add('bubble-pop');
-          }
-        </script>
-
-        <!-- F. ABOUT -->
-        <section id="about-me" class="scroll-mt-32 max-w-7xl mx-auto w-full px-4 sm:px-8 py-16 sm:py-24">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            <div class="lg:col-span-4 relative max-w-sm mx-auto lg:mx-0 w-full">
-              <div class="relative bg-[#FFFDF7] ink-card p-3 pb-8 rotate-[-2.2deg]">
-                <span class="tape" aria-hidden="true"></span>
-                <div class="w-full aspect-[4/5] overflow-hidden border-2 border-[#20201E] rounded-[18px_7px_20px_9px/9px_20px_8px_18px] bg-[#EDEDED]">
-                  <img src="img.jpg" alt="Prashant" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-[#55554F] font-doodle font-bold\'>Photo</div>'" />
-                </div>
-                <p class="font-hand text-3xl text-center mt-4">Prashant · UI/UX Designer · India</p>
-              </div>
-              <div class="absolute -bottom-7 -right-3 sm:right-4 bg-[#FFD34D] ink-card px-4 py-2 font-doodle font-bold rotate-3">that&rsquo;s me ↑</div>
+          <div class="border-t border-neutral-900/10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">01</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Product design</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                End-to-end UX and UI for digital products — from research and flows to polished Figma interfaces that turn complex, high-friction problems into calm, intuitive experiences.
+              </p>
             </div>
-            <div class="lg:col-span-8">
-              <p class="font-doodle font-bold text-lg text-[#E65343]">a note about the human behind the desk</p>
-              <h2 class="font-hand text-6xl sm:text-7xl lg:text-8xl font-bold leading-none mt-3">About Me</h2>
-              <div class="mt-8 text-lg sm:text-xl text-[#3F3F3B] leading-relaxed space-y-6 bg-[#FFFDF7]/70 border-2 border-dashed border-[#20201E]/50 rounded-[24px_9px_26px_11px/11px_26px_10px_24px] p-6 sm:p-8">
-                <p>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">02</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Design systems</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Tokenized, WCAG-compliant design systems with reusable components — like the Vitalis Design System — built for accessibility, consistency and rapid feature delivery.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">03</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Interface direction</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Setting the visual direction of an interface — typography, layout, colour and micro-interactions — so every screen feels clear, consistent and unmistakably part of the same product.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">04</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Web design</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Responsive website design and redesign, like the HealthPortal Web project — clarifying complex information and making it easy to find, understand and act on, on any screen size.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">05</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Brand identity</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                The foundations of product branding — logo direction, colour and typography — carried through into the interface, so a product looks and feels like one coherent brand.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">06</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Advisory &amp; audits</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Structured UX reviews and heuristic audits of existing interfaces — pinpointing friction, jargon and cognitive load, with practical recommendations for what to fix first.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- D3. DESIGN PHILOSOPHY STATEMENT -->
+        <section class="max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-6">
+            Design Philosophy
+          </p>
+          <p class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-[1.15] text-neutral-950 max-w-5xl">
+            I turn complex, high-friction digital problems into <span class="underline decoration-neutral-300 decoration-2 underline-offset-[6px]">calm, intuitive, accessible</span> experiences — where empathy isn&rsquo;t optional, and the next step always feels natural.
+          </p>
+        </section>
+
+        <!-- D4. THINGS WORTH SHARING -->
+        <section class="max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            Things worth sharing
+          </h2>
+
+          <div class="border-t border-neutral-900/10">
+
+            <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">ClearSpend — Figma prototype</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">The full ClearSpend concept in Figma — 13 frames with a clickable prototype flow. Concept project.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+            <a href="assets/case-studies/clearspend-case-study.pdf" download class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">ClearSpend — Case study PDF</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">The complete written case study — research, process and design decisions, as a PDF download.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">LinkedIn</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">Connect with me on LinkedIn — projects, progress and updates.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- D. ABOUT ME SECTION (id="about-me") -->
+        <section id="about-me" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24 border-t border-neutral-900/10">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-4">
+            About
+          </p>
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            About Me
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+
+            <!-- Photo -->
+            <div class="md:col-span-4">
+              <div class="w-full max-w-xs aspect-[4/5] rounded-xl overflow-hidden border border-neutral-900/10 shadow-sm">
+                <img
+                  src="img.jpg"
+                  alt="Prashant"
+                  class="w-full h-full object-cover"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-neutral-100 text-neutral-400 text-xs\'>Photo</div>'"
+                />
+              </div>
+            </div>
+
+            <!-- Copy (his existing About text) -->
+            <div class="md:col-span-8 text-base sm:text-lg text-neutral-600 leading-relaxed space-y-6">
+              <p>
                 I'm Prashant, a UI/UX Designer and Product Thinker dedicated to turning complex, high-friction digital problems into calm, intuitive, and accessible user experiences. My journey into product design grew from a deep fascination with how people make decisions under pressure—and how thoughtful interface architecture can replace user anxiety with effortless clarity.
               </p>
               <p>
@@ -715,65 +681,74 @@
               <p>
                 From architecting scalable, WCAG-compliant design systems and micro-interactions in Figma to collaborating closely with engineering teams during implementation, I focus on bridging human needs with measurable business outcomes.
               </p>
-              </div>
             </div>
+
           </div>
         </section>
 
-        <!-- G. THINGS WORTH SHARING -->
-        <section id="sharing" class="scroll-mt-32 max-w-6xl mx-auto w-full px-4 sm:px-8 py-16 sm:py-24">
-          <div class="text-center">
-            <p class="font-doodle font-bold text-lg text-[#39728C]">take a little something with you</p>
-            <h2 class="font-hand text-6xl sm:text-7xl lg:text-8xl font-bold leading-none mt-3 rotate-[0.5deg]">Things worth sharing</h2>
-          </div>
-          <div class="mt-12 space-y-5">
-            <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="sharing-row group flex items-center justify-between gap-6 bg-[#FFFDF7] ink-card px-6 sm:px-8 py-6 rotate-[-0.35deg]">
-              <div><p class="font-doodle font-bold text-[#245BDB]">01 · Figma</p><h3 class="font-hand text-4xl sm:text-5xl font-bold leading-none mt-1">ClearSpend — Figma prototype</h3><p class="mt-2 text-base sm:text-lg text-[#55554F]">The full ClearSpend concept in Figma — 13 frames with a clickable prototype flow. Concept project.</p></div><span class="text-4xl shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
-            </a>
-            <a href="assets/case-studies/clearspend-case-study.pdf" download class="sharing-row group flex items-center justify-between gap-6 bg-[#FFF1A8] ink-card px-6 sm:px-8 py-6 rotate-[0.35deg]">
-              <div><p class="font-doodle font-bold text-[#8A6D00]">02 · PDF</p><h3 class="font-hand text-4xl sm:text-5xl font-bold leading-none mt-1">ClearSpend — Case study PDF</h3><p class="mt-2 text-base sm:text-lg text-[#55554F]">The complete written case study — research, process and design decisions, as a PDF download.</p></div><span class="text-4xl shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↓</span>
-            </a>
-            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="sharing-row group flex items-center justify-between gap-6 bg-[#CDEFF2] ink-card px-6 sm:px-8 py-6 rotate-[-0.25deg]">
-              <div><p class="font-doodle font-bold text-[#39728C]">03 · LinkedIn</p><h3 class="font-hand text-4xl sm:text-5xl font-bold leading-none mt-1">LinkedIn</h3><p class="mt-2 text-base sm:text-lg text-[#55554F]">Connect with me on LinkedIn — projects, progress and updates.</p></div><span class="text-4xl shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </section>
       </main>
 
-      <!-- H. FOOTER -->
-      <footer id="contact" class="scroll-mt-32 relative mt-8">
-        <div class="marquee-shell border-y-2 border-[#20201E] bg-[#FFD34D] py-3 sm:py-4 -rotate-1 scale-[1.02]" aria-label="Prashant Kumar">
-          <div class="marquee-track font-hand text-5xl sm:text-7xl font-bold leading-none">
-            <span class="pr-4">Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳&nbsp;</span>
-            <span class="pr-4" aria-hidden="true">Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳ Prashant ✳ Kumar ✳&nbsp;</span>
+      <!-- E. FOOTER / CONTACT SECTION (id="contact") -->
+      <footer id="contact" class="scroll-mt-24 border-t border-neutral-900/10 bg-[#fafaf9]">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-6">
+            Open for Fresher UI/UX Designer roles
+          </p>
+
+          <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.98] text-neutral-950">
+            Let&rsquo;s work<br />together
+          </h2>
+
+          <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-4">
+            <a
+              href="mailto:prashantkumar.pr501@gmail.com"
+              class="btn-lift bg-neutral-950 text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-neutral-800"
+            >
+              prashantkumar.pr501@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prashant-kumar-89b822142/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-neutral-950 hover:text-neutral-950 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="Prashant_CV.pdf"
+              download
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-neutral-950 hover:text-neutral-950 transition-colors"
+            >
+              Resume
+            </a>
           </div>
-        </div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-8 pt-20 sm:pt-24 pb-12 text-center">
-          <p class="font-doodle text-xl font-bold text-[#E65343]">Got a role, a project, or a messy problem that needs untangling?</p>
-          <h2 class="font-hand text-6xl sm:text-8xl font-bold leading-[0.9] mt-4 -rotate-1">Let&rsquo;s make something clear.</h2>
-
-          <a href="mailto:prashantkumar.pr501@gmail.com" class="inline-block mt-10 font-hand font-bold leading-[1.05] text-[clamp(1.55rem,5vw,3.8rem)] wavy-link break-all">
-            prashantkumar.pr501@gmail.com
-          </a>
-
-          <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="ink-button bg-[#57B8FF] px-7 py-3 font-doodle text-xl font-bold">LinkedIn ↗</a>
-            <a href="Prashant_CV.pdf" download class="ink-button bg-[#FF6B57] text-white px-7 py-3 font-doodle text-xl font-bold">Resume ↓</a>
-            <button type="button" onclick="scrollToSection('hero')" class="ink-button bg-[#FFFDF7] px-7 py-3 font-doodle text-xl font-bold cursor-pointer">Back to the desk ↑</button>
+          <div class="mt-16 sm:mt-20 pt-6 border-t border-neutral-900/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <p class="text-xs text-neutral-400">
+              &copy; 2026 Prashant. All rights reserved.
+            </p>
+            <p class="text-xs text-neutral-400 flex flex-wrap items-center gap-x-4 gap-y-1">
+              <span>Prashant Kumar — UI/UX Designer &middot; India</span>
+              <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-neutral-300 hover:text-neutral-950 hover:decoration-neutral-950 transition-colors">LinkedIn</a>
+              <a href="mailto:prashantkumar.pr501@gmail.com" class="underline underline-offset-4 decoration-neutral-300 hover:text-neutral-950 hover:decoration-neutral-950 transition-colors">Email</a>
+            </p>
           </div>
 
-          <div class="mt-16 pt-6 border-t-2 border-dashed border-[#20201E]/40 flex flex-col md:flex-row items-center justify-between gap-3 text-sm sm:text-base text-[#55554F]">
-            <p>&copy; 2026 Prashant Kumar. All rights reserved.</p>
-            <p class="font-doodle font-bold text-[#20201E]">Drawn &amp; built by Prashant Kumar — Desk last tidied November 2026</p>
-          </div>
         </div>
       </footer>
+
     </div>
   </div>
 
 <!-- END OF #homepage-view -->
 
+
+  <!-- =========================================================================
+       VIEW 2: ISOLATED TRACTO CASE STUDY VIEW (#casestudy-view)
+       Isolated Mint & Teal healthcare theme (bg-[#f4faf7] text-neutral-900).
+       Zero transition delays on container so view switches are instantaneous.
+       ========================================================================= -->
   <div id="casestudy-view" class="hidden min-h-screen">
 <style data-cs-style="csTracto">
 #casestudy-view{background-color:#FFF8EC!important;background-image:radial-gradient(rgba(32,32,30,.055) 1px,transparent 1.15px),linear-gradient(rgba(32,32,30,.024) 1px,transparent 1px);background-size:24px 24px,100% 34px;color:#20201E!important;overflow-x:clip}
