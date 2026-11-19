@@ -39,6 +39,14 @@
               lightmint: '#CCFBF1',
               surface: '#f4faf7',
               coral: '#ff5733',
+            },
+            clearspend: {
+              navy: '#0A1730',
+              deep: '#0B1B3A',
+              blue: '#2F6BFF',
+              bluedark: '#245BDB',
+              sky: '#EEF4FF',
+              money: '#22C55E',
             }
           }
         }
@@ -298,7 +306,7 @@
               class="cursor-pointer group flex flex-col focus:outline-none"
             >
               <!-- Image Canvas (Top) -->
-              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
+              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow border border-[#0f2d25]/15">
   <img 
     src="important.jpg" 
     alt="Tracto Showcase" 
@@ -312,7 +320,7 @@
                 <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
                   MOBILE APPLICATION
                 </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0E7C66] transition-colors">
+                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0A4F44] transition-colors">
                   Tracto
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
@@ -480,35 +488,13 @@
               aria-label="Open ClearSpend Fintech Mobile Application Case Study"
               class="cursor-pointer group flex flex-col focus:outline-none"
             >
-              <!-- Full-Frame 16:9 Canvas Matching Other Cards -->
-              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#0e7c66] via-[#0b3d31] to-[#06231c] border border-neutral-200/60 shadow-sm group-hover:shadow-md transition-shadow flex flex-col justify-between p-5 sm:p-6">
-                <!-- Top Row: Category & Concept Pill -->
-                <div class="flex items-center justify-between z-10">
-                  <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-200/90 font-medium">Fintech &bull; UPI</span>
-                  <span class="bg-white/10 backdrop-blur-md text-neutral-200 border border-white/15 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                    Concept Project
-                  </span>
-                </div>
-
-                <!-- Center Graphic -->
-                <div class="my-auto text-center z-10 py-0.5">
-                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-white/5 border border-white/10 text-emerald-300 mb-1.5 shadow-inner">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                  </div>
-                  <h4 class="text-white font-bold text-base sm:text-lg tracking-tight">ClearSpend</h4>
-                  <p class="text-neutral-300 text-xs mt-0.5 max-w-xs mx-auto">One clear number: what is safe to spend today</p>
-                </div>
-
-                <!-- Bottom Row: Spec Meta -->
-                <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-neutral-300 z-10 border-t border-white/10 pt-2">
-                  <span>2026</span>
-                  <span>Mobile App &bull; Figma Prototype</span>
-                </div>
-
-                <!-- Background Subtle Glow -->
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"></div>
+              <!-- Poster Visual (16:9, fintech navy theme) -->
+              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow border border-[#0B1B3A]/25">
+                <img
+                  src="clearspend-poster.svg"
+                  alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
+                  class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                />
               </div>
 
               <!-- Text Block (Bottom, Left-aligned) -->
@@ -516,7 +502,7 @@
                 <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
                   MOBILE APPLICATION / FINTECH
                 </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0E7C66] transition-colors">
+                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#2F6BFF] transition-colors">
                   ClearSpend
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
@@ -1127,58 +1113,58 @@
 
   <!-- =========================================================================
        CLEARSPEND CASE STUDY VIEW (#clearspend-view)
-       Concept project. Light minimalist theme matching the homepage, with a
-       deep-green fintech hero in the same family as the Tracto view.
+       Concept project. Light sky-tinted theme matching the homepage, with a
+       midnight-navy fintech hero — a blue finance theme, distinct from Tracto’s teal health theme.
        ========================================================================= -->
-  <div id="clearspend-view" class="hidden bg-[#f7f8f7] text-neutral-900 min-h-screen">
+  <div id="clearspend-view" class="hidden bg-[#f4f7ff] text-neutral-900 min-h-screen">
 
     <!-- STICKY SUB-NAV BAR -->
-    <header class="bg-[#06231c] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
+    <header class="bg-[#0A1730] text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
       <button
         type="button"
         onclick="showHomeView()"
-        class="bg-[#0e7c66] hover:bg-[#0a5f4f] text-white font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0 cursor-pointer"
+        class="bg-[#2F6BFF] hover:bg-[#245BDB] text-white font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0 cursor-pointer"
       >
         &larr; Back to Home
       </button>
 
       <div class="hidden md:flex items-center gap-6 lg:gap-8 overflow-x-auto scrollbar-none">
-        <button type="button" onclick="document.getElementById('cs-problem').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-emerald-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">THE PROBLEM</button>
-        <button type="button" onclick="document.getElementById('cs-research').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-emerald-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">RESEARCH</button>
-        <button type="button" onclick="document.getElementById('cs-process').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-emerald-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">DESIGN PROCESS</button>
-        <button type="button" onclick="document.getElementById('cs-concept').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-emerald-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">SAFE TO SPEND TODAY</button>
+        <button type="button" onclick="document.getElementById('cs-problem').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-sky-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">THE PROBLEM</button>
+        <button type="button" onclick="document.getElementById('cs-research').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-sky-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">RESEARCH</button>
+        <button type="button" onclick="document.getElementById('cs-process').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-sky-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">DESIGN PROCESS</button>
+        <button type="button" onclick="document.getElementById('cs-concept').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-sky-300 transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">SAFE TO SPEND TODAY</button>
       </div>
 
       <a
         href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-white hover:bg-emerald-50 text-[#06231c] font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
+        class="bg-white hover:bg-[#EEF4FF] text-[#0A1730] font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
       >
         Figma File &nearr;
       </a>
     </header>
 
     <!-- HERO -->
-    <section class="bg-[#06231c] text-white py-16 sm:py-24 border-b border-white/10">
+    <section class="bg-[#0A1730] text-white py-16 sm:py-24 border-b border-white/10">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
           <div class="lg:col-span-7 space-y-5">
-            <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-300">Mobile Application / Fintech &mdash; Concept Project</p>
+            <p class="font-mono text-xs font-bold uppercase tracking-widest text-sky-300">Mobile Application / Fintech &mdash; Concept Project</p>
             <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]">
               ClearSpend: Safe to spend, today.
             </h1>
-            <p class="text-emerald-50/90 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p class="text-sky-100/90 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
               A UPI-first expense tracker for young salaried users in India, designed around one clear
               number &mdash; what is safe to spend today &mdash; instead of backward-looking charts that
               only explain a low balance after the money is gone.
             </p>
             <div class="flex flex-wrap gap-3 pt-2">
-              <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#0e7c66] hover:bg-[#0a5f4f] text-white font-bold text-sm transition-colors">View in Figma &nearr;</a>
-              <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-white hover:bg-emerald-50 text-[#06231c] font-bold text-sm transition-colors">Download Case Study (PDF)</a>
+              <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2F6BFF] hover:bg-[#245BDB] text-white font-bold text-sm transition-colors">View in Figma &nearr;</a>
+              <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-white hover:bg-[#EEF4FF] text-[#0A1730] font-bold text-sm transition-colors">Download Case Study (PDF)</a>
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-emerald-100/80">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-sky-100/80">
               <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
               <div><strong class="text-white block mb-0.5">ROLE</strong>UI/UX Designer (Fresher)</div>
               <div><strong class="text-white block mb-0.5">TYPE</strong>Concept Project</div>
@@ -1188,23 +1174,23 @@
 
           <!-- Today Screen Preview Card (example UI copy) -->
           <div class="lg:col-span-5">
-            <div class="rounded-3xl bg-[#0b3d31] p-6 sm:p-8 border border-white/15 shadow-2xl">
+            <div class="rounded-3xl bg-[#0B1B3A] p-6 sm:p-8 border border-white/15 shadow-2xl">
               <div class="flex items-center justify-between mb-4">
                 <div>
                   <span class="font-display font-bold text-white text-base block">Today</span>
-                  <span class="font-mono text-[11px] text-emerald-200">Example UI copy from the prototype</span>
+                  <span class="font-mono text-[11px] text-sky-200">Example UI copy from the prototype</span>
                 </div>
-                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-400/20 text-emerald-200">Prototype</span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-sky-400/20 text-sky-200">Prototype</span>
               </div>
-              <div class="bg-[#0e7c66] rounded-2xl p-5 border border-white/10 mb-4">
-                <span class="font-mono text-[11px] text-emerald-100 block mb-1">SAFE TO SPEND TODAY</span>
-                <span class="font-display font-extrabold text-4xl text-white">&#8377;1,240</span>
-                <span class="text-xs text-emerald-50 block mt-1">On track &mdash; &#8377;18,650 left for the next 15 days</span>
+              <div class="bg-[#2F6BFF] rounded-2xl p-5 border border-white/10 mb-4">
+                <span class="font-mono text-[11px] text-sky-100 block mb-1">SAFE TO SPEND TODAY</span>
+                <span class="font-display font-extrabold text-4xl text-[#22C55E]">&#8377;1,240</span>
+                <span class="text-xs text-sky-100 block mt-1">On track &mdash; &#8377;18,650 left for the next 15 days</span>
               </div>
               <div class="space-y-3 text-white text-sm">
                 <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span>Swiggy</span><span class="font-semibold">-&#8377;420</span></div>
                 <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span>Uber</span><span class="font-semibold">-&#8377;185</span></div>
-                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span>3 transactions need review</span><span class="font-semibold text-emerald-300">Review &rarr;</span></div>
+                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span>3 transactions need review</span><span class="font-semibold text-sky-300">Review &rarr;</span></div>
               </div>
             </div>
           </div>
@@ -1216,10 +1202,19 @@
     <!-- MAIN CONTENT -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
+      <!-- ClearSpend Poster -->
+      <div class="w-full rounded-3xl overflow-hidden shadow-sm border border-[#0B1B3A]/15 mb-20">
+        <img
+          src="clearspend-poster.svg"
+          alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount of ₹1,240 and recent UPI transactions"
+          class="w-full h-auto block"
+        />
+      </div>
+
       <!-- 01. THE PROBLEM -->
       <section id="cs-problem" class="scroll-mt-24 mb-20 space-y-6">
         <div>
-          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0e7c66] block mb-2">01 &mdash; The Problem</span>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">01 &mdash; The Problem</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">Paying is effortless. Seeing where it went is not.</h2>
         </div>
         <p class="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-3xl">
@@ -1248,7 +1243,7 @@
       <!-- 02. RESEARCH -->
       <section id="cs-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
         <div>
-          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0e7c66] block mb-2">02 &mdash; Research Highlights</span>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">02 &mdash; Research Highlights</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">Secondary research, from sources anyone can check</h2>
         </div>
         <p class="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-3xl">
@@ -1257,9 +1252,9 @@
           archetypes synthesised from these survey patterns.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-[#06231c] text-white rounded-3xl p-6 shadow-sm">
+          <div class="bg-[#0A1730] text-white rounded-3xl p-6 shadow-sm">
             <span class="font-display font-extrabold text-3xl block mb-2">~228 billion</span>
-            <p class="text-sm text-emerald-50/85 leading-relaxed">UPI transactions in calendar year 2025 (NPCI data), with 21.63 billion in December 2025 alone &mdash; UPI is now the default way India pays.</p>
+            <p class="text-sm text-sky-100/85 leading-relaxed">UPI transactions in calendar year 2025 (NPCI data), with 21.63 billion in December 2025 alone &mdash; UPI is now the default way India pays.</p>
           </div>
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
             <h3 class="font-display text-lg font-bold text-neutral-950 mb-2">Financial pressure is real</h3>
@@ -1275,24 +1270,24 @@
       <!-- 03. DESIGN PROCESS -->
       <section id="cs-process" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
         <div>
-          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0e7c66] block mb-2">03 &mdash; Design Process</span>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">03 &mdash; Design Process</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">From blur to one number, in five moves</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
-            <span class="font-mono text-xs uppercase text-[#0e7c66] font-bold">Discover &amp; Define</span>
+            <span class="font-mono text-xs uppercase text-[#2F6BFF] font-bold">Discover &amp; Define</span>
             <p class="text-sm text-neutral-600 leading-relaxed mt-2">Desk research and competitor audit narrowed the problem to automatic capture, a complete cross-bank picture, and guidance at the moment of spending.</p>
           </div>
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
-            <span class="font-mono text-xs uppercase text-[#0e7c66] font-bold">Information Architecture</span>
+            <span class="font-mono text-xs uppercase text-[#2F6BFF] font-bold">Information Architecture</span>
             <p class="text-sm text-neutral-600 leading-relaxed mt-2">Four tabs only &mdash; Today, Review, Budgets, Insights &mdash; so the daily loop (check, clear, move on) never competes with settings or reports.</p>
           </div>
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
-            <span class="font-mono text-xs uppercase text-[#0e7c66] font-bold">Three Core Flows</span>
+            <span class="font-mono text-xs uppercase text-[#2F6BFF] font-bold">Three Core Flows</span>
             <p class="text-sm text-neutral-600 leading-relaxed mt-2">Consent-first account linking via the Account Aggregator framework, a 60-second review queue for uncertain transactions, and in-flow expense splits that only count your share in your budget.</p>
           </div>
           <div class="bg-white rounded-3xl p-6 border border-neutral-200/70 shadow-sm">
-            <span class="font-mono text-xs uppercase text-[#0e7c66] font-bold">Design &amp; Validation Plan</span>
+            <span class="font-mono text-xs uppercase text-[#2F6BFF] font-bold">Design &amp; Validation Plan</span>
             <p class="text-sm text-neutral-600 leading-relaxed mt-2">13 Figma frames with linked prototype flows. Usability testing is a written 5-person plan with pass marks set in advance &mdash; it has not been run yet, and no results are claimed.</p>
           </div>
         </div>
@@ -1301,7 +1296,7 @@
       <!-- 04. SAFE TO SPEND TODAY -->
       <section id="cs-concept" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-neutral-200">
         <div>
-          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#0e7c66] block mb-2">04 &mdash; The Concept</span>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2F6BFF] block mb-2">04 &mdash; The Concept</span>
           <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-neutral-950">&ldquo;Safe to spend today&rdquo;</h2>
         </div>
         <p class="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-3xl">
@@ -1326,17 +1321,17 @@
           </div>
         </div>
         <div class="flex flex-wrap gap-3 pt-2">
-          <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#0e7c66] hover:bg-[#0a5f4f] text-white font-bold text-sm transition-colors">Open the Figma File &nearr;</a>
-          <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-[#06231c] hover:bg-[#0b3d31] text-white font-bold text-sm transition-colors">Download Full Case Study (PDF)</a>
+          <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2F6BFF] hover:bg-[#245BDB] text-white font-bold text-sm transition-colors">Open the Figma File &nearr;</a>
+          <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-[#0A1730] hover:bg-[#0B1B3A] text-white font-bold text-sm transition-colors">Download Full Case Study (PDF)</a>
         </div>
       </section>
 
       <!-- Bottom Return Banner -->
-      <div class="bg-[#06231c] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
+      <div class="bg-[#0A1730] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
         <div class="space-y-2 max-w-xl">
-          <span class="font-mono text-xs uppercase tracking-widest text-emerald-300">Case Study Complete</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-sky-300">Case Study Complete</span>
           <h3 class="font-display text-2xl sm:text-3xl font-bold">Designed by Prashant Kumar, UI/UX Designer (Fresher).</h3>
-          <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-emerald-100">
+          <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-sky-100">
             <a href="mailto:prashantkumar.pr501@gmail.com" class="underline hover:text-white">prashantkumar.pr501@gmail.com</a>
             <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">LinkedIn &nearr;</a>
           </div>
@@ -1344,7 +1339,7 @@
         <button
           type="button"
           onclick="showHomeView()"
-          class="px-7 py-3.5 rounded-full bg-[#0e7c66] text-white hover:bg-[#0a5f4f] font-bold text-sm transition-colors shadow-md shrink-0 cursor-pointer"
+          class="px-7 py-3.5 rounded-full bg-[#2F6BFF] text-white hover:bg-[#245BDB] font-bold text-sm transition-colors shadow-md shrink-0 cursor-pointer"
         >
           &larr; Back to Home
         </button>
