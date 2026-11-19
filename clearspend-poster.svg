@@ -4,32 +4,32 @@
   <desc id="poster-desc">Poster for ClearSpend, a UPI-first expense tracker concept project. A phone mockup shows the Today screen with a safe-to-spend amount of ₹1,240 and recent UPI transactions.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0B1B3A"/>
-      <stop offset="0.55" stop-color="#0A1730"/>
-      <stop offset="1" stop-color="#060D1F"/>
+      <stop offset="0" stop-color="#0E4A37"/>
+      <stop offset="0.55" stop-color="#0B3D2E"/>
+      <stop offset="1" stop-color="#07271E"/>
     </linearGradient>
     <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#2F6BFF" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#2F6BFF"/>
+      <stop offset="0" stop-color="#12A37C" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#12A37C"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect x="0" y="0" width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1450" cy="60" r="340" fill="#2F6BFF" opacity="0.14"/>
-  <circle cx="120" cy="880" r="260" fill="#2F6BFF" opacity="0.08"/>
-  <circle cx="1450" cy="60" r="200" fill="#2F6BFF" opacity="0.10"/>
+  <circle cx="1450" cy="60" r="340" fill="#12A37C" opacity="0.14"/>
+  <circle cx="120" cy="880" r="260" fill="#12A37C" opacity="0.08"/>
+  <circle cx="1450" cy="60" r="200" fill="#12A37C" opacity="0.10"/>
 
   <!-- Left: wordmark, tagline, chart -->
-  <text x="110" y="150" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" letter-spacing="6" fill="#7FB0FF">FINTECH &#8226; UPI &#8226; MOBILE APP</text>
+  <text x="110" y="150" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" letter-spacing="6" fill="#6EE7B7">FINTECH &#8226; UPI &#8226; MOBILE APP</text>
   <text x="106" y="262" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="bold" fill="#FFFFFF">ClearSpend</text>
-  <text x="110" y="348" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#BFD6FF">Safe to spend <tspan fill="#22C55E">today</tspan></text>
-  <text x="110" y="404" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#D7E4FF">A UPI-first expense tracker for young salaried users in India &#8212;</text>
-  <text x="110" y="442" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#D7E4FF">one clear number instead of backward-looking charts.</text>
+  <text x="110" y="348" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#DFF5EC">Safe to spend <tspan fill="#34D399">today</tspan></text>
+  <text x="110" y="404" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#CDEFE0">A UPI-first expense tracker for young salaried users in India &#8212;</text>
+  <text x="110" y="442" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#CDEFE0">one clear number instead of backward-looking charts.</text>
 
   <!-- Concept pill -->
   <rect x="110" y="486" width="690" height="52" rx="26" fill="#FFFFFF" opacity="0.08"/>
-  <rect x="110" y="486" width="690" height="52" rx="26" fill="none" stroke="#7FB0FF" stroke-opacity="0.55" stroke-width="1.5"/>
+  <rect x="110" y="486" width="690" height="52" rx="26" fill="none" stroke="#6EE7B7" stroke-opacity="0.55" stroke-width="1.5"/>
   <text x="136" y="520" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" letter-spacing="2" fill="#FFFFFF">UPI-FIRST EXPENSE TRACKER &#8212; CONCEPT PROJECT</text>
 
   <!-- Bar chart -->
@@ -39,51 +39,51 @@
     <rect x="290" y="672" width="56" height="88" rx="8" fill="url(#bar)" opacity="0.8"/>
     <rect x="376" y="612" width="56" height="148" rx="8" fill="url(#bar)" opacity="0.9"/>
     <rect x="462" y="576" width="56" height="184" rx="8" fill="url(#bar)"/>
-    <rect x="104" y="760" width="560" height="3" fill="#7FB0FF" opacity="0.4"/>
-    <text x="110" y="806" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#9DB9E8">Spending, made visible &#8212; every morning, in one number</text>
+    <rect x="104" y="760" width="560" height="3" fill="#6EE7B7" opacity="0.4"/>
+    <text x="110" y="806" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#8FD0B4">Spending, made visible &#8212; every morning, in one number</text>
   </g>
 
-  <text x="110" y="862" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#8FA8D8">UI/UX Case Study by Prashant Kumar</text>
+  <text x="110" y="862" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#7FB99E">UI/UX Case Study by Prashant Kumar</text>
 
   <!-- Right: phone mockup (Today screen) -->
   <g>
-    <rect x="1066" y="96" width="368" height="708" rx="52" fill="#04081A" stroke="#2F6BFF" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="1066" y="96" width="368" height="708" rx="52" fill="#04120C" stroke="#12A37C" stroke-opacity="0.55" stroke-width="2"/>
     <rect x="1082" y="112" width="336" height="676" rx="40" fill="#FFFFFF"/>
-    <rect x="1196" y="128" width="108" height="18" rx="9" fill="#0A1730"/>
+    <rect x="1196" y="128" width="108" height="18" rx="9" fill="#0B3D2E"/>
 
-    <text x="1112" y="196" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="bold" fill="#0A1730">Today</text>
+    <text x="1112" y="196" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="bold" fill="#0B3D2E">Today</text>
     <text x="1112" y="224" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#64748B">Tuesday, 18 November</text>
 
     <!-- Safe-to-spend card -->
-    <rect x="1112" y="246" width="276" height="158" rx="20" fill="#0B1B3A"/>
-    <text x="1136" y="284" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="#7FB0FF">SAFE TO SPEND TODAY</text>
-    <text x="1134" y="344" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#22C55E">&#8377;1,240</text>
-    <text x="1136" y="378" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#BFD6FF">On track &#8212; &#8377;18,650 left for 15 days</text>
+    <rect x="1112" y="246" width="276" height="158" rx="20" fill="#0E4A37"/>
+    <text x="1136" y="284" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="#6EE7B7">SAFE TO SPEND TODAY</text>
+    <text x="1134" y="344" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#34D399">&#8377;1,240</text>
+    <text x="1136" y="378" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#DFF5EC">On track &#8212; &#8377;18,650 left for 15 days</text>
 
     <!-- Transaction rows -->
-    <rect x="1112" y="428" width="276" height="58" rx="14" fill="#F4F7FF" stroke="#E2E8F0" stroke-width="1"/>
-    <circle cx="1138" cy="457" r="7" fill="#2F6BFF"/>
-    <text x="1158" y="464" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0A1730">Swiggy</text>
-    <text x="1372" y="464" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0A1730">-&#8377;420</text>
+    <rect x="1112" y="428" width="276" height="58" rx="14" fill="#F2F9F4" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="1138" cy="457" r="7" fill="#12A37C"/>
+    <text x="1158" y="464" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0B3D2E">Swiggy</text>
+    <text x="1372" y="464" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0B3D2E">-&#8377;420</text>
 
-    <rect x="1112" y="498" width="276" height="58" rx="14" fill="#F4F7FF" stroke="#E2E8F0" stroke-width="1"/>
-    <circle cx="1138" cy="527" r="7" fill="#2F6BFF"/>
-    <text x="1158" y="534" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0A1730">Uber</text>
-    <text x="1372" y="534" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0A1730">-&#8377;185</text>
+    <rect x="1112" y="498" width="276" height="58" rx="14" fill="#F2F9F4" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="1138" cy="527" r="7" fill="#12A37C"/>
+    <text x="1158" y="534" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0B3D2E">Uber</text>
+    <text x="1372" y="534" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0B3D2E">-&#8377;185</text>
 
-    <rect x="1112" y="568" width="276" height="58" rx="14" fill="#F4F7FF" stroke="#E2E8F0" stroke-width="1"/>
-    <circle cx="1138" cy="597" r="7" fill="#2F6BFF"/>
-    <text x="1158" y="604" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0A1730">Netflix</text>
-    <text x="1372" y="604" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0A1730">-&#8377;649</text>
+    <rect x="1112" y="568" width="276" height="58" rx="14" fill="#F2F9F4" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="1138" cy="597" r="7" fill="#12A37C"/>
+    <text x="1158" y="604" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0B3D2E">Netflix</text>
+    <text x="1372" y="604" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#0B3D2E">-&#8377;649</text>
 
     <!-- Review row -->
-    <rect x="1112" y="638" width="276" height="58" rx="14" fill="#EEF4FF" stroke="#C7DAFF" stroke-width="1"/>
-    <text x="1136" y="674" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#0A1730">3 transactions need review</text>
-    <text x="1372" y="674" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#2F6BFF">&#8594;</text>
+    <rect x="1112" y="638" width="276" height="58" rx="14" fill="#DFF5EC" stroke="#B9E8D2" stroke-width="1"/>
+    <text x="1136" y="674" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#0B3D2E">3 transactions need review</text>
+    <text x="1372" y="674" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#12A37C">&#8594;</text>
 
     <!-- Tab bar -->
     <rect x="1082" y="716" width="336" height="2" fill="#E2E8F0"/>
-    <text x="1140" y="756" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2F6BFF">Today</text>
+    <text x="1140" y="756" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#12A37C">Today</text>
     <text x="1224" y="756" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#94A3B8">Review</text>
     <text x="1308" y="756" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#94A3B8">Budgets</text>
     <text x="1392" y="756" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#94A3B8">Insights</text>
