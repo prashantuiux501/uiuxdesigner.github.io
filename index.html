@@ -145,48 +145,58 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* ===== Editorial homepage (reference-style rebuild) ===== */
+    #case-studies article.work-row:hover { transform: none; }
+    #case-studies article.work-row > div:first-child { box-shadow: none; }
+    #case-studies article.work-row:hover > div:first-child { box-shadow: none; }
+    .work-row .work-arrow {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+    }
+    .work-row:hover .work-arrow { transform: translate(4px, -4px); }
   </style>
 </head>
 <body class="antialiased selection:bg-[#0E7C66] selection:text-white">
 
   <!-- =========================================================================
        VIEW 1: HOMEPAGE VIEW (#homepage-view)
-       Strictly high-contrast minimalist light mode (#f4f4f4 outer canvas,
-       #ffffff inner container, neutral-950 headings, neutral-600 body).
+       Editorial minimal rebuild: off-white canvas, near-black type,
+       hairline dividers, very large display type, emerald accent.
        ========================================================================= -->
-  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#f7f7f5] text-neutral-950">
+  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#fbfbfa] text-neutral-950">
 
-    <!-- Pure White Inner Container -->
-    <div class="w-full bg-white min-h-screen flex flex-col">
+    <!-- Off-White Inner Container -->
+    <div class="w-full bg-[#fbfbfa] min-h-screen flex flex-col">
 
       <!-- A. NAVIGATION BAR -->
-      <header class="sticky top-0 bg-white/85 backdrop-blur-xl border-b border-neutral-200/80 z-50 relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
-          
-          <!-- Left: Minimal Circular Monogram Icon + Bold Text "Prashant" -->
-          <button 
-            type="button" 
-            onclick="scrollToSection('hero')" 
-            class="flex items-center gap-2.5 group focus:outline-none shrink-0 cursor-pointer"
+      <header class="sticky top-0 bg-[#fbfbfa]/85 backdrop-blur-xl border-b border-neutral-900/10 z-50 relative">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+
+          <!-- Left: Text Wordmark -->
+          <button
+            type="button"
+            onclick="scrollToSection('hero')"
+            class="flex items-center group focus:outline-none shrink-0 cursor-pointer"
+            aria-label="Prashant Kumar — back to top"
           >
-            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#0E7C66] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center group-hover:scale-105 transition-transform shadow-[0_6px_16px_-6px_rgba(14,124,102,0.6)]">
-              P
-            </span>
-            <span class="font-bold text-base sm:text-lg tracking-tight text-neutral-950">
-              Prashant
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-neutral-950">
+              Prashant Kumar<span class="text-[#0E7C66]">.</span>
             </span>
           </button>
 
-          <!-- Right (Desktop md: and up): Horizontal Navigation Buttons + Outline Pill Resume Link -->
+          <!-- Right (Desktop md: and up): Editorial Nav Links + Resume Pill -->
           <nav class="hidden md:flex items-center gap-8" aria-label="Primary Navigation">
-            <button type="button" onclick="scrollToSection('hero')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
-              Home
-            </button>
             <button type="button" onclick="scrollToSection('case-studies')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
-              Case Studies
+              Work
+            </button>
+            <button type="button" onclick="scrollToSection('what-i-do')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              What I Do
             </button>
             <button type="button" onclick="scrollToSection('about-me')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
-              About Me
+              About
+            </button>
+            <button type="button" onclick="scrollToSection('contact')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
+              Contact
             </button>
             <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all shrink-0">
               Resume
@@ -194,12 +204,12 @@
           </nav>
 
           <!-- Right (Mobile < md): Clean Hamburger / Close Toggle Button -->
-          <button 
-            id="mobile-menu-btn" 
-            type="button" 
+          <button
+            id="mobile-menu-btn"
+            type="button"
             onclick="toggleMobileMenu()"
-            aria-label="Toggle navigation menu" 
-            aria-expanded="false" 
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
             aria-controls="mobile-menu"
             class="md:hidden w-10 h-10 inline-flex items-center justify-center rounded-xl text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 transition-colors focus:outline-none"
           >
@@ -211,20 +221,23 @@
         </div>
 
         <!-- Mobile Centered Dropdown Menu (< md) -->
-        <nav 
-          id="mobile-menu" 
+        <nav
+          id="mobile-menu"
           aria-label="Mobile Navigation"
-          class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border border-neutral-200/80 rounded-b-2xl shadow-[0_24px_48px_-20px_rgba(16,24,40,0.25)] py-6 px-6 text-center z-50"
+          class="hidden md:hidden absolute top-full left-0 right-0 bg-[#fbfbfa]/95 backdrop-blur-xl border-b border-neutral-900/10 shadow-[0_24px_48px_-20px_rgba(16,24,40,0.25)] py-6 px-6 text-center z-50"
         >
           <div class="flex flex-col items-center space-y-5">
-            <button type="button" onclick="scrollToSection('hero')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
-              Home
-            </button>
             <button type="button" onclick="scrollToSection('case-studies')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
-              Case Studies
+              Work
+            </button>
+            <button type="button" onclick="scrollToSection('what-i-do')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              What I Do
             </button>
             <button type="button" onclick="scrollToSection('about-me')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
-              About Me
+              About
+            </button>
+            <button type="button" onclick="scrollToSection('contact')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
+              Contact
             </button>
             <div class="pt-1">
               <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all">
@@ -238,104 +251,136 @@
       <main class="flex-grow">
 
         <!-- B. HERO SECTION (id="hero") -->
-        <section id="hero" class="scroll-mt-24 py-20 sm:py-28 md:py-36 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+        <section id="hero" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6 sm:mb-8">
             Prashant Kumar &mdash; UI/UX Designer
           </p>
 
-          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-neutral-950 leading-[1.04]">
-            <span>Hi, <span> I'm Prashant!</span></span>
+          <h1 class="font-display text-[2.75rem] leading-[1.02] sm:text-7xl lg:text-[6.25rem] font-extrabold tracking-tight text-neutral-950">
+            UI/UX designer shaping digital products, apps and design systems into <span class="text-[#0E7C66]">calm, intuitive</span> experiences.
           </h1>
 
-          <p class="max-w-2xl mx-auto mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed font-normal">
+          <p class="max-w-2xl mt-8 sm:mt-10 text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed font-normal">
             A UI/UX Designer &amp; Product Thinker passionate about transforming complex digital ecosystems into calm, intuitive, and accessible experiences. Specializing in user research, design systems, and interaction design, I bridge human empathy with measurable business outcomes. Currently crafting digital solutions that make critical health information easier to find, understand, and act upon.
           </p>
 
-          <!-- Hero CTAs -->
-          <div class="mt-10 sm:mt-12 flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+          <!-- Hero Text Actions -->
+          <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-semibold">
             <button
               type="button"
               onclick="scrollToSection('case-studies')"
-              class="btn-lift bg-[#0E7C66] hover:bg-[#0A5F4F] text-white px-7 py-3 rounded-full text-sm font-semibold cursor-pointer"
+              class="text-neutral-950 underline underline-offset-[6px] decoration-[#0E7C66] decoration-2 hover:text-[#0E7C66] transition-colors cursor-pointer"
             >
-              View Case Studies
+              View selected work &darr;
             </button>
             <a
               href="Prashant_CV.pdf"
               download
-              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
+              class="text-neutral-950 underline underline-offset-[6px] decoration-neutral-300 decoration-2 hover:decoration-[#0E7C66] hover:text-[#0E7C66] transition-colors"
             >
               Download Resume
             </a>
           </div>
 
-          <!-- Centered Downward Arrow Scroll Indicator -->
-          <div class="mt-10 sm:mt-14 flex justify-center">
-            <button 
-              type="button" 
-              onclick="scrollToSection('case-studies')" 
-              aria-label="Scroll to Case Studies" 
-              class="text-neutral-400 hover:text-[#0E7C66] text-lg animate-bounce transition-colors p-2 cursor-pointer"
-            >
-              &darr;
-            </button>
+          <!-- Info Row (4 columns, hairlines) -->
+          <div class="mt-14 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-neutral-900/10 pt-6 sm:pt-8">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Based</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">India</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Focus</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">Product UX/UI, User Research, Design Systems</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Open for</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">Fresher UI/UX Designer roles</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Contact</p>
+              <a href="mailto:prashantkumar.pr501@gmail.com" class="text-[13px] sm:text-sm font-semibold text-neutral-900 break-all underline underline-offset-4 decoration-neutral-300 hover:decoration-[#0E7C66] hover:text-[#0E7C66] transition-colors">prashantkumar.pr501@gmail.com</a>
+            </div>
           </div>
 
         </section>
 
-        <!-- C. CASE STUDIES SECTION (id="case-studies") -->
-        <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto px-4 sm:px-6 pb-24">
-          
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] text-center mb-4">
+        <!-- C. SELECTED WORK SECTION (id="case-studies") -->
+        <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
             Selected Work
           </p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 text-center mb-12 sm:mb-16">
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
             Case Studies
           </h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          <div class="border-t border-neutral-900/10">
 
-            <!-- CARD 1: TRACTO (FULLY ACTIVE & CLICKABLE) -->
-            <article 
-              onclick="showCaseStudyView()" 
+            <!-- ROW 01: TRACTO (FULLY ACTIVE & CLICKABLE) -->
+            <article
+              onclick="showCaseStudyView()"
               onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCaseStudyView(); }"
               tabindex="0"
               role="button"
               aria-label="Open Tracto Mobile Application Case Study"
-              class="cursor-pointer group flex flex-col focus:outline-none"
+              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
             >
-              <!-- Image Canvas (Top) -->
-              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow border border-[#0f2d25]/15">
-  <img 
-    src="important.jpg" 
-    alt="Tracto Showcase" 
-    class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" 
-    onerror="this.parentElement.innerHTML='<div class=\'text-white font-semibold text-center\'>Tracto UI Showcase Poster</div>'"
-  />
-</div>
-
-              <!-- Text Block (Bottom, Left-aligned) -->
-              <div class="text-left">
-                <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  MOBILE APPLICATION
-                </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0A4F44] transition-colors">
-                  Tracto
-                </h3>
-                <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A calm, human-first health companion that empowers patients and elevates task success metrics from 40% to 81%.
-                </p>
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">01</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#0A4F44] mb-3">
+                    Mobile Application &middot; Healthcare
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#0A4F44] transition-colors">
+                    Tracto
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A calm, human-first health companion that empowers patients and elevates task success metrics from 40% to 81%.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Case Study
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="w-full rounded-xl overflow-hidden border border-[#0f2d25]/15 shadow-sm">
+                    <img
+                      src="important.jpg"
+                      alt="Tracto Showcase"
+                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                      onerror="this.parentElement.innerHTML='<div class=\'text-white font-semibold text-center\'>Tracto UI Showcase Poster</div>'"
+                    />
+                  </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#0A4F44]">&#8599;</span>
+                </div>
               </div>
             </article>
 
-<!-- CARD 2: HEALTHPORTAL WEB (16:9 WIDESCREEN ALIGNED WITH TRACTO) -->
-            <article 
+            <!-- ROW 02: HEALTHPORTAL WEB -->
+            <article
               aria-disabled="true"
-              class="opacity-75 select-none transition-all flex flex-col"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
-              <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">02</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Website Redesign
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    HealthPortal Web
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A comprehensive redesign aimed at improving usability and clarifying complex patient data.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Q4 2026
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row: Category & Coming Soon Pill -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-sky-400/90 font-medium">Web Platform</span>
@@ -364,28 +409,36 @@
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
               </div>
-
-              <!-- Text Block -->
-              <div class="text-left">
-                <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  WEBSITE REDESIGN
-                </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
-                  HealthPortal Web
-                </h3>
-                <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A comprehensive redesign aimed at improving usability and clarifying complex patient data.
-                </p>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <!-- CARD 3: PULSE FLOW (16:9 WIDESCREEN ALIGNED WITH TRACTO) -->
-            <article 
+            <!-- ROW 03: PULSE FLOW -->
+            <article
               aria-disabled="true"
-              class="opacity-75 select-none transition-all flex flex-col"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
-              <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">03</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Mobile Application
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    Pulse Flow
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    Streamlined daily biometric logging designed for fast 15-second interactions.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Q1 2027
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-rose-400/90 font-medium">iOS &amp; WatchOS</span>
@@ -414,28 +467,36 @@
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
               </div>
-
-              <!-- Text Block -->
-              <div class="text-left">
-                <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  MOBILE APPLICATION
-                </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
-                  Pulse Flow
-                </h3>
-                <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  Streamlined daily biometric logging designed for fast 15-second interactions.
-                </p>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <!-- CARD 4: VITALIS DESIGN SYSTEM (16:9 WIDESCREEN ALIGNED WITH TRACTO) -->
-            <article 
+            <!-- ROW 04: VITALIS DESIGN SYSTEM -->
+            <article
               aria-disabled="true"
-              class="opacity-75 select-none transition-all flex flex-col"
+              class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
-              <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">04</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
+                    Design System
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950">
+                    Vitalis Design System
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.
+                  </p>
+                  <p class="mt-4 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">
+                    Coming Soon &middot; Tokens v2.0
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-400/90 font-medium">Design System</span>
@@ -464,88 +525,150 @@
                 <!-- Background Subtle Glow -->
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
               </div>
-
-              <!-- Text Block -->
-              <div class="text-left">
-                <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  DESIGN SYSTEM
-                </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
-                  Vitalis Design System
-                </h3>
-                <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.
-                </p>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-200">&#8599;</span>
+                </div>
               </div>
             </article>
 
-            <!-- CARD 5: CLEARSPEND (FULLY ACTIVE & CLICKABLE) -->
+            <!-- ROW 05: CLEARSPEND (FULLY ACTIVE & CLICKABLE) -->
             <article
               onclick="showClearSpendView()"
               onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showClearSpendView(); }"
               tabindex="0"
               role="button"
               aria-label="Open ClearSpend Fintech Mobile Application Case Study"
-              class="cursor-pointer group flex flex-col focus:outline-none"
+              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
             >
-              <!-- Poster Visual (16:9, fintech navy theme) -->
-              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow border border-[#0B1B3A]/25">
-                <img
-                  src="clearspend-poster.svg"
-                  alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
-                  class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
-                />
-              </div>
-
-              <!-- Text Block (Bottom, Left-aligned) -->
-              <div class="text-left">
-                <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
-                  MOBILE APPLICATION / FINTECH
-                </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#2F6BFF] transition-colors">
-                  ClearSpend
-                </h3>
-                <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
-                  A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.
-                </p>
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">05</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#2F6BFF] mb-3">
+                    Mobile Application &middot; Fintech
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#2F6BFF] transition-colors">
+                    ClearSpend
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.
+                  </p>
+                  <p class="mt-4 flex flex-wrap items-center gap-3">
+                    <span class="inline-block bg-[#0A1730] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Concept Project</span>
+                    <span class="text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">2026</span>
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="w-full rounded-xl overflow-hidden border border-[#0B1B3A]/25 shadow-sm">
+                    <img
+                      src="clearspend-poster.svg"
+                      alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
+                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#2F6BFF]">&#8599;</span>
+                </div>
               </div>
             </article>
+
           </div>
         </section>
 
+        <!-- D2. WHAT I DO SECTION (id="what-i-do") -->
+        <section id="what-i-do" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
+            What I Do
+          </p>
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            Capabilities
+          </h2>
+
+          <div class="border-t border-neutral-900/10">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">01</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Product Design</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                End-to-end UX and UI for digital products — turning complex, high-friction problems into calm, intuitive interfaces in Figma, and bridging human needs with measurable business outcomes.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">02</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">User Research</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Foundational user research grounded in how people make decisions under pressure — so clinical jargon, clutter and cognitive load get stripped away, and the next step always feels natural.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">03</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Design Systems</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Scalable, WCAG-compliant design systems with tokenized foundations and reusable components — architected for accessibility and rapid feature delivery across platforms.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">04</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Interaction Design</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Micro-interactions and thoughtful interface architecture that replace user anxiety with effortless clarity — shaped through rapid Crazy 8s ideation and iterative usability testing.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- D3. DESIGN PHILOSOPHY STATEMENT -->
+        <section class="max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+            Design Philosophy
+          </p>
+          <p class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-[1.15] text-neutral-950 max-w-5xl">
+            I turn complex, high-friction digital problems into <span class="text-[#0E7C66]">calm, intuitive, accessible</span> experiences — where empathy isn&rsquo;t optional, and the next step always feels natural.
+          </p>
+        </section>
+
         <!-- D. ABOUT ME SECTION (id="about-me") -->
-        <section id="about-me" class="scroll-mt-24 max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-200/70">
+        <section id="about-me" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24 border-t border-neutral-900/10">
 
           <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
             About
           </p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 mb-8">
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
             About Me
           </h2>
 
-          <div class="clearfix text-base sm:text-lg text-neutral-600 leading-relaxed space-y-6">
-            
-            <!-- Right Float Photo -->
-            <div class="float-right w-48 sm:w-64 md:w-72 aspect-[4/5] rounded-2xl overflow-hidden ml-6 mb-6 shadow-[0_16px_36px_-18px_rgba(16,24,40,0.3)] border border-neutral-200">
-              <img 
-                src="img.jpg" 
-                alt="Prashant" 
-                class="w-full h-full object-cover" 
-                onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-neutral-100 text-neutral-400 text-xs\'>Photo</div>'"
-              />
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+
+            <!-- Photo -->
+            <div class="md:col-span-4">
+              <div class="w-full max-w-xs aspect-[4/5] rounded-xl overflow-hidden border border-neutral-900/10 shadow-sm">
+                <img
+                  src="img.jpg"
+                  alt="Prashant"
+                  class="w-full h-full object-cover"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-neutral-100 text-neutral-400 text-xs\'>Photo</div>'"
+                />
+              </div>
             </div>
 
-            <p>
-              I'm Prashant, a UI/UX Designer and Product Thinker dedicated to turning complex, high-friction digital problems into calm, intuitive, and accessible user experiences. My journey into product design grew from a deep fascination with how people make decisions under pressure—and how thoughtful interface architecture can replace user anxiety with effortless clarity.
-            </p>
-
-            <p>
-              I specialize in healthcare and consumer digital products where empathy isn't optional. When someone is tracking daily vitals or trying to book the right doctor while feeling unwell, clinical jargon and cluttered directories erode trust. Through foundational user research, rapid Crazy 8s ideation, and iterative usability testing, I strip away unnecessary cognitive load so the next step always feels natural.
-            </p>
-
-            <p>
-              From architecting scalable, WCAG-compliant design systems and micro-interactions in Figma to collaborating closely with engineering teams during implementation, I focus on bridging human needs with measurable business outcomes.
-            </p>
+            <!-- Copy (his existing About text) -->
+            <div class="md:col-span-8 text-base sm:text-lg text-neutral-600 leading-relaxed space-y-6">
+              <p>
+                I'm Prashant, a UI/UX Designer and Product Thinker dedicated to turning complex, high-friction digital problems into calm, intuitive, and accessible user experiences. My journey into product design grew from a deep fascination with how people make decisions under pressure—and how thoughtful interface architecture can replace user anxiety with effortless clarity.
+              </p>
+              <p>
+                I specialize in healthcare and consumer digital products where empathy isn't optional. When someone is tracking daily vitals or trying to book the right doctor while feeling unwell, clinical jargon and cluttered directories erode trust. Through foundational user research, rapid Crazy 8s ideation, and iterative usability testing, I strip away unnecessary cognitive load so the next step always feels natural.
+              </p>
+              <p>
+                From architecting scalable, WCAG-compliant design systems and micro-interactions in Figma to collaborating closely with engineering teams during implementation, I focus on bridging human needs with measurable business outcomes.
+              </p>
+            </div>
 
           </div>
         </section>
@@ -553,56 +676,57 @@
       </main>
 
       <!-- E. FOOTER / CONTACT SECTION (id="contact") -->
-      <footer id="contact" class="scroll-mt-24 py-20 sm:py-28 border-t border-neutral-200/70 text-center px-4 sm:px-6 bg-[#fafaf9]">
-        <div class="max-w-3xl mx-auto">
-          
-          <span class="text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-3 block text-center">
-            LIKE WHAT YOU SEE?
-          </span>
+      <footer id="contact" class="scroll-mt-24 border-t border-neutral-900/10 bg-[#fafaf9]">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
 
-          <h2 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-neutral-950 mb-8 text-center">
-            Let's Connect!
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+            Open for Fresher UI/UX Designer roles
+          </p>
+
+          <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.98] text-neutral-950">
+            Let&rsquo;s work<br />together
           </h2>
 
-          <!-- Pill Buttons: Resume (Download) + Working LinkedIn URL -->
-          <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
-            <a 
-              href="Prashant_CV.pdf" 
-              download 
-              class="btn-lift bg-[#0E7C66] text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-[#0A5F4F]"
+          <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-4">
+            <a
+              href="mailto:prashantkumar.pr501@gmail.com"
+              class="btn-lift bg-[#0E7C66] text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-[#0A5F4F]"
             >
-              Resume
+              prashantkumar.pr501@gmail.com
             </a>
-            <a 
-              href="https://www.linkedin.com/in/prashant-kumar-89b822142/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:bg-white hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
+            <a
+              href="https://www.linkedin.com/in/prashant-kumar-89b822142/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
             >
               LinkedIn
             </a>
-          </div>
-
-          <!-- Centered Email Link -->
-          <div class="mb-10">
-            <a 
-              href="mailto:1000000000111@gmail.com" 
-              class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors inline-flex items-center gap-2"
+            <a
+              href="Prashant_CV.pdf"
+              download
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
             >
-              <span>&#9993;</span>
-              <span>1000000000111@gmail.com</span>
+              Resume
             </a>
           </div>
 
-          <p class="text-xs text-neutral-400">
-            &copy; 2026 Prashant. All rights reserved.
-          </p>
+          <div class="mt-16 sm:mt-20 pt-6 border-t border-neutral-900/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <p class="text-xs text-neutral-400">
+              &copy; 2026 Prashant. All rights reserved.
+            </p>
+            <p class="text-xs text-neutral-400">
+              Prashant Kumar — UI/UX Designer &middot; India
+            </p>
+          </div>
+
         </div>
       </footer>
 
     </div>
   </div>
-  <!-- END OF #homepage-view -->
+
+<!-- END OF #homepage-view -->
 
 
   <!-- =========================================================================
