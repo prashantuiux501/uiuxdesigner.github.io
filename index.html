@@ -103,14 +103,14 @@
 
     /* Visible keyboard focus everywhere */
     :focus-visible {
-      outline: 2px solid #0E7C66 !important;
+      outline: 2px solid #171717 !important;
       outline-offset: 3px;
     }
 
     /* Hero: soft accent glow + gentle depth */
     #hero {
       background:
-        radial-gradient(560px 300px at 50% -60px, rgba(14, 124, 102, 0.10), rgba(14, 124, 102, 0) 70%);
+        radial-gradient(560px 300px at 50% -60px, rgba(23, 23, 23, 0.05), rgba(23, 23, 23, 0) 70%);
     }
 
     /* Case-study cards: gentle lift + deeper soft shadow on hover */
@@ -125,13 +125,13 @@
       transition: box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
     #case-studies article:hover > div:first-child {
-      box-shadow: 0 2px 4px rgba(16, 24, 40, 0.06), 0 24px 44px -18px rgba(14, 124, 102, 0.30);
+      box-shadow: 0 2px 4px rgba(16, 24, 40, 0.06), 0 24px 44px -18px rgba(16, 24, 40, 0.22);
     }
 
     /* Primary buttons: subtle lift on hover */
     .btn-lift {
       transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease, box-shadow 0.25s ease;
-      box-shadow: 0 8px 20px -10px rgba(14, 124, 102, 0.55);
+      box-shadow: 0 8px 20px -10px rgba(16, 24, 40, 0.35);
     }
     .btn-lift:hover {
       transform: translateY(-1px);
@@ -156,12 +156,12 @@
     .work-row:hover .work-arrow { transform: translate(4px, -4px); }
   </style>
 </head>
-<body class="antialiased selection:bg-[#0E7C66] selection:text-white">
+<body class="antialiased selection:bg-neutral-950 selection:text-white">
 
   <!-- =========================================================================
        VIEW 1: HOMEPAGE VIEW (#homepage-view)
        Editorial minimal rebuild: off-white canvas, near-black type,
-       hairline dividers, very large display type, emerald accent.
+       hairline dividers, very large display type, one neutral accent.
        ========================================================================= -->
   <div id="homepage-view" class="min-h-screen flex flex-col bg-[#fbfbfa] text-neutral-950">
 
@@ -180,7 +180,7 @@
             aria-label="Prashant Kumar — back to top"
           >
             <span class="font-bold text-lg sm:text-xl tracking-tight text-neutral-950">
-              Prashant Kumar<span class="text-[#0E7C66]">.</span>
+              Prashant Kumar<span class="text-neutral-400">.</span>
             </span>
           </button>
 
@@ -198,7 +198,7 @@
             <button type="button" onclick="scrollToSection('contact')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
               Contact
             </button>
-            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all shrink-0">
+            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-950 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
               Resume
             </a>
           </nav>
@@ -240,7 +240,7 @@
               Contact
             </button>
             <div class="pt-1">
-              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all">
+              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-950 hover:bg-neutral-950 hover:text-white transition-all">
                 Resume
               </a>
             </div>
@@ -251,40 +251,14 @@
       <main class="flex-grow">
 
         <!-- B. HERO SECTION (id="hero") -->
-        <section id="hero" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20">
+        <section id="hero" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 pt-20 sm:pt-28 lg:pt-36 pb-16 sm:pb-20">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6 sm:mb-8">
-            Prashant Kumar &mdash; UI/UX Designer
-          </p>
-
-          <h1 class="font-display text-[2.75rem] leading-[1.02] sm:text-7xl lg:text-[6.25rem] font-extrabold tracking-tight text-neutral-950">
-            UI/UX designer shaping digital products, apps and design systems into <span class="text-[#0E7C66]">calm, intuitive</span> experiences.
+          <h1 class="font-display text-[2.9rem] leading-[1.04] sm:text-7xl lg:text-[6.5rem] font-extrabold tracking-tight text-neutral-950">
+            Designer based in India. Shaping digital products, websites and design systems with clarity and character.
           </h1>
 
-          <p class="max-w-2xl mt-8 sm:mt-10 text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed font-normal">
-            A UI/UX Designer &amp; Product Thinker passionate about transforming complex digital ecosystems into calm, intuitive, and accessible experiences. Specializing in user research, design systems, and interaction design, I bridge human empathy with measurable business outcomes. Currently crafting digital solutions that make critical health information easier to find, understand, and act upon.
-          </p>
-
-          <!-- Hero Text Actions -->
-          <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-semibold">
-            <button
-              type="button"
-              onclick="scrollToSection('case-studies')"
-              class="text-neutral-950 underline underline-offset-[6px] decoration-[#0E7C66] decoration-2 hover:text-[#0E7C66] transition-colors cursor-pointer"
-            >
-              View selected work &darr;
-            </button>
-            <a
-              href="Prashant_CV.pdf"
-              download
-              class="text-neutral-950 underline underline-offset-[6px] decoration-neutral-300 decoration-2 hover:decoration-[#0E7C66] hover:text-[#0E7C66] transition-colors"
-            >
-              Download Resume
-            </a>
-          </div>
-
           <!-- Info Row (4 columns, hairlines) -->
-          <div class="mt-14 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-neutral-900/10 pt-6 sm:pt-8">
+          <div class="mt-16 sm:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-neutral-900/10 pt-6 sm:pt-8">
             <div>
               <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Based</p>
               <p class="text-sm sm:text-base font-semibold text-neutral-900">India</p>
@@ -294,12 +268,12 @@
               <p class="text-sm sm:text-base font-semibold text-neutral-900">Product UX/UI, User Research, Design Systems</p>
             </div>
             <div>
-              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Open for</p>
-              <p class="text-sm sm:text-base font-semibold text-neutral-900">Fresher UI/UX Designer roles</p>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Contact</p>
+              <a href="mailto:prashantkumar.pr501@gmail.com" class="text-[13px] sm:text-sm font-semibold text-neutral-900 break-all underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-950 transition-colors">prashantkumar.pr501@gmail.com</a>
             </div>
             <div>
-              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Contact</p>
-              <a href="mailto:prashantkumar.pr501@gmail.com" class="text-[13px] sm:text-sm font-semibold text-neutral-900 break-all underline underline-offset-4 decoration-neutral-300 hover:decoration-[#0E7C66] hover:text-[#0E7C66] transition-colors">prashantkumar.pr501@gmail.com</a>
+              <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-2">Open for</p>
+              <p class="text-sm sm:text-base font-semibold text-neutral-900">Fresher UI/UX Designer roles</p>
             </div>
           </div>
 
@@ -308,11 +282,8 @@
         <!-- C. SELECTED WORK SECTION (id="case-studies") -->
         <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
-            Selected Work
-          </p>
-          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
-            Case Studies
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            Selected work
           </h2>
 
           <div class="border-t border-neutral-900/10">
@@ -358,13 +329,53 @@
               </div>
             </article>
 
-            <!-- ROW 02: HEALTHPORTAL WEB -->
+            <!-- ROW 02: CLEARSPEND (FULLY ACTIVE & CLICKABLE) -->
+            <article
+              onclick="showClearSpendView()"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showClearSpendView(); }"
+              tabindex="0"
+              role="button"
+              aria-label="Open ClearSpend Fintech Mobile Application Case Study"
+              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">02</div>
+                <div class="md:col-span-6">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#2F6BFF] mb-3">
+                    Mobile Application &middot; Fintech
+                  </p>
+                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#2F6BFF] transition-colors">
+                    ClearSpend
+                  </h3>
+                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
+                    A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.
+                  </p>
+                  <p class="mt-4 flex flex-wrap items-center gap-3">
+                    <span class="inline-block bg-[#0A1730] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Concept Project</span>
+                    <span class="text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">2026</span>
+                  </p>
+                </div>
+                <div class="md:col-span-4">
+                  <div class="w-full rounded-xl overflow-hidden border border-[#0B1B3A]/25 shadow-sm">
+                    <img
+                      src="clearspend-poster.svg"
+                      alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
+                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+                <div class="hidden md:flex md:col-span-1 justify-end">
+                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#2F6BFF]">&#8599;</span>
+                </div>
+              </div>
+            </article>
+            <!-- ROW 03: HEALTHPORTAL WEB -->
             <article
               aria-disabled="true"
               class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
               <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                <div class="md:col-span-1 text-sm font-mono text-neutral-400">02</div>
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">03</div>
                 <div class="md:col-span-6">
                   <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
                     Website Redesign
@@ -416,13 +427,13 @@
               </div>
             </article>
 
-            <!-- ROW 03: PULSE FLOW -->
+            <!-- ROW 04: PULSE FLOW -->
             <article
               aria-disabled="true"
               class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
               <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                <div class="md:col-span-1 text-sm font-mono text-neutral-400">03</div>
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">04</div>
                 <div class="md:col-span-6">
                   <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
                     Mobile Application
@@ -474,13 +485,13 @@
               </div>
             </article>
 
-            <!-- ROW 04: VITALIS DESIGN SYSTEM -->
+            <!-- ROW 05: VITALIS DESIGN SYSTEM -->
             <article
               aria-disabled="true"
               class="work-row opacity-75 select-none border-b border-neutral-900/10 py-10 sm:py-12"
             >
               <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                <div class="md:col-span-1 text-sm font-mono text-neutral-400">04</div>
+                <div class="md:col-span-1 text-sm font-mono text-neutral-400">05</div>
                 <div class="md:col-span-6">
                   <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 mb-3">
                     Design System
@@ -532,46 +543,6 @@
               </div>
             </article>
 
-            <!-- ROW 05: CLEARSPEND (FULLY ACTIVE & CLICKABLE) -->
-            <article
-              onclick="showClearSpendView()"
-              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showClearSpendView(); }"
-              tabindex="0"
-              role="button"
-              aria-label="Open ClearSpend Fintech Mobile Application Case Study"
-              class="work-row group cursor-pointer border-b border-neutral-900/10 py-10 sm:py-12 focus:outline-none"
-            >
-              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                <div class="md:col-span-1 text-sm font-mono text-neutral-400">05</div>
-                <div class="md:col-span-6">
-                  <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#2F6BFF] mb-3">
-                    Mobile Application &middot; Fintech
-                  </p>
-                  <h3 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-950 group-hover:text-[#2F6BFF] transition-colors">
-                    ClearSpend
-                  </h3>
-                  <p class="mt-3 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl">
-                    A UPI-first expense tracker built around a daily &ldquo;safe to spend today&rdquo; number, so dozens of small payments never blur into a surprise low balance.
-                  </p>
-                  <p class="mt-4 flex flex-wrap items-center gap-3">
-                    <span class="inline-block bg-[#0A1730] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Concept Project</span>
-                    <span class="text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400">2026</span>
-                  </p>
-                </div>
-                <div class="md:col-span-4">
-                  <div class="w-full rounded-xl overflow-hidden border border-[#0B1B3A]/25 shadow-sm">
-                    <img
-                      src="clearspend-poster.svg"
-                      alt="ClearSpend poster — Safe to spend today: a UPI-first expense tracker concept, showing the Today screen with a safe-to-spend amount"
-                      class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300"
-                    />
-                  </div>
-                </div>
-                <div class="hidden md:flex md:col-span-1 justify-end">
-                  <span class="work-arrow text-3xl leading-none text-neutral-300 group-hover:text-[#2F6BFF]">&#8599;</span>
-                </div>
-              </div>
-            </article>
 
           </div>
         </section>
@@ -579,64 +550,105 @@
         <!-- D2. WHAT I DO SECTION (id="what-i-do") -->
         <section id="what-i-do" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
-            What I Do
-          </p>
-          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
-            Capabilities
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            What I do
           </h2>
 
           <div class="border-t border-neutral-900/10">
-
             <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
               <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">01</div>
-              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Product Design</h3>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Product design</h3>
               <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                End-to-end UX and UI for digital products — turning complex, high-friction problems into calm, intuitive interfaces in Figma, and bridging human needs with measurable business outcomes.
+                End-to-end UX and UI for digital products — from research and flows to polished Figma interfaces that turn complex, high-friction problems into calm, intuitive experiences.
               </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
               <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">02</div>
-              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">User Research</h3>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Design systems</h3>
               <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Foundational user research grounded in how people make decisions under pressure — so clinical jargon, clutter and cognitive load get stripped away, and the next step always feels natural.
+                Tokenized, WCAG-compliant design systems with reusable components — like the Vitalis Design System — built for accessibility, consistency and rapid feature delivery.
               </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
               <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">03</div>
-              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Design Systems</h3>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Interface direction</h3>
               <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Scalable, WCAG-compliant design systems with tokenized foundations and reusable components — architected for accessibility and rapid feature delivery across platforms.
+                Setting the visual direction of an interface — typography, layout, colour and micro-interactions — so every screen feels clear, consistent and unmistakably part of the same product.
               </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
               <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">04</div>
-              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Interaction Design</h3>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Web design</h3>
               <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Micro-interactions and thoughtful interface architecture that replace user anxiety with effortless clarity — shaped through rapid Crazy 8s ideation and iterative usability testing.
+                Responsive website design and redesign, like the HealthPortal Web project — clarifying complex information and making it easy to find, understand and act on, on any screen size.
               </p>
             </div>
-
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">05</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Brand identity</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                The foundations of product branding — logo direction, colour and typography — carried through into the interface, so a product looks and feels like one coherent brand.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 py-8 sm:py-10 border-b border-neutral-900/10">
+              <div class="md:col-span-2 text-sm font-mono text-neutral-400 pt-1.5">06</div>
+              <h3 class="md:col-span-4 font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">Advisory &amp; audits</h3>
+              <p class="md:col-span-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Structured UX reviews and heuristic audits of existing interfaces — pinpointing friction, jargon and cognitive load, with practical recommendations for what to fix first.
+              </p>
+            </div>
           </div>
         </section>
 
         <!-- D3. DESIGN PHILOSOPHY STATEMENT -->
         <section class="max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-6">
             Design Philosophy
           </p>
           <p class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-[1.15] text-neutral-950 max-w-5xl">
-            I turn complex, high-friction digital problems into <span class="text-[#0E7C66]">calm, intuitive, accessible</span> experiences — where empathy isn&rsquo;t optional, and the next step always feels natural.
+            I turn complex, high-friction digital problems into <span class="underline decoration-neutral-300 decoration-2 underline-offset-[6px]">calm, intuitive, accessible</span> experiences — where empathy isn&rsquo;t optional, and the next step always feels natural.
           </p>
+        </section>
+
+        <!-- D4. THINGS WORTH SHARING -->
+        <section class="max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24">
+          <h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
+            Things worth sharing
+          </h2>
+
+          <div class="border-t border-neutral-900/10">
+
+            <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">ClearSpend — Figma prototype</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">The full ClearSpend concept in Figma — 13 frames with a clickable prototype flow. Concept project.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+            <a href="assets/case-studies/clearspend-case-study.pdf" download class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">ClearSpend — Case study PDF</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">The complete written case study — research, process and design decisions, as a PDF download.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="work-row group flex items-center justify-between gap-6 py-6 sm:py-7 border-b border-neutral-900/10">
+              <div class="transition-transform duration-300 group-hover:translate-x-1">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950">LinkedIn</h3>
+                <p class="mt-1 text-sm sm:text-base text-neutral-500">Connect with me on LinkedIn — projects, progress and updates.</p>
+              </div>
+              <span class="work-arrow shrink-0 text-3xl leading-none text-neutral-300 group-hover:text-neutral-950">&#8599;</span>
+            </a>
+
+          </div>
         </section>
 
         <!-- D. ABOUT ME SECTION (id="about-me") -->
         <section id="about-me" class="scroll-mt-24 max-w-6xl mx-auto w-full px-5 sm:px-8 py-16 sm:py-24 border-t border-neutral-900/10">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-4">
             About
           </p>
           <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-950 mb-10 sm:mb-14">
@@ -679,7 +691,7 @@
       <footer id="contact" class="scroll-mt-24 border-t border-neutral-900/10 bg-[#fafaf9]">
         <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
 
-          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-neutral-400 mb-6">
             Open for Fresher UI/UX Designer roles
           </p>
 
@@ -690,7 +702,7 @@
           <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-4">
             <a
               href="mailto:prashantkumar.pr501@gmail.com"
-              class="btn-lift bg-[#0E7C66] text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-[#0A5F4F]"
+              class="btn-lift bg-neutral-950 text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-neutral-800"
             >
               prashantkumar.pr501@gmail.com
             </a>
@@ -698,14 +710,14 @@
               href="https://www.linkedin.com/in/prashant-kumar-89b822142/"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-neutral-950 hover:text-neutral-950 transition-colors"
             >
               LinkedIn
             </a>
             <a
               href="Prashant_CV.pdf"
               download
-              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
+              class="bg-white border border-neutral-300 text-neutral-900 px-8 py-3.5 rounded-full text-sm font-semibold hover:border-neutral-950 hover:text-neutral-950 transition-colors"
             >
               Resume
             </a>
@@ -715,8 +727,10 @@
             <p class="text-xs text-neutral-400">
               &copy; 2026 Prashant. All rights reserved.
             </p>
-            <p class="text-xs text-neutral-400">
-              Prashant Kumar — UI/UX Designer &middot; India
+            <p class="text-xs text-neutral-400 flex flex-wrap items-center gap-x-4 gap-y-1">
+              <span>Prashant Kumar — UI/UX Designer &middot; India</span>
+              <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-neutral-300 hover:text-neutral-950 hover:decoration-neutral-950 transition-colors">LinkedIn</a>
+              <a href="mailto:prashantkumar.pr501@gmail.com" class="underline underline-offset-4 decoration-neutral-300 hover:text-neutral-950 hover:decoration-neutral-950 transition-colors">Email</a>
             </p>
           </div>
 
