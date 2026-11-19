@@ -475,7 +475,7 @@
               <p class="font-doodle font-bold text-lg text-[#E65343] rotate-[-1deg]">pinned, taped &amp; ready to open</p>
               <h2 class="font-hand text-6xl sm:text-7xl lg:text-8xl font-bold leading-none mt-2">Featured projects</h2>
             </div>
-            <p class="font-hand text-3xl text-[#55554F] max-w-xs leading-tight rotate-1">Five projects, fresh from the desk.</p>
+            <p class="font-hand text-3xl text-[#55554F] max-w-xs leading-tight rotate-1">Four projects, fresh from the desk.</p>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
@@ -509,122 +509,67 @@
               </div>
             </article>
 
-            <article aria-disabled="true" class="project-card tilt-right relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none">
+                        <article onclick="showAntarikshView()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showAntarikshView(); }" tabindex="0" role="button" aria-label="Open Antariksh VR Space Exploration Case Study" class="project-card tilt-left group relative cursor-pointer bg-[#FFFDF7] ink-card p-4 sm:p-5 focus:outline-none">
               <span class="tape" aria-hidden="true"></span>
-              <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
-                <!-- Top Row: Category & Coming Soon Pill -->
-                <div class="flex items-center justify-between z-10">
-                  <span class="text-[11px] font-mono tracking-widest uppercase text-sky-400/90 font-medium">Web Platform</span>
-                  <span class="bg-white/10 backdrop-blur-md text-neutral-200 border border-white/15 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                    Coming Soon
-                  </span>
-                </div>
-
-                <!-- Center Graphic Placeholder -->
-                <div class="my-auto text-center z-10 py-0.5">
-                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-white/5 border border-white/10 text-sky-400 mb-1.5 shadow-inner">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                  </div>
-                  <h4 class="text-white font-bold text-base sm:text-lg tracking-tight">Patient Clinical Portal</h4>
-                  <p class="text-neutral-400 text-xs mt-0.5 max-w-xs mx-auto">Desktop &amp; tablet clinical dashboard redesign</p>
-                </div>
-
-                <!-- Bottom Row: Spec Meta -->
-                <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-neutral-400 z-10 border-t border-white/10 pt-2">
-                  <span>Q4 2026</span>
-                  <span>Responsive Web</span>
-                </div>
-
-                <!-- Background Subtle Glow -->
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
+              <div class="w-full rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#0A1030] bg-[#050914]">
+                <svg viewBox="0 0 400 225" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" role="img" aria-label="Antariksh — a teal planet with orbital rings in deep indigo space">
+                  <defs>
+                    <linearGradient id="akCardSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1030"/><stop offset="1" stop-color="#050914"/></linearGradient>
+                    <radialGradient id="akCardPlanet" cx="0.38" cy="0.32" r="0.95"><stop offset="0" stop-color="#99F6E4"/><stop offset="0.55" stop-color="#2DD4BF"/><stop offset="1" stop-color="#0F766E"/></radialGradient>
+                  </defs>
+                  <rect width="400" height="225" fill="url(#akCardSky)"/>
+                  <circle cx="42" cy="36" r="1.8" fill="#FFFFFF" opacity="0.9"/><circle cx="96" cy="66" r="1.2" fill="#FFFFFF" opacity="0.55"/><circle cx="150" cy="28" r="1.5" fill="#FFFFFF" opacity="0.75"/><circle cx="238" cy="44" r="1.2" fill="#FFFFFF" opacity="0.5"/><circle cx="330" cy="30" r="1.7" fill="#FFFFFF" opacity="0.85"/><circle cx="366" cy="86" r="1.2" fill="#FFFFFF" opacity="0.55"/><circle cx="58" cy="120" r="1.3" fill="#FFFFFF" opacity="0.5"/><circle cx="352" cy="150" r="1.5" fill="#FFFFFF" opacity="0.7"/><circle cx="276" cy="186" r="1.2" fill="#FFFFFF" opacity="0.5"/><circle cx="120" cy="196" r="1.6" fill="#FFFFFF" opacity="0.65"/><circle cx="28" cy="182" r="1.1" fill="#FFFFFF" opacity="0.45"/>
+                  <ellipse cx="200" cy="120" rx="152" ry="43" fill="none" stroke="#8B7CFF" stroke-width="2" opacity="0.65" transform="rotate(-12 200 120)"/>
+                  <ellipse cx="200" cy="120" rx="114" ry="31" fill="none" stroke="#2DD4BF" stroke-width="1.6" opacity="0.75" transform="rotate(-12 200 120)"/>
+                  <circle cx="200" cy="114" r="46" fill="url(#akCardPlanet)"/>
+                  <circle cx="322" cy="58" r="7" fill="#E9E7FF"/><circle cx="319" cy="55" r="1.8" fill="#B9B3E8"/>
+                  <circle cx="297" cy="86" r="3.5" fill="#2DD4BF"/>
+                  <circle cx="88" cy="168" r="4" fill="#8B7CFF"/>
+                  <text x="22" y="204" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2.5" fill="#2DD4BF">VR &#183; 4 MISSIONS &#183; 10 MIN EACH</text>
+                </svg>
+              </div>
               <div class="px-2 sm:px-3 pt-6 pb-3">
-                <p class="font-doodle font-bold uppercase tracking-wide text-[#39728C]">03 · Website Redesign</p>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">HealthPortal Web</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A comprehensive redesign aimed at improving usability and clarifying complex patient data.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#FFF1A8] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Q4 2026</p>
+                <div class="flex items-center justify-between gap-4">
+                  <p class="font-doodle font-bold uppercase tracking-wide text-[#6D5DF6]">03 · VR Experience · Space Education</p><span class="text-3xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
+                </div>
+                <h3 class="font-hand text-6xl font-bold leading-none mt-3">Antariksh VR</h3>
+                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">Stand on the Moon, dock with the space station, walk on Mars &mdash; a comfort-first VR exploration that makes students feel how big space actually is.</p>
+                <p class="mt-5 flex flex-wrap gap-3"><span class="font-doodle font-bold bg-[#0A1030] text-white border-2 border-[#20201E] rounded-full px-4 py-1">Concept Project</span><span class="font-doodle font-bold bg-[#E4E0FF] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</span></p>
               </div>
             </article>
 
-            <article aria-disabled="true" class="project-card tilt-left relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none lg:mt-14">
+            <article onclick="showStudioDeskView()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showStudioDeskView(); }" tabindex="0" role="button" aria-label="Open StudioDesk Desktop Workspace Case Study" class="project-card tilt-right group relative cursor-pointer bg-[#FFFDF7] ink-card p-4 sm:p-5 focus:outline-none lg:mt-14">
               <span class="tape" aria-hidden="true"></span>
-              <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
-                <!-- Top Row -->
-                <div class="flex items-center justify-between z-10">
-                  <span class="text-[11px] font-mono tracking-widest uppercase text-rose-400/90 font-medium">iOS &amp; WatchOS</span>
-                  <span class="bg-white/10 backdrop-blur-md text-neutral-200 border border-white/15 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                    Coming Soon
-                  </span>
-                </div>
-
-                <!-- Center Graphic Placeholder -->
-                <div class="my-auto text-center z-10 py-0.5">
-                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-white/5 border border-white/10 text-rose-400 mb-1.5 shadow-inner">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                  </div>
-                  <h4 class="text-white font-bold text-base sm:text-lg tracking-tight">Pulse Flow Companion</h4>
-                  <p class="text-neutral-400 text-xs mt-0.5 max-w-xs mx-auto">15-second biometric logging &amp; habit tracking</p>
-                </div>
-
-                <!-- Bottom Row -->
-                <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-neutral-400 z-10 border-t border-white/10 pt-2">
-                  <span>Q1 2027</span>
-                  <span>HealthKit Sync</span>
-                </div>
-
-                <!-- Background Subtle Glow -->
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
-              <div class="px-2 sm:px-3 pt-6 pb-3">
-                <p class="font-doodle font-bold uppercase tracking-wide text-[#B5444C]">04 · Mobile Application</p>
-                <h3 class="font-hand text-6xl font-bold leading-none mt-3">Pulse Flow</h3>
-                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">Streamlined daily biometric logging designed for fast 15-second interactions.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#FFD6D0] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Q1 2027</p>
+              <div class="w-full rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#1C1B1A] bg-[#F4F1EA]">
+                <svg viewBox="0 0 400 225" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" role="img" aria-label="StudioDesk — a desktop app window with a sidebar, on warm paper">
+                  <rect width="400" height="225" fill="#F4F1EA"/>
+                  <circle cx="36" cy="30" r="2" fill="#1C1B1A" opacity="0.18"/><circle cx="368" cy="200" r="2" fill="#1C1B1A" opacity="0.18"/><circle cx="382" cy="36" r="2" fill="#1C1B1A" opacity="0.14"/>
+                  <rect x="54" y="36" width="292" height="156" rx="10" fill="#FAF8F3" stroke="#1C1B1A" stroke-width="2.5"/>
+                  <rect x="54" y="36" width="292" height="27" rx="10" fill="#1C1B1A"/>
+                  <rect x="54" y="53" width="292" height="10" fill="#1C1B1A"/>
+                  <circle cx="72" cy="49.5" r="4.5" fill="#FAF8F3" opacity="0.45"/><circle cx="88" cy="49.5" r="4.5" fill="#FAF8F3" opacity="0.45"/><circle cx="104" cy="49.5" r="4.5" fill="#FF5C1A"/>
+                  <text x="122" y="54" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="1.5" fill="#FAF8F3" opacity="0.85">STUDIODESK &#8212; HOME / TODAY</text>
+                  <rect x="54" y="63" width="76" height="129" fill="#EFEAE0"/>
+                  <line x1="130" y1="63" x2="130" y2="192" stroke="#1C1B1A" stroke-width="1.5"/>
+                  <circle cx="68" cy="82" r="3.5" fill="#FF5C1A"/><rect x="78" y="78" width="38" height="7" rx="3.5" fill="#1C1B1A" opacity="0.75"/>
+                  <rect x="68" y="102" width="48" height="7" rx="3.5" fill="#1C1B1A" opacity="0.35"/>
+                  <rect x="68" y="122" width="48" height="7" rx="3.5" fill="#1C1B1A" opacity="0.35"/>
+                  <rect x="68" y="142" width="48" height="7" rx="3.5" fill="#1C1B1A" opacity="0.35"/>
+                  <rect x="68" y="162" width="34" height="7" rx="3.5" fill="#1C1B1A" opacity="0.35"/>
+                  <rect x="146" y="76" width="150" height="10" rx="5" fill="#1C1B1A" opacity="0.8"/>
+                  <rect x="146" y="100" width="184" height="9" rx="4.5" fill="#1C1B1A" opacity="0.28"/>
+                  <rect x="146" y="118" width="164" height="9" rx="4.5" fill="#1C1B1A" opacity="0.28"/>
+                  <circle cx="150" cy="150" r="5" fill="#FF5C1A"/><rect x="162" y="145" width="138" height="9" rx="4.5" fill="#1C1B1A" opacity="0.45"/>
+                  <rect x="146" y="168" width="104" height="9" rx="4.5" fill="#1C1B1A" opacity="0.28"/>
+                </svg>
               </div>
-            </article>
-
-            <article aria-disabled="true" class="project-card tilt-soft relative bg-[#FFFDF7] ink-card p-4 sm:p-5 select-none lg:col-span-2">
-              <span class="tape" aria-hidden="true"></span>
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                <div class="rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#20201E]"><div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
-                <!-- Top Row -->
-                <div class="flex items-center justify-between z-10">
-                  <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-400/90 font-medium">Design System</span>
-                  <span class="bg-white/10 backdrop-blur-md text-neutral-200 border border-white/15 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                    Coming Soon
-                  </span>
+              <div class="px-2 sm:px-3 pt-6 pb-3">
+                <div class="flex items-center justify-between gap-4">
+                  <p class="font-doodle font-bold uppercase tracking-wide text-[#D9480F]">04 · Desktop Application · Productivity</p><span class="text-3xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true">↗</span>
                 </div>
-
-                <!-- Center Graphic Placeholder -->
-                <div class="my-auto text-center z-10 py-0.5">
-                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-white/5 border border-white/10 text-emerald-400 mb-1.5 shadow-inner">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-                    </svg>
-                  </div>
-                  <h4 class="text-white font-bold text-base sm:text-lg tracking-tight">Vitalis Token System</h4>
-                  <p class="text-neutral-400 text-xs mt-0.5 max-w-xs mx-auto">Cross-platform tokens &amp; accessible UI components</p>
-                </div>
-
-                <!-- Bottom Row -->
-                <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-neutral-400 z-10 border-t border-white/10 pt-2">
-                  <span>Tokens v2.0</span>
-                  <span>WCAG AAA 10/10</span>
-                </div>
-
-                <!-- Background Subtle Glow -->
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              </div></div>
-                <div class="px-2 sm:px-3 py-3">
-                  <p class="font-doodle font-bold uppercase tracking-wide text-[#0A6B57]">05 · Design System</p>
-                  <h3 class="font-hand text-6xl font-bold leading-none mt-3">Vitalis Design System</h3>
-                  <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A cross-platform tokenized design system prioritizing accessibility and rapid feature delivery.</p>
-                  <p class="mt-5 inline-block font-doodle font-bold bg-[#DDF3D8] border-2 border-[#20201E] rounded-full px-4 py-1">Coming Soon · Tokens v2.0</p>
-                </div>
+                <h3 class="font-hand text-6xl font-bold leading-none mt-3">StudioDesk</h3>
+                <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A calm desktop workspace for freelance designers &mdash; projects, feedback, file versions, deadlines and payments in one place, instead of five apps and your head.</p>
+                <p class="mt-5 flex flex-wrap gap-3"><span class="font-doodle font-bold bg-[#1C1B1A] text-white border-2 border-[#20201E] rounded-full px-4 py-1">Concept Project</span><span class="font-doodle font-bold bg-[#FFE3D3] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</span></p>
               </div>
             </article>
           </div>
@@ -1664,6 +1609,844 @@
   </div>
   <!-- END OF #clearspend-view -->
 
+  <div id="antariksh-view" class="hidden min-h-screen">
+<style data-cs-style="csAntariksh">
+#antariksh-view{background-color:#050914!important;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1.3px),radial-gradient(rgba(139,124,255,.15) 1px,transparent 1.25px),linear-gradient(180deg,#050914 0%,#0A1030 52%,#050914 100%);background-size:130px 130px,215px 215px,100% 100%;background-position:0 0,64px 92px,0 0;color:#E9E7FF!important;overflow-x:clip}
+#antariksh-view main{background:transparent}
+#antariksh-view h1,#antariksh-view h2{font-family:'Bricolage Grotesque','Figtree',sans-serif!important;letter-spacing:-.02em!important}
+#antariksh-view h1{font-size:clamp(2.9rem,6.5vw,5.4rem)!important;line-height:1!important}
+#antariksh-view h2{font-size:clamp(2.1rem,4.6vw,3.6rem)!important;line-height:1.04!important}
+#antariksh-view h3{font-family:'Bricolage Grotesque','Figtree',sans-serif!important;letter-spacing:0!important}
+#antariksh-view .font-mono{font-family:'JetBrains Mono',monospace!important;letter-spacing:.05em!important}
+#antariksh-view section{position:relative}
+#antariksh-view .rounded-3xl{border-radius:22px!important}
+#antariksh-view .rounded-2xl{border-radius:16px!important}
+#antariksh-view .bg-white{background:rgba(255,255,255,.055)!important;border:1.5px solid rgba(139,124,255,.38)!important;box-shadow:0 10px 34px rgba(0,0,0,.42);color:#E9E7FF!important}
+#antariksh-view header{border-bottom:1.5px solid rgba(139,124,255,.35)!important;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+#antariksh-view .cs-beat{margin:0 0 1.25rem}
+#antariksh-view .cs-kicker{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#2DD4BF;background:rgba(45,212,191,.1);border:1.5px solid rgba(45,212,191,.55);border-radius:999px;padding:.42rem .85rem}
+#antariksh-view .cs-question{font-family:'Bricolage Grotesque','Figtree',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.06;color:#FFFFFF;margin-top:1rem;max-width:58rem}
+#antariksh-view .cs-goal,#antariksh-view .cs-note{position:relative;border:1.5px solid rgba(139,124,255,.55);border-radius:22px;box-shadow:0 12px 36px rgba(0,0,0,.45);padding:1.35rem 1.5rem;background:rgba(139,124,255,.09);margin:1.5rem 0}
+#antariksh-view .cs-note{border-color:rgba(45,212,191,.5);background:rgba(45,212,191,.07)}
+#antariksh-view .cs-goal p,#antariksh-view .cs-note p{color:#E9E7FF}
+#antariksh-view .cs-tape{position:absolute;width:92px;height:10px;background:linear-gradient(90deg,#2DD4BF,#8B7CFF);top:-6px;left:50%;transform:translateX(-50%);border-radius:999px;z-index:2;opacity:.9}
+#antariksh-view .cs-table-wrap{overflow-x:auto;margin-top:1.5rem}
+#antariksh-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:1.5px solid rgba(139,124,255,.45);border-radius:18px;box-shadow:0 12px 36px rgba(0,0,0,.45);background:rgba(10,16,48,.72);overflow:hidden}
+#antariksh-view .cs-table th,#antariksh-view .cs-table td{border-bottom:1px solid rgba(139,124,255,.22);padding:1rem;text-align:left;vertical-align:top;color:#DCD9F7}
+#antariksh-view .cs-table th{font-family:'JetBrains Mono',monospace;background:rgba(45,212,191,.09);color:#2DD4BF;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+#antariksh-view .cs-table tr:last-child td{border-bottom:0}
+#antariksh-view .cs-marquee{overflow:hidden;border-bottom:1.5px solid rgba(139,124,255,.3);background:rgba(255,255,255,.025);padding:1rem 0 1.2rem}
+#antariksh-view .cs-track{display:flex;width:max-content;animation:csAntarikshScroll 36s linear infinite}
+#antariksh-view .cs-marquee:hover .cs-track{animation-play-state:paused}
+#antariksh-view .cs-strip-group{display:flex;gap:1rem;padding-right:1rem}
+#antariksh-view .cs-card{width:300px;flex:0 0 auto;border:1.5px solid rgba(139,124,255,.42);border-radius:18px;overflow:hidden;background:#0A1030;box-shadow:0 10px 30px rgba(0,0,0,.5);margin:0}
+#antariksh-view .cs-card figcaption{font-family:'Bricolage Grotesque','Figtree',sans-serif;font-size:1.3rem;font-weight:700;line-height:1.1;padding:.7rem .9rem .9rem;color:#FFFFFF}
+#antariksh-view .cs-card figcaption span{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.72rem;letter-spacing:.06em;color:#9D97D8;margin-top:.3rem;text-transform:uppercase}
+#antariksh-view .ak-scene{height:168px;position:relative;overflow:hidden}
+#antariksh-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:rgba(139,124,255,.08);color:#E9E7FF}
+#antariksh-view .cs-text-card strong{font-family:'Bricolage Grotesque','Figtree',sans-serif;font-size:1.8rem;line-height:1;color:#FFFFFF}
+#antariksh-view .cs-text-card span{font-size:.95rem;line-height:1.35;color:#C7C3EE}
+#antariksh-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:1.5px solid rgba(45,212,191,.6);border-radius:999px;background:#2DD4BF;color:#04211C!important;font-weight:800;box-shadow:0 8px 24px rgba(45,212,191,.25)}
+@keyframes csAntarikshScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){#antariksh-view .cs-track{animation:none}}
+</style>
+
+    <!-- STICKY SUB-NAV BAR -->
+    <header class="bg-[#0A1030]/95 text-white px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4 border-b border-white/10">
+      <button
+        type="button"
+        onclick="showHomeView()"
+        class="bg-[#2DD4BF] hover:bg-[#5EEAD4] text-[#04211C] font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0 cursor-pointer"
+      >
+        &larr; Back to Home
+      </button>
+
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 overflow-x-auto scrollbar-none">
+        <button type="button" onclick="document.getElementById('ak-problem').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#2DD4BF] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">THE PROBLEM</button>
+        <button type="button" onclick="document.getElementById('ak-principles').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#2DD4BF] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">PRINCIPLES</button>
+        <button type="button" onclick="document.getElementById('ak-logic').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#2DD4BF] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">MISSION LOGIC</button>
+        <button type="button" onclick="document.getElementById('ak-comfort').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#2DD4BF] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">COMFORT &amp; SAFETY</button>
+        <button type="button" onclick="document.getElementById('ak-testing').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#2DD4BF] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">TESTING PLAN</button>
+      </div>
+
+      <a
+        href="https://www.figma.com/design/VhqUjBsglUCwopi5lbeC7n"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#8B7CFF] hover:bg-[#A79BFF] text-[#0A1030] font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
+      >
+        Figma File &nearr;
+      </a>
+    </header>
+
+    <!-- HERO -->
+    <section class="text-white py-16 sm:py-24 border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <div class="lg:col-span-7 space-y-5">
+            <p class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF]">VR Experience / Space Education &mdash; Concept Project</p>
+            <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]">
+              Antariksh: Stand on the Moon. Feel how big space actually is.
+            </h1>
+            <p class="text-[#C7C3EE] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+              A VR space exploration experience for students aged 12&ndash;20, designed for schools and
+              science centres that share a small set of headsets. Four guided missions, ten minutes
+              each, built comfort-first &mdash; so space stops being a table in a textbook and becomes
+              a place you have actually stood in.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="https://www.figma.com/design/VhqUjBsglUCwopi5lbeC7n" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2DD4BF] hover:bg-[#5EEAD4] text-[#04211C] font-bold text-sm transition-colors">View in Figma &nearr;</a>
+              <a href="assets/case-studies/antariksh-vr-case-study.pdf" class="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-colors border border-white/25">Download Case Study (PDF)</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-[#9D97D8]">
+              <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
+              <div><strong class="text-white block mb-0.5">ROLE</strong>UI/UX Designer (Fresher)</div>
+              <div><strong class="text-white block mb-0.5">TYPE</strong>Concept Project</div>
+              <div><strong class="text-white block mb-0.5">PLATFORM</strong>Standalone VR Headset</div>
+            </div>
+          </div>
+
+          <!-- Mission Select Preview Card -->
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-[#0A1030] p-6 sm:p-8 border border-[#8B7CFF]/40 shadow-2xl">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="font-display font-bold text-white text-base block">Mission Select &mdash; The Hub</span>
+                  <span class="font-mono text-[11px] text-[#9D97D8]">Example UI copy from the prototype</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-[#2DD4BF]/15 text-[#2DD4BF]">Prototype</span>
+              </div>
+              <div class="space-y-3 text-white text-sm">
+                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span><span class="font-mono text-[#2DD4BF] text-xs mr-2">M-01</span>First Footprints</span><span class="font-semibold text-[#9D97D8]">Moon</span></div>
+                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span><span class="font-mono text-[#2DD4BF] text-xs mr-2">M-02</span>Rendezvous</span><span class="font-semibold text-[#9D97D8]">ISS Docking</span></div>
+                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span><span class="font-mono text-[#2DD4BF] text-xs mr-2">M-03</span>Red Ground</span><span class="font-semibold text-[#9D97D8]">Mars Walk</span></div>
+                <div class="flex items-center justify-between bg-white/5 rounded-xl px-3.5 py-3 border border-white/10"><span><span class="font-mono text-[#2DD4BF] text-xs mr-2">M-04</span>The Long View</span><span class="font-semibold text-[#9D97D8]">Solar System</span></div>
+              </div>
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/10 font-mono text-[11px] text-[#9D97D8]">
+                <span>COMFORT: STANDARD VIGNETTE</span><span>SEATED &#183; 10:00</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-marquee" aria-label="Antariksh mission scenes"><div class="cs-track"><div class="cs-strip-group"><figure class="cs-card"><div class="ak-scene" style="background:radial-gradient(circle at 50% 115%,rgba(139,124,255,.5),transparent 62%),linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="52" cy="30" r="1.6" fill="#fff" opacity=".8"/><circle cx="238" cy="24" r="1.3" fill="#fff" opacity=".55"/><circle cx="150" cy="88" r="30" fill="#2DD4BF" opacity=".9"/><ellipse cx="150" cy="92" rx="72" ry="19" fill="none" stroke="#8B7CFF" stroke-width="2" opacity=".7" transform="rotate(-11 150 92)"/><circle cx="226" cy="58" r="3" fill="#2DD4BF"/></svg></div><figcaption>Mission Hub<span>Choose a mission patch</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="40" cy="36" r="1.5" fill="#fff" opacity=".7"/><circle cx="262" cy="44" r="1.4" fill="#fff" opacity=".6"/><ellipse cx="150" cy="84" rx="118" ry="34" fill="none" stroke="#8B7CFF" stroke-width="1.6" opacity=".55"/><ellipse cx="150" cy="84" rx="82" ry="23" fill="none" stroke="#2DD4BF" stroke-width="1.6" opacity=".65"/><ellipse cx="150" cy="84" rx="46" ry="13" fill="none" stroke="#E9E7FF" stroke-width="1.4" opacity=".6"/><circle cx="150" cy="84" r="11" fill="#FFD34D"/><circle cx="232" cy="70" r="6" fill="#8B7CFF"/><circle cx="104" cy="98" r="4.5" fill="#2DD4BF"/><circle cx="176" cy="66" r="3.4" fill="#E9E7FF"/></svg></div><figcaption>Solar System Map<span>Scale, honestly &mdash; two views</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#050914 58%,#3F3F46 58.5%,#52525B)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="228" cy="38" r="13" fill="#BFDBFE"/><circle cx="224" cy="35" r="3" fill="#93C5FD" opacity=".7"/><circle cx="60" cy="26" r="1.5" fill="#fff" opacity=".8"/><circle cx="130" cy="18" r="1.2" fill="#fff" opacity=".55"/><path d="M96 128 l7 -14 7 14 z" fill="#2DD4BF"/><rect x="102.6" y="112" width="1.8" height="16" fill="#E9E7FF"/></svg></div><figcaption>Moon Surface<span>Find Earth without a pointer</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:radial-gradient(circle at 50% 130%,rgba(45,212,191,.28),transparent 60%),linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><rect x="128" y="66" width="44" height="36" rx="4" fill="#1E1B4B" stroke="#8B7CFF" stroke-width="1.6"/><rect x="66" y="74" width="54" height="20" fill="#2DD4BF" opacity=".55"/><rect x="180" y="74" width="54" height="20" fill="#2DD4BF" opacity=".55"/><line x1="120" y1="84" x2="128" y2="84" stroke="#8B7CFF" stroke-width="2"/><line x1="172" y1="84" x2="180" y2="84" stroke="#8B7CFF" stroke-width="2"/><circle cx="150" cy="84" r="6" fill="none" stroke="#2DD4BF" stroke-width="2"/><circle cx="44" cy="30" r="1.5" fill="#fff" opacity=".7"/><circle cx="258" cy="26" r="1.3" fill="#fff" opacity=".55"/></svg></div><figcaption>ISS Docking<span>Align &#183; Approach &#183; Capture</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#2A0E07 0%,#7C2D12 55%,#9A3412 56%,#7C2D12)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><path d="M0 108 Q70 88 150 104 T300 100 V168 H0 Z" fill="#431407" opacity=".65"/><rect x="196" y="96" width="34" height="20" rx="4" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.4"/><circle cx="204" cy="120" r="5" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.2"/><circle cx="224" cy="120" r="5" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.2"/><line x1="213" y1="96" x2="213" y2="84" stroke="#FDBA74" stroke-width="1.6"/><circle cx="213" cy="82" r="2.4" fill="#2DD4BF"/><text x="18" y="34" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1.5" fill="#FDBA74">SIGNAL DELAY 22 MIN</text></svg></div><figcaption>Mars Walk<span>Drive the rover, feel the delay</span></figcaption></figure></div><div class="cs-strip-group" aria-hidden="true"><figure class="cs-card"><div class="ak-scene" style="background:radial-gradient(circle at 50% 115%,rgba(139,124,255,.5),transparent 62%),linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="52" cy="30" r="1.6" fill="#fff" opacity=".8"/><circle cx="238" cy="24" r="1.3" fill="#fff" opacity=".55"/><circle cx="150" cy="88" r="30" fill="#2DD4BF" opacity=".9"/><ellipse cx="150" cy="92" rx="72" ry="19" fill="none" stroke="#8B7CFF" stroke-width="2" opacity=".7" transform="rotate(-11 150 92)"/><circle cx="226" cy="58" r="3" fill="#2DD4BF"/></svg></div><figcaption>Mission Hub<span>Choose a mission patch</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="40" cy="36" r="1.5" fill="#fff" opacity=".7"/><circle cx="262" cy="44" r="1.4" fill="#fff" opacity=".6"/><ellipse cx="150" cy="84" rx="118" ry="34" fill="none" stroke="#8B7CFF" stroke-width="1.6" opacity=".55"/><ellipse cx="150" cy="84" rx="82" ry="23" fill="none" stroke="#2DD4BF" stroke-width="1.6" opacity=".65"/><ellipse cx="150" cy="84" rx="46" ry="13" fill="none" stroke="#E9E7FF" stroke-width="1.4" opacity=".6"/><circle cx="150" cy="84" r="11" fill="#FFD34D"/><circle cx="232" cy="70" r="6" fill="#8B7CFF"/><circle cx="104" cy="98" r="4.5" fill="#2DD4BF"/><circle cx="176" cy="66" r="3.4" fill="#E9E7FF"/></svg></div><figcaption>Solar System Map<span>Scale, honestly &mdash; two views</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#050914 58%,#3F3F46 58.5%,#52525B)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><circle cx="228" cy="38" r="13" fill="#BFDBFE"/><circle cx="224" cy="35" r="3" fill="#93C5FD" opacity=".7"/><circle cx="60" cy="26" r="1.5" fill="#fff" opacity=".8"/><circle cx="130" cy="18" r="1.2" fill="#fff" opacity=".55"/><path d="M96 128 l7 -14 7 14 z" fill="#2DD4BF"/><rect x="102.6" y="112" width="1.8" height="16" fill="#E9E7FF"/></svg></div><figcaption>Moon Surface<span>Find Earth without a pointer</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:radial-gradient(circle at 50% 130%,rgba(45,212,191,.28),transparent 60%),linear-gradient(180deg,#0A1030,#050914)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><rect x="128" y="66" width="44" height="36" rx="4" fill="#1E1B4B" stroke="#8B7CFF" stroke-width="1.6"/><rect x="66" y="74" width="54" height="20" fill="#2DD4BF" opacity=".55"/><rect x="180" y="74" width="54" height="20" fill="#2DD4BF" opacity=".55"/><line x1="120" y1="84" x2="128" y2="84" stroke="#8B7CFF" stroke-width="2"/><line x1="172" y1="84" x2="180" y2="84" stroke="#8B7CFF" stroke-width="2"/><circle cx="150" cy="84" r="6" fill="none" stroke="#2DD4BF" stroke-width="2"/><circle cx="44" cy="30" r="1.5" fill="#fff" opacity=".7"/><circle cx="258" cy="26" r="1.3" fill="#fff" opacity=".55"/></svg></div><figcaption>ISS Docking<span>Align &#183; Approach &#183; Capture</span></figcaption></figure><figure class="cs-card"><div class="ak-scene" style="background:linear-gradient(180deg,#2A0E07 0%,#7C2D12 55%,#9A3412 56%,#7C2D12)"><svg viewBox="0 0 300 168" class="w-full h-full block" aria-hidden="true"><path d="M0 108 Q70 88 150 104 T300 100 V168 H0 Z" fill="#431407" opacity=".65"/><rect x="196" y="96" width="34" height="20" rx="4" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.4"/><circle cx="204" cy="120" r="5" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.2"/><circle cx="224" cy="120" r="5" fill="#1C0A05" stroke="#FDBA74" stroke-width="1.2"/><line x1="213" y1="96" x2="213" y2="84" stroke="#FDBA74" stroke-width="1.6"/><circle cx="213" cy="82" r="2.4" fill="#2DD4BF"/><text x="18" y="34" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="1.5" fill="#FDBA74">SIGNAL DELAY 22 MIN</text></svg></div><figcaption>Mars Walk<span>Drive the rover, feel the delay</span></figcaption></figure></div></div></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+
+      <!-- 01. THE PROBLEM -->
+      <section id="ak-problem" class="scroll-mt-24 mb-20 space-y-6">
+        <div class="cs-beat"><span class="cs-kicker">Core Question</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">01 &mdash; The Problem</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Space is taught flat. So it is remembered flat.</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          In a classroom, the solar system becomes a table: planet, distance from the Sun, number of
+          moons. A student can score full marks and still have no sense of what any of it means &mdash;
+          because a diagram draws planets almost the same size and almost evenly spaced, simply
+          because real scale will not fit on a page.
+        </p>
+        <p class="cs-question">&ldquo;Why does the most exciting subject humans have &mdash; space &mdash; feel flat and forgettable in a classroom?&rdquo;</p>
+
+        <aside class="cs-goal"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Goal</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">Antariksh does not try to replace the textbook. It does the one job a page cannot do: it puts the student <strong>inside the scale</strong> for ten minutes, then sends them back to class with questions a teacher can build on. If the experience only added spectacle, it would fail &mdash; every scene is tied to a specific misconception that diagrams leave behind.</p>
+        </aside>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Scale is lost</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">How small Earth looks from the Moon, and how empty the space between orbits is, never survives a printed diagram.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Procedure is lost</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Docking is a sequence of careful corrections, not a single dramatic moment &mdash; a table of numbers cannot teach patience in order.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Presence is lost</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Photos have no body in them. There is nothing to stand next to, nothing to look up at &mdash; and nothing to make a student care in the first place.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02. RESEARCH -->
+      <section id="ak-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">What the research found</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">02 &mdash; Research Highlights</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Promising, modest &mdash; and easy to ruin with discomfort</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          No interviews or survey were run for this concept, and this page does not pretend otherwise.
+          The research is published evidence, read critically &mdash; including where it argues
+          against hype. The people in this case study are research-based archetypes, not
+          interviewed participants.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[#2DD4BF] text-[#04211C] rounded-3xl p-6 shadow-sm">
+            <span class="font-display font-extrabold text-3xl block mb-2">g = 0.38</span>
+            <p class="text-sm leading-relaxed">A meta-analysis of 48 primary studies (3,179 students) found a small positive effect for immersive VR on learning outcomes, larger in K-12 than in higher education (Coban, Bolat &amp; Goksu, 2022). Small matters: design quality, not the headset alone, decides the result.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Spatial topics are the strongest case</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">A K-12 STEM review (80 studies, 7,750 students) reported favourable estimates for learning and engagement, while warning most studies were small and short-term. So Antariksh targets a spatial topic &mdash; scale and orientation &mdash; rather than claiming VR helps everything.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">India has the audience</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">ISRO&rsquo;s outreach &mdash; National Space Day, Space on Wheels, Chandrayaan school programmes &mdash; shows sustained national effort to take space science to students. Schools are beginning to set up shared VR labs, starting with a small pilot set of standalone headsets. That shared, supervised, short-session reality shaped every decision in this design.</p>
+          </div>
+        </div>
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">What the evidence does not say</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">It does not say VR is &ldquo;4x better&rdquo; for schoolchildren, and it does not guarantee retention. Corporate training figures are often quoted out of context &mdash; this case study treats them as a ceiling, not a promise.</p>
+        </div>
+      </section>
+
+      <!-- 03. PRINCIPLES -->
+      <section id="ak-principles" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">Problem &rarr; Principle &rarr; Feature</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">03 &mdash; Experience Principles</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Five principles, in priority order</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          Designed for three archetypes at once: the First-Timer (12&ndash;14, has never worn a
+          headset, needs a win in the first 60 seconds), the Gamer (16&ndash;20, expects smooth
+          movement, needs challenge layers without unlocking uncomfortable locomotion for everyone),
+          and the Teacher (a class of 30, 6 headsets, needs to start, pause and reset without
+          touching a student&rsquo;s face).
+        </p>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Problem</th><th>Design principle</th><th>Feature it produced</th></tr></thead><tbody>
+        <tr><td><strong>Beginners get sick in VR</strong></td><td>1. Comfort First &mdash; if a choice risks nausea, it loses, even if it is more immersive</td><td>Teleport pads, snap turning, comfort vignette, seated-first design</td></tr>
+        <tr><td><strong>Students look everywhere except the lesson</strong></td><td>2. Guide the Eye &mdash; you cannot control where a student looks in 360&deg;, so light, sound and motion lead attention</td><td>A soft teal pulse on the next target, a spatial-audio cue, a guide line that fades once they look the right way</td></tr>
+        <tr><td><strong>Scale does not survive diagrams</strong></td><td>3. Feel the Scale &mdash; every mission has one moment sized to the body</td><td>Standing beside, looking up, crossing real-feeling distance in every mission</td></tr>
+        <tr><td><strong>Failure embarrasses in front of the class</strong></td><td>4. Safe to Fail &mdash; a failed docking is a lesson, never a game over</td><td>Instant, calm reset to the last checkpoint, with the reason shown in plain words</td></tr>
+        <tr><td><strong>Shared headsets, one school period</strong></td><td>5. Ten-Minute Missions &mdash; depth comes from debrief, not duration</td><td>The same orbit every session &mdash; Hub, Briefing, Mission, Debrief &mdash; with progression by patch, not by score, and no leaderboard</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <!-- 04. WHY IMMERSION -->
+      <section id="ak-why" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">Why immersion?</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">04 &mdash; The Rationale</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">VR earns its place only where a page cannot go</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          A video cannot let a student turn around and fail to find Earth. It cannot make them wait
+          out a signal delay, or feel travel time at true scale. Where VR adds nothing &mdash; facts
+          and dates &mdash; Antariksh does not use it. And where the medium has to simplify, it says
+          so: the Solar System Map&rsquo;s Classroom View compresses distance so all planets are
+          visible, and says so on screen; True Scale is mostly darkness and distance, with a
+          travel-time counter. Naming the lie is the lesson.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Moon Surface &mdash; feel distance</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Almost no HUD. One marker at the landing site, Earth fixed in a black sky, and a single task: plant a flag, turn around, and find Earth without a pointer. The emptiness is the interface.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">ISS Docking &mdash; learn a sequence</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">A docking panel with three states only &mdash; Align, Approach, Capture &mdash; each with one control and one clear good / too-far signal. Speed is capped; overshoot triggers a calm reset to the last checkpoint.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Mars Walk &mdash; understand delay</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">A wrist panel shows distance to the rover and a live signal-delay counter &mdash; up to 22 minutes one-way, compressed to 20 seconds &mdash; so students feel why Mars is driven, not joysticked, from Earth.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          Common rule across scenes: panels are diegetic where possible (walls, wrists, consoles),
+          text is never smaller than the equivalent of 20pt at reading distance, and the exit
+          control sits in the same place in every scene &mdash; lower centre, hold to exit.
+        </p>
+      </section>
+
+      <!-- 05. LOGIC BEHIND THE PROTOTYPE -->
+      <section id="ak-logic" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">Logic behind the prototype</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">05 &mdash; Mission Map &amp; Interaction Model</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Every session follows the same orbit</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          Predictability is a comfort feature. When students know what happens next, they relax
+          &mdash; and teachers can run the timetable: <strong class="text-white">Hub</strong> (2 min,
+          choose a mission patch, check comfort settings) &rarr; <strong class="text-white">Briefing</strong>
+          (1 min, in-world: one goal, one control reminder, one thing to look for) &rarr;
+          <strong class="text-white">Mission</strong> (7&ndash;8 min, guided tasks sized to one
+          learning idea) &rarr; <strong class="text-white">Debrief</strong> (2 min, headset off: one
+          question on the teacher screen, one badge earned).
+        </p>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Mission</th><th>Place</th><th>The one idea</th></tr></thead><tbody>
+        <tr><td><strong>M-01 First Footprints</strong></td><td>Moon landing site</td><td>Earth is small and far from here.</td></tr>
+        <tr><td><strong>M-02 Rendezvous</strong></td><td>ISS docking</td><td>Docking is patience: small corrections, in order.</td></tr>
+        <tr><td><strong>M-03 Red Ground</strong></td><td>Mars surface walk</td><td>Mars is a place with weather, distance and delay &mdash; not a backdrop.</td></tr>
+        <tr><td><strong>M-04 The Long View</strong></td><td>Solar-system scale flight</td><td>Space is mostly empty. Orbits are vast, planets are specks.</td></tr>
+        </tbody></table></div>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Decision</th><th>Chosen</th><th>Rejected &mdash; and why</th></tr></thead><tbody>
+        <tr><td><strong>Locomotion</strong></td><td>Teleport pads</td><td>Smooth stick movement &mdash; the strongest sickness trigger for beginners</td></tr>
+        <tr><td><strong>Turning</strong></td><td>Physical turning + 45&deg; snap turn</td><td>Smooth turn &mdash; continuous rotation causes discomfort</td></tr>
+        <tr><td><strong>Selection</strong></td><td>Gaze-dwell, 1.2 seconds &mdash; a filling ring shows progress, looking away cancels</td><td>Laser pointer only &mdash; excludes dropped or faulty controllers</td></tr>
+        <tr><td><strong>Text</strong></td><td>Short panels at 2&ndash;3 m, high contrast</td><td>Floating small text &mdash; unreadable and tiring in headsets</td></tr>
+        </tbody></table></div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          Controllers add precision for docking, but no mission requires them &mdash; a student who
+          drops a controller can still finish. In the Hub, mission patches hang as physical badges
+          on a wall and comfort settings live on a large, labelled panel by the door, visible before
+          every mission, not buried in a menu.
+        </p>
+      </section>
+
+      <!-- 06. COMFORT & SAFETY -->
+      <section id="ak-comfort" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">Comfort &amp; Safety</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">06 &mdash; Comfort &amp; Safety System</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">A student can stop, instantly, without asking permission</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Exit-anywhere</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Hold the lower-centre exit for one second, from any scene, at any moment. The view fades to the Hub&rsquo;s calm room &mdash; never to black, never to a menu maze. Teachers also have a pause-all that gently fades every headset at once.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Timers that protect</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Missions hard-stop at 10 minutes with a two-minute landing sequence, not a sudden cut. The Hub shows time used today per headset and suggests a break after 20 minutes total. Timers are framed as mission rules, not punishments.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">No forced motion, ever</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">The camera never moves without student input &mdash; except the single guided flight in M-04, which is previewed in Briefing, skippable, vignetted, and flown at constant speed with a stable horizon reference.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">Before the headset goes on</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">A 30-second comfort check: fit, lens clarity, seated position, boundary clear &mdash; and a plain-language note: if you feel dizzy or unwell, stop and tell the teacher; stopping is normal. Students with glasses get a spacer prompt.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          The standard this design holds itself to: teleport as the default locomotion, snap
+          turning, dynamic vignette during movement, seated-first design, and a stable frame rate
+          at the headset&rsquo;s native refresh rate &mdash; the widely published comfort baseline
+          in Meta&rsquo;s developer guidance and the VR comfort literature, treated as a
+          requirement, not a feature list.
+        </p>
+      </section>
+
+      <!-- 07. CLASSROOM DEPLOYMENT -->
+      <section id="ak-classroom" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-beat"><span class="cs-kicker">Classroom Deployment</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">07 &mdash; Classroom Deployment</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Six headsets, thirty students, one period</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          It has to run like a timetable, not a demo. The 90-second reset flow: the student removes
+          the headset and taps End on the teacher screen (15 sec); lenses and straps are wiped with
+          the station kit (30 sec); the next student does the fit and comfort check as the Hub opens
+          (30 sec); battery and fault flags are checked, and the headset is swapped if below 25%
+          (15 sec).
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">What the teacher sees</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">Per headset: student first name, mission, time left, comfort status. One-tap pause-all and end-all. The debrief question for the mission just finished. Fault and battery flags &mdash; without student performance scores.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-white mb-2">What the teacher deliberately does not see</h3>
+            <p class="text-sm text-[#C7C3EE] leading-relaxed">No rankings between students. No gaze tracking or attention scores. No recordings of the student&rsquo;s view by default. Trust is a deployment feature &mdash; a tool teachers feel surveils children will not be used twice.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          While six students fly, the other twenty-four are not waiting idle: each mission has a
+          paired worksheet &mdash; predict before, observe during a class-screen mirror view,
+          discuss after. The headset is the middle of the lesson, not the whole lesson.
+        </p>
+      </section>
+
+      <!-- Reflection + Testing plan -->
+      <section id="ak-testing" class="cs-added scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-white/10">
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Reflection &amp; Current Tensions</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">Antariksh is a self-initiated concept project by Prashant Kumar, UI/UX Designer (Fresher). No school, student or teacher participated in this design, and no usability or learning results are claimed. The open tension is honest: if testing shows a good video teaches scale just as well, the honest answer is to ship the video.</p>
+        </div>
+        <div class="cs-beat"><span class="cs-kicker">Testing Plan &amp; Future Considerations</span></div>
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#2DD4BF] block mb-2">08 &mdash; Testing Plan &mdash; Not Yet Tested</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Targets defined here. Claimed nowhere.</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          These are targets written before testing, so results cannot be cherry-picked afterwards.
+          None of these numbers has been achieved &mdash; testing has not happened yet.
+        </p>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Metric</th><th>Target (pre-set)</th><th>How measured</th></tr></thead><tbody>
+        <tr><td><strong>Comfort completion</strong></td><td>At least 90% finish a mission without stopping for discomfort</td><td>Session log + exit reason</td></tr>
+        <tr><td><strong>Scale understanding</strong></td><td>At least 70% improve on a 5-question scale quiz, pre to post</td><td>Same quiz before and after M-04</td></tr>
+        <tr><td><strong>First-task success</strong></td><td>At least 85% select a mission unaided in the Hub</td><td>Observed task, no prompts</td></tr>
+        <tr><td><strong>Reset flow</strong></td><td>Median reset at or under 90 seconds</td><td>Teacher timing, 10 resets</td></tr>
+        <tr><td><strong>Debrief quality</strong></td><td>Teacher rates the debrief prompt useful in at least 4 of 5 sessions</td><td>Teacher short form</td></tr>
+        </tbody></table></div>
+        <p class="text-base sm:text-lg text-[#C7C3EE] leading-relaxed max-w-3xl">
+          The plan runs in four rounds: a comfort pilot (8 first-time students, aged 12&ndash;20,
+          guardian and school consent), a usability round (10 students, Hub + M-01 + M-02 tasks), a
+          learning check (one class, pre/post scale quiz, with a video comparison group), and a
+          teacher run (3 teachers, full-period simulation). Stop rule: any participant reporting
+          strong nausea or disorientation ends that session immediately, is counted as a comfort
+          failure, and the scene involved is reviewed before any further sessions.
+        </p>
+        <div class="cs-beat"><span class="cs-kicker">Final Product / Prototype</span></div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://www.figma.com/design/VhqUjBsglUCwopi5lbeC7n" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2DD4BF] hover:bg-[#5EEAD4] text-[#04211C] font-bold text-sm transition-colors">Open the Figma File &nearr;</a>
+          <a href="assets/case-studies/antariksh-vr-case-study.pdf" class="px-6 py-3 rounded-full bg-[#8B7CFF] hover:bg-[#A79BFF] text-[#0A1030] font-bold text-sm transition-colors">Download Full Case Study (PDF)</a>
+        </div>
+      </section>
+
+      <!-- Bottom Return Banner -->
+      <div class="bg-[#0A1030] text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12 border border-[#8B7CFF]/40">
+        <div class="space-y-2 max-w-xl">
+          <span class="cs-kicker">Takeaways</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-[#2DD4BF] block">Case Study Complete</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold">Designed by Prashant Kumar, UI/UX Designer (Fresher).</h3>
+          <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-[#C7C3EE]">
+            <a href="mailto:prashantkumar.pr501@gmail.com" class="underline hover:text-white">prashantkumar.pr501@gmail.com</a>
+            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">LinkedIn &nearr;</a>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="showHomeView()"
+          class="px-7 py-3.5 rounded-full bg-[#2DD4BF] text-[#04211C] hover:bg-[#5EEAD4] font-bold text-sm transition-colors shadow-md shrink-0 cursor-pointer"
+        >
+          &larr; Back to Home
+        </button>
+      </div>
+    </main>
+  </div>
+  <!-- END OF #antariksh-view -->
+
+  <div id="studiodesk-view" class="hidden min-h-screen">
+<style data-cs-style="csStudio">
+#studiodesk-view{background-color:#F4F1EA!important;background-image:radial-gradient(rgba(28,27,26,.05) 1px,transparent 1.15px);background-size:24px 24px;color:#1C1B1A!important;overflow-x:clip}
+#studiodesk-view main{background:transparent}
+#studiodesk-view h1,#studiodesk-view h2{font-family:Georgia,'Times New Roman',serif!important;letter-spacing:-.01em!important;font-weight:700!important}
+#studiodesk-view h1{font-size:clamp(2.8rem,6vw,5rem)!important;line-height:1.02!important}
+#studiodesk-view h2{font-size:clamp(2rem,4.4vw,3.4rem)!important;line-height:1.08!important}
+#studiodesk-view h3{font-family:'Figtree',sans-serif!important;letter-spacing:0!important}
+#studiodesk-view .font-mono{font-family:'JetBrains Mono',monospace!important;letter-spacing:.05em!important}
+#studiodesk-view section{position:relative}
+#studiodesk-view .rounded-3xl{border-radius:14px!important}
+#studiodesk-view .rounded-2xl{border-radius:10px!important}
+#studiodesk-view .bg-white{background:#FAF8F3!important;border:1.5px solid #1C1B1A!important;box-shadow:3px 4px 0 rgba(28,27,26,.85);color:#1C1B1A!important}
+#studiodesk-view header{border-bottom:2px solid #1C1B1A!important;box-shadow:0 3px 0 rgba(28,27,26,.15)}
+#studiodesk-view .cs-beat{margin:0 0 1.25rem}
+#studiodesk-view .cs-kicker{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#C2410C;background:#FFF1E8;border:1.5px solid #1C1B1A;border-radius:999px;padding:.42rem .85rem}
+#studiodesk-view .cs-question{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,3.3rem);line-height:1.12;color:#1C1B1A;margin-top:1rem;max-width:58rem}
+#studiodesk-view .cs-goal,#studiodesk-view .cs-note{position:relative;border:1.5px solid #1C1B1A;border-radius:14px;box-shadow:4px 5px 0 rgba(28,27,26,.88);padding:1.35rem 1.5rem;background:#FAF8F3;margin:1.5rem 0}
+#studiodesk-view .cs-goal{background:#FFF6EF}
+#studiodesk-view .cs-goal p,#studiodesk-view .cs-note p{color:#1C1B1A}
+#studiodesk-view .cs-tape{position:absolute;width:92px;height:24px;background:rgba(255,92,26,.5);top:-13px;left:50%;transform:translateX(-50%) rotate(-2deg);border-left:1px dashed rgba(28,27,26,.35);border-right:1px dashed rgba(28,27,26,.35);z-index:2}
+#studiodesk-view .cs-table-wrap{overflow-x:auto;margin-top:1.5rem}
+#studiodesk-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:1.5px solid #1C1B1A;border-radius:12px;box-shadow:3px 4px 0 rgba(28,27,26,.85);background:#FAF8F3;overflow:hidden}
+#studiodesk-view .cs-table th,#studiodesk-view .cs-table td{border-bottom:1px solid rgba(28,27,26,.25);padding:1rem;text-align:left;vertical-align:top;color:#1C1B1A}
+#studiodesk-view .cs-table th{font-family:'JetBrains Mono',monospace;background:#F4F1EA;color:#1C1B1A;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+#studiodesk-view .cs-table tr:last-child td{border-bottom:0}
+#studiodesk-view .cs-marquee{overflow:hidden;border-bottom:2px solid #1C1B1A;background:#FAF8F3;padding:1rem 0 1.2rem}
+#studiodesk-view .cs-track{display:flex;width:max-content;animation:csStudioScroll 36s linear infinite}
+#studiodesk-view .cs-marquee:hover .cs-track{animation-play-state:paused}
+#studiodesk-view .cs-strip-group{display:flex;gap:1rem;padding-right:1rem}
+#studiodesk-view .cs-card{width:300px;flex:0 0 auto;border:1.5px solid #1C1B1A;border-radius:12px;overflow:hidden;background:#FAF8F3;box-shadow:3px 4px 0 rgba(28,27,26,.85);margin:0}
+#studiodesk-view .cs-card figcaption{font-family:'Figtree',sans-serif;font-size:1.15rem;font-weight:800;line-height:1.15;padding:.7rem .9rem .9rem;color:#1C1B1A}
+#studiodesk-view .cs-card figcaption span{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.7rem;letter-spacing:.06em;color:#8A8578;margin-top:.3rem;text-transform:uppercase}
+#studiodesk-view .sd-win{height:168px;background:#F4F1EA;padding:14px}
+#studiodesk-view .sd-winframe{height:100%;border:1.5px solid #1C1B1A;border-radius:8px;background:#FAF8F3;overflow:hidden;display:flex;flex-direction:column}
+#studiodesk-view .sd-winbar{display:flex;align-items:center;gap:5px;background:#1C1B1A;padding:6px 9px}
+#studiodesk-view .sd-winbar i{width:8px;height:8px;border-radius:999px;background:rgba(250,248,243,.4);display:block}
+#studiodesk-view .sd-winbar i.sd-dot{background:#FF5C1A}
+#studiodesk-view .sd-winbar em{font-family:'JetBrains Mono',monospace;font-style:normal;font-size:9.5px;letter-spacing:.08em;color:rgba(250,248,243,.85);margin-left:5px;text-transform:uppercase}
+#studiodesk-view .sd-winbody{padding:11px 12px;display:flex;flex-direction:column;gap:7px}
+#studiodesk-view .sd-line{height:8px;border-radius:99px;background:rgba(28,27,26,.22)}
+#studiodesk-view .sd-line.strong{background:rgba(28,27,26,.65)}
+#studiodesk-view .sd-row{display:flex;align-items:center;gap:8px}
+#studiodesk-view .sd-row .sd-line{flex:1}
+#studiodesk-view .sd-urgent{width:9px;height:9px;border-radius:99px;background:#FF5C1A;flex:0 0 auto}
+#studiodesk-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:#FAF8F3;color:#1C1B1A}
+#studiodesk-view .cs-text-card strong{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.05;color:#1C1B1A}
+#studiodesk-view .cs-text-card span{font-size:.95rem;line-height:1.35;color:#55524C}
+#studiodesk-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:1.5px solid #1C1B1A;border-radius:999px;background:#FF5C1A;color:#fff!important;font-weight:800;box-shadow:3px 4px 0 rgba(28,27,26,.9)}
+@keyframes csStudioScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){#studiodesk-view .cs-track{animation:none}}
+</style>
+
+    <!-- STICKY SUB-NAV BAR -->
+    <header class="bg-[#1C1B1A] text-[#FAF8F3] px-4 sm:px-6 py-3 sticky top-0 z-50 flex items-center justify-between text-xs tracking-wider uppercase font-mono whitespace-nowrap gap-4">
+      <button
+        type="button"
+        onclick="showHomeView()"
+        class="bg-[#FF5C1A] hover:bg-[#E04E12] text-white font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-2 font-sans text-xs shrink-0 cursor-pointer"
+      >
+        &larr; Back to Home
+      </button>
+
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 overflow-x-auto scrollbar-none">
+        <button type="button" onclick="document.getElementById('sd-problem').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#FF9E6B] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">THE PROBLEM</button>
+        <button type="button" onclick="document.getElementById('sd-why').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#FF9E6B] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">WHY DESKTOP</button>
+        <button type="button" onclick="document.getElementById('sd-principles').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#FF9E6B] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">PRINCIPLES</button>
+        <button type="button" onclick="document.getElementById('sd-screens').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#FF9E6B] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">SCREENS</button>
+        <button type="button" onclick="document.getElementById('sd-testing').scrollIntoView({ behavior: 'smooth' }); return false;" class="hover:text-[#FF9E6B] transition-colors whitespace-nowrap shrink-0 focus:outline-none cursor-pointer">TESTING PLAN</button>
+      </div>
+
+      <a
+        href="https://www.figma.com/design/XocK96VHmSTNIFDUfbGCrv"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#FAF8F3] hover:bg-white text-[#1C1B1A] font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
+      >
+        Figma File &nearr;
+      </a>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-[#1C1B1A] text-[#FAF8F3] py-16 sm:py-24 border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <div class="lg:col-span-7 space-y-5">
+            <p class="font-mono text-xs font-bold uppercase tracking-widest text-[#FF9E6B]">Desktop Application / Productivity &mdash; Concept Project</p>
+            <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]">
+              StudioDesk: One calm desktop place for freelance work.
+            </h1>
+            <p class="text-[#D8D2C4] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+              Projects, deadlines, client feedback, file versions and payments &mdash; in one calm
+              desktop place, instead of five apps and your head. Designed for solo freelance
+              designers running three to six live clients at once.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="https://www.figma.com/design/XocK96VHmSTNIFDUfbGCrv" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#FF5C1A] hover:bg-[#E04E12] text-white font-bold text-sm transition-colors">View in Figma &nearr;</a>
+              <a href="assets/case-studies/studiodesk-case-study.pdf" class="px-6 py-3 rounded-full bg-[#FAF8F3] hover:bg-white text-[#1C1B1A] font-bold text-sm transition-colors">Download Case Study (PDF)</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-[#B9B2A2]">
+              <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
+              <div><strong class="text-white block mb-0.5">ROLE</strong>UI/UX Designer (Fresher)</div>
+              <div><strong class="text-white block mb-0.5">TYPE</strong>Concept Project</div>
+              <div><strong class="text-white block mb-0.5">PLATFORM</strong>Desktop App &#183; 1440&#8202;&times;&#8202;900</div>
+            </div>
+          </div>
+
+          <!-- Home / Today Window Mock -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl bg-[#FAF8F3] text-[#1C1B1A] border-2 border-[#1C1B1A] shadow-2xl overflow-hidden">
+              <div class="flex items-center gap-2 bg-[#1C1B1A] px-4 py-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FAF8F3]/40 block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FAF8F3]/40 block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FF5C1A] block"></span>
+                <span class="font-mono text-[11px] tracking-wider text-[#FAF8F3]/85 ml-2">STUDIODESK &mdash; HOME / TODAY</span>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] text-left">
+                <div class="border-r border-[#1C1B1A]/20 px-3 py-3.5 font-mono text-[10px] leading-6 text-[#55524C]">
+                  <p class="text-[#1C1B1A] font-bold"><span class="text-[#FF5C1A]">&#9679;</span> HOME / TODAY</p>
+                  <p>PROJECTS</p>
+                  <p>FEEDBACK INBOX (3)</p>
+                  <p>FILES &amp; VERSIONS</p>
+                  <p>INVOICES</p>
+                  <p>SETTINGS</p>
+                </div>
+                <div class="px-4 py-3.5">
+                  <p class="font-bold text-[13px] tracking-wide mb-2.5" style="font-family:Georgia,'Times New Roman',serif">Good morning &mdash; here is today</p>
+                  <div class="space-y-2 text-[12px]">
+                    <div class="flex items-center justify-between gap-2 border border-[#1C1B1A]/15 rounded-lg px-2.5 py-2"><span>Meera&rsquo;s Cafe &mdash; feedback on v4 waiting</span><span class="font-mono text-[10px] font-bold text-[#C2410C]">REPLY</span></div>
+                    <div class="flex items-center justify-between gap-2 border border-[#1C1B1A]/15 rounded-lg px-2.5 py-2"><span>FitWithRaj &mdash; deliver 12 posts</span><span class="font-mono text-[10px] font-bold text-[#C2410C]">TODAY</span></div>
+                    <div class="flex items-center justify-between gap-2 border border-[#1C1B1A]/15 rounded-lg px-2.5 py-2"><span>Invoice #018 &mdash; viewed, unpaid day 6</span><span class="font-mono text-[10px] font-bold text-[#C2410C]">REMINDER SET</span></div>
+                    <div class="flex items-center gap-2 rounded-lg bg-[#FFF1E8] border border-[#FF5C1A]/40 px-2.5 py-2"><span class="w-2 h-2 rounded-full bg-[#FF5C1A] block shrink-0"></span><span>Deadline radar: Logo finals Fri &#183; Brand kit Mon</span><span class="font-mono text-[10px] font-bold ml-auto">2 INSIDE 48H</span></div>
+                  </div>
+                  <p class="font-mono text-[10px] text-[#55524C] mt-3">MONEY SNAPSHOT: &#8377;84,000 INVOICED &#183; &#8377;61,500 RECEIVED &#183; &#8377;22,500 IN MOTION</p>
+                </div>
+              </div>
+              <p class="font-mono text-[10px] text-[#8A8578] px-4 py-2 border-t border-[#1C1B1A]/15">Illustrative data in a design mockup &mdash; client names and figures are not real engagements.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-marquee" aria-label="StudioDesk screens"><div class="cs-track"><div class="cs-strip-group"><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Home / Today</em></div><div class="sd-winbody"><div class="sd-line strong" style="width:62%"></div><div class="sd-row"><span class="sd-urgent"></span><div class="sd-line"></div></div><div class="sd-line" style="width:84%"></div><div class="sd-line" style="width:70%"></div></div></div></div><figcaption>Dashboard<span>Needs you &#183; due &#183; money</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Project Board</em></div><div class="sd-winbody"><div style="display:flex;gap:7px"><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div><div class="sd-line" style="margin-top:7px;width:80%"></div></div><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div><div class="sd-line" style="margin-top:7px;width:72%"></div></div><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div></div></div></div></div></div><figcaption>Project Board<span>In Design &#183; In Review &#183; Approved</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Project Room</em></div><div class="sd-winbody"><div class="sd-line strong" style="width:55%"></div><div class="sd-row"><div class="sd-line"></div><span class="font-mono" style="font-size:9px;color:#C2410C;font-weight:700">V4</span></div><div class="sd-line" style="width:88%"></div><div class="sd-line" style="width:66%"></div></div></div></div><figcaption>Project Room<span>Feedback next to the file</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Files &amp; Versions</em></div><div class="sd-winbody"><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V5</span><div class="sd-line"></div></div><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V4</span><div class="sd-line"></div></div><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V3</span><div class="sd-line" style="width:70%"></div></div><div class="sd-line" style="width:58%"></div></div></div></div><figcaption>Files &amp; Versions<span>&ldquo;Final&rdquo; is a status, not a filename</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Invoices</em></div><div class="sd-winbody"><div class="sd-row"><div class="sd-line strong"></div><span class="font-mono" style="font-size:9px;color:#C2410C;font-weight:700">DAY 7</span></div><div class="sd-line" style="width:82%"></div><div class="sd-line" style="width:64%"></div><div class="sd-line" style="width:74%"></div></div></div></div><figcaption>Invoices<span>Built from approved work</span></figcaption></figure></div><div class="cs-strip-group" aria-hidden="true"><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Home / Today</em></div><div class="sd-winbody"><div class="sd-line strong" style="width:62%"></div><div class="sd-row"><span class="sd-urgent"></span><div class="sd-line"></div></div><div class="sd-line" style="width:84%"></div><div class="sd-line" style="width:70%"></div></div></div></div><figcaption>Dashboard<span>Needs you &#183; due &#183; money</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Project Board</em></div><div class="sd-winbody"><div style="display:flex;gap:7px"><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div><div class="sd-line" style="margin-top:7px;width:80%"></div></div><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div><div class="sd-line" style="margin-top:7px;width:72%"></div></div><div style="flex:1"><div class="sd-line strong"></div><div class="sd-line" style="margin-top:7px"></div></div></div></div></div></div><figcaption>Project Board<span>In Design &#183; In Review &#183; Approved</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Project Room</em></div><div class="sd-winbody"><div class="sd-line strong" style="width:55%"></div><div class="sd-row"><div class="sd-line"></div><span class="font-mono" style="font-size:9px;color:#C2410C;font-weight:700">V4</span></div><div class="sd-line" style="width:88%"></div><div class="sd-line" style="width:66%"></div></div></div></div><figcaption>Project Room<span>Feedback next to the file</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Files &amp; Versions</em></div><div class="sd-winbody"><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V5</span><div class="sd-line"></div></div><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V4</span><div class="sd-line"></div></div><div class="sd-row"><span class="font-mono" style="font-size:9px;font-weight:700">V3</span><div class="sd-line" style="width:70%"></div></div><div class="sd-line" style="width:58%"></div></div></div></div><figcaption>Files &amp; Versions<span>&ldquo;Final&rdquo; is a status, not a filename</span></figcaption></figure><figure class="cs-card"><div class="sd-win"><div class="sd-winframe"><div class="sd-winbar"><i></i><i></i><i class="sd-dot"></i><em>Invoices</em></div><div class="sd-winbody"><div class="sd-row"><div class="sd-line strong"></div><span class="font-mono" style="font-size:9px;color:#C2410C;font-weight:700">DAY 7</span></div><div class="sd-line" style="width:82%"></div><div class="sd-line" style="width:64%"></div><div class="sd-line" style="width:74%"></div></div></div></div><figcaption>Invoices<span>Built from approved work</span></figcaption></figure></div></div></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+
+      <!-- 01. THE PROBLEM -->
+      <section id="sd-problem" class="scroll-mt-24 mb-20 space-y-6">
+        <div class="cs-beat"><span class="cs-kicker">Core Question</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">01 &mdash; The Problem</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">Five apps and my head.</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          The design work is rarely what slips. What slips is everything around it &mdash; because
+          each kind of truth about a project currently lives in a different place, and the only
+          system connecting them is the freelancer&rsquo;s memory.
+        </p>
+        <p class="cs-question">&ldquo;Why does a freelancer&rsquo;s real project management happen in five apps and their head &mdash; and still things slip?&rdquo;</p>
+
+        <aside class="cs-goal"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Goal</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">One calm desktop place where a solo designer&rsquo;s projects, deadlines, client feedback, file versions and payments live together &mdash; a tool designed around the whole loop, <strong>comment &rarr; revise &rarr; send version &rarr; get approval &rarr; get paid</strong>, for one person, with nothing enterprise in the way.</p>
+        </aside>
+
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Kind of truth</th><th>Where it lives today</th><th>How it fails</th></tr></thead><tbody>
+        <tr><td><strong>Feedback</strong></td><td>WhatsApp chats, Gmail threads, Figma comments</td><td>A comment seen on a phone at night is forgotten by morning; two clients contradict each other in two apps.</td></tr>
+        <tr><td><strong>Files &amp; versions</strong></td><td>Drive folders, desktop, WeTransfer links</td><td>&ldquo;Final_v3_REALfinal&rdquo; &mdash; nobody, including the designer, is sure which file the client approved.</td></tr>
+        <tr><td><strong>Deadlines</strong></td><td>Memory, chat messages, a notebook</td><td>Nothing warns early. A deadline is discovered on the day it arrives.</td></tr>
+        <tr><td><strong>Money</strong></td><td>A spreadsheet, or nowhere</td><td>Invoices are sent late and chased awkwardly &mdash; or not chased at all.</td></tr>
+        <tr><td><strong>The work itself</strong></td><td>Figma, Illustrator, Photoshop</td><td>The one place that works &mdash; which is why the chaos around it stays invisible for so long.</td></tr>
+        </tbody></table></div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          The cost is not one big failure &mdash; it is a steady tax of small searches, re-checks and
+          awkward follow-ups, paid every single week. A client asks &ldquo;which version did I
+          approve?&rdquo; and it takes twenty minutes of scrolling chat history to answer a
+          ten-second question.
+        </p>
+      </section>
+
+      <!-- 02. RESEARCH -->
+      <section id="sd-research" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-beat"><span class="cs-kicker">What the research found</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">02 &mdash; Research Highlights</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">The admin burden is documented, not anecdotal</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          This case study invents no interviews and no survey of its own. The evidence is published
+          research, and the personas that follow are labelled archetypes built from it.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[#1C1B1A] text-[#FAF8F3] rounded-3xl p-6 shadow-sm">
+            <span class="font-display font-extrabold text-3xl block mb-2">7.7M &rarr; 23.5M</span>
+            <p class="text-sm text-[#D8D2C4] leading-relaxed">Gig workers in India in 2020&ndash;21, projected to reach 23.5 million by 2029&ndash;30 (NITI Aayog, <em>India&rsquo;s Booming Gig and Platform Economy</em>, 2022). The audience for this problem is large and growing.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">204 hours a year lost to admin</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">The average freelancer surveyed loses roughly 204 hours a year to admin and paperwork (Smallpdf Freelancer Freedom Index, n=397). In the same survey, 54% waited more than a week to be paid after invoicing, and 24% waited two weeks or longer.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Freelancing is mainstream</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">28% of skilled knowledge workers now freelance, generating $1.5 trillion in earnings in 2024 (Upwork Future Workforce Index 2025, n=3,000). Getting paid is slow &mdash; and chasing it is the awkward part.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          Two research-based archetypes (not interviewed users): <strong class="text-[#1C1B1A]">A, the
+          solo brand designer</strong> &mdash; runs 4&ndash;6 clients at once, feedback arrives as
+          voice notes and chat screenshots, biggest fear is sending the wrong version to the wrong
+          client. <strong class="text-[#1C1B1A]">B, the social-media freelancer</strong> &mdash; high
+          volume, small tickets, daily deadlines; biggest pain is month-end, reconstructing what was
+          delivered before daring to invoice.
+        </p>
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">What published evidence cannot tell</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">These studies describe freelancers in general, mostly outside India and rarely designers specifically. They justify the problem space; they do not validate this design &mdash; which is why the testing plan exists. A competitor audit (Notion, Trello, Milanote, Hello Bonsai, Toggl) found the same shape everywhere: every tool owns a slice of the loop, and none owns the loop.</p>
+        </div>
+      </section>
+
+      <!-- 03. PRINCIPLES -->
+      <section id="sd-principles" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-beat"><span class="cs-kicker">Problem &rarr; Principle &rarr; Feature</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">03 &mdash; Design Principles</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">Four principles, each answering a failure</h2>
+        </div>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Failure it answers</th><th>Design principle</th><th>Feature it produced</th></tr></thead><tbody>
+        <tr><td><strong>&ldquo;Which version did I approve?&rdquo;</strong></td><td>01 &#183; One Project = One Truth &mdash; if it is not in the room, it did not happen</td><td>The Project Room: files, feedback, versions, deadline and money for one project, in one place</td></tr>
+        <tr><td><strong>Feedback detached from what it describes</strong></td><td>02 &#183; Feedback Next to the File &mdash; a comment is never shown without the exact version it was made on</td><td>Comments pinned to versions; approve, resolve or reply beside the artwork &mdash; never from a chat screenshot</td></tr>
+        <tr><td><strong>Invoices sent late, or never chased</strong></td><td>03 &#183; Money Without Awkwardness &mdash; the system does the chasing; the designer keeps the relationship</td><td>Invoices generated from approved work; reminders scheduled, polite and automatic</td></tr>
+        <tr><td><strong>Tools that feel fine in a demo and tiring in a week</strong></td><td>04 &#183; Keyboard Beats Mouse &mdash; a tool used 40 times a day must respect the fortieth use</td><td>Every daily action &mdash; triage, resolve, send, remind &mdash; reachable without the mouse: Cmd K, J/K, E, R</td></tr>
+        </tbody></table></div>
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">What the principles forbid</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">No dashboards of vanity charts. No red badges screaming about things that are not urgent. No feature that serves a team of fifty &mdash; StudioDesk is proudly for an army of one.</p>
+        </div>
+      </section>
+
+      <!-- 04. WHY DESKTOP FIRST -->
+      <section id="sd-why" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-beat"><span class="cs-kicker">Why desktop first?</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">04 &mdash; Platform Decision</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">Desktop first &mdash; because that is where this work happens</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          Choosing a platform is a design decision, and this one is argued, not defaulted.
+          StudioDesk&rsquo;s core tasks are comparison, triage and file handling &mdash; all
+          big-screen, two-handed work.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Side-by-side truth</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Feedback on the left, the file it refers to on the right &mdash; no app-switching, no memory load. Figma stays open beside StudioDesk; neither fights for the whole screen.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Drag-and-drop files</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">A new version is dropped onto the project, not uploaded through five dialogs. Files live on the work machine &mdash; the tool meets them there.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Keyboard-first triage</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Clear a feedback inbox the way you clear email: Cmd K to move, J/K to step, E to resolve, R to reply. Density is a feature &mdash; scanning beats clicking.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Dense, calm status</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Six projects&rsquo; health visible at once, without opening any of them. Tangerine is spent only on the primary action and true urgency &mdash; inside 48 hours, or overdue. If everything is orange, nothing is.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          Why not mobile first? Nobody compares version 4 against version 5 on a 6-inch screen
+          &mdash; they postpone it, and postponing is the original problem. Mobile still has a job
+          &mdash; a companion for approvals, deadline alerts and &ldquo;has the invoice been
+          paid?&rdquo; &mdash; deliberately scoped as phase two, not the foundation. The test
+          applied: <em>&ldquo;Would a designer do this task at their desk, during work, next to
+          their design tool?&rdquo;</em> If yes, it belongs in StudioDesk&rsquo;s core.
+        </p>
+      </section>
+
+      <!-- 05. LOGIC BEHIND THE PROTOTYPE -->
+      <section id="sd-logic" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-beat"><span class="cs-kicker">Logic behind the prototype</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">05 &mdash; Architecture &amp; Key Flows</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">One room per project. Three flows that carry the week.</h2>
+        </div>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Level</th><th>Contents</th></tr></thead><tbody>
+        <tr><td><strong>Home</strong></td><td>Today, deadline radar, needs-reply inbox, money snapshot</td></tr>
+        <tr><td><strong>Projects</strong></td><td>Board of all live work by stage &mdash; In Design, In Review, Approved / Bill</td></tr>
+        <tr><td><strong>Project Room</strong></td><td>Files, feedback, versions, client, money &mdash; for one project</td></tr>
+        <tr><td><strong>Files &amp; Versions</strong></td><td>Every version, its status, who approved it and when. A version can never be edited in place or deleted once a client has seen it &mdash; history is the product</td></tr>
+        <tr><td><strong>Invoices</strong></td><td>Draft, sent, viewed, paid, overdue &mdash; with reminders. An invoice can only be built from approved versions</td></tr>
+        <tr><td><strong>Settings</strong></td><td>Rate card, reminder tone, review-link defaults, shortcuts</td></tr>
+        </tbody></table></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Flow 1 &mdash; The feedback loop</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Client comments on the review link, pinned to v4 &rarr; designer triages in the inbox, keyboard-first &rarr; revise and drop v5 onto the same Project Room &rarr; client approves v5, timestamped &rarr; the invoice unlocks, built from the approved work. The client never needs an account: one clean page per version, with two honest buttons &mdash; Request changes, and Approve this version.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Flow 2 &mdash; The payment chase</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Designed to be invisible. Invoice sent from approved versions &rarr; viewed receipt, so the designer sees it was opened &rarr; a gentle reminder auto-sends on day 7, in the designer&rsquo;s chosen tone &rarr; a firmer reminder on day 14, only if still unpaid &rarr; paid, and the project money view updates itself.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Flow 3 &mdash; The deadline radar</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Deadlines are not a calendar page buried in a menu. Home ranks every commitment by days remaining, and anything inside 48 hours earns the only tangerine the interface spends on urgency. Calm by default, loud only when it matters.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06. SCREEN BY SCREEN -->
+      <section id="sd-screens" class="scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-beat"><span class="cs-kicker">Screen by screen</span></div>
+
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">06 &mdash; Screens, 1440 &times; 900</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">A tool that looks like a tool &mdash; on purpose</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Home / Today &mdash; the morning, in ten seconds</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">One screen answers the three morning questions: what needs me, what is due, and where is my money. Nothing else is allowed above the fold.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Project Board &mdash; stages mirror the loop</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">In Design, In Review, Approved / Bill &mdash; so moving a card forward is also moving the business forward.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Project Room &mdash; the heart of StudioDesk</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">The file and every word said about it, on one screen, permanently paired by version. Drop a file to create v5 &mdash; the comment pins stay mapped to v4, never silently moved. Keys: J/K move, E resolve, R reply, Cmd+Enter send new version.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Files &amp; Versions &mdash; &ldquo;final&rdquo; is a status</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Every version with its status &mdash; superseded, was approved, archived. &ldquo;Final&rdquo; is a status the system grants on approval, never a word typed into a filename again.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">Invoices &amp; Payments &mdash; money without awkwardness</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">Invoices are built only from approved versions, so &ldquo;what am I billing for?&rdquo; always has a one-click answer attached. Reminder tone &mdash; Warm, Neutral or Firm &mdash; is set once in Settings, and every automatic chase uses it.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6">
+            <h3 class="font-display text-lg font-bold text-[#1C1B1A] mb-2">The client&rsquo;s side of the glass</h3>
+            <p class="text-sm text-[#55524C] leading-relaxed">A single clean page per version: the work large, comment pins, and two honest buttons &mdash; Request changes and Approve this version. No account, no password, no app. The approval is timestamped and lands back in the Project Room instantly.</p>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          Design system notes: warm paper canvas (#F4F1EA) and stone (#FAF8F3), because long hours
+          at a desk should feel like paper, not a glowing dashboard. Ink #1C1B1A for text, borders
+          and window chrome; structure from 1pt rules, not shadows. One accent &mdash; tangerine
+          #FF5C1A &mdash; spent only where action lives. Serif display for human moments, sans for
+          work, monospace for labels, statuses and numbers that must line up. 32px row rhythm;
+          statuses always in the same column; no card nests deeper than one level.
+        </p>
+      </section>
+
+      <!-- Reflection + Testing plan -->
+      <section id="sd-testing" class="cs-added scroll-mt-24 mb-20 space-y-6 pt-16 border-t border-[#1C1B1A]/15">
+        <div class="cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Reflection &amp; Current Tensions</span>
+          <p class="text-base sm:text-lg leading-relaxed max-w-3xl mt-4">StudioDesk is a self-initiated concept project by Prashant Kumar, UI/UX Designer (Fresher). It is not a shipped product, has no client, and claims no user metrics. All client names, amounts and dates inside screen mockups are illustrative design data, not real engagements. The honest tension: Notion stores the project, but does not pair a comment with a version or turn an approval into an invoice &mdash; StudioDesk is narrower, and deeper on that one loop.</p>
+        </div>
+        <div class="cs-beat"><span class="cs-kicker">Testing Plan &amp; Future Considerations</span></div>
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#C2410C] block mb-2">07 &mdash; Testing Plan &mdash; Not Yet Tested</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1B1A]">Not yet tested &mdash; and here is exactly how it will be</h2>
+        </div>
+        <p class="text-base sm:text-lg text-[#55524C] leading-relaxed max-w-3xl">
+          The plan: 5 freelance designers (brand, social, UI), recruited from design communities,
+          testing the clickable desktop prototype at 1440 &times; 900. If a pass mark is missed,
+          the flow is redesigned and retested &mdash; the marks were set before testing, so they
+          cannot drift to fit the outcome. Success metrics are defined the same way: feedback-to-revision
+          time against the designer&rsquo;s chat-and-Drive baseline, invoice lag (target: same day),
+          and zero tolerance for wrong-version incidents &mdash; any &ldquo;sent the wrong
+          file&rdquo; event in testing is a release blocker. None of these is a result yet.
+        </p>
+        <div class="cs-table-wrap"><table class="cs-table"><thead><tr><th>Task</th><th>Pre-set pass mark</th></tr></thead><tbody>
+        <tr><td><strong>Find what needs you today</strong></td><td>4 of 5 succeed in under 10 seconds, no hints</td></tr>
+        <tr><td><strong>Resolve feedback &amp; send v5</strong></td><td>4 of 5 complete unaided</td></tr>
+        <tr><td><strong>Build an invoice from an approval</strong></td><td>4 of 5 complete in under 2 minutes</td></tr>
+        <tr><td><strong>Set a reminder tone in Settings</strong></td><td>4 of 5 find it without search</td></tr>
+        </tbody></table></div>
+        <div class="cs-beat"><span class="cs-kicker">Final Product / Prototype</span></div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://www.figma.com/design/XocK96VHmSTNIFDUfbGCrv" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#FF5C1A] hover:bg-[#E04E12] text-white font-bold text-sm transition-colors">Open the Figma File &nearr;</a>
+          <a href="assets/case-studies/studiodesk-case-study.pdf" class="px-6 py-3 rounded-full bg-[#1C1B1A] hover:bg-black text-white font-bold text-sm transition-colors">Download Full Case Study (PDF)</a>
+        </div>
+      </section>
+
+      <!-- Bottom Return Banner -->
+      <div class="bg-[#1C1B1A] text-[#FAF8F3] rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mt-12">
+        <div class="space-y-2 max-w-xl">
+          <span class="cs-kicker">Takeaways</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-[#FF9E6B] block">Case Study Complete</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold">Designed by Prashant Kumar, UI/UX Designer (Fresher).</h3>
+          <div class="pt-2 flex flex-wrap items-center gap-6 text-sm text-[#D8D2C4]">
+            <a href="mailto:prashantkumar.pr501@gmail.com" class="underline hover:text-white">prashantkumar.pr501@gmail.com</a>
+            <a href="https://www.linkedin.com/in/prashant-kumar-89b822142/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">LinkedIn &nearr;</a>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="showHomeView()"
+          class="px-7 py-3.5 rounded-full bg-[#FF5C1A] text-white hover:bg-[#E04E12] font-bold text-sm transition-colors shadow-md shrink-0 cursor-pointer"
+        >
+          &larr; Back to Home
+        </button>
+      </div>
+    </main>
+  </div>
+  <!-- END OF #studiodesk-view -->
+
 
 
   <!-- =========================================================================
@@ -1716,8 +2499,12 @@
       const homeView = document.getElementById('homepage-view');
       const csView = document.getElementById('casestudy-view');
       const clearView = document.getElementById('clearspend-view');
+      const antView = document.getElementById('antariksh-view');
+      const studioView = document.getElementById('studiodesk-view');
       if (homeView) homeView.classList.add('hidden');
       if (clearView) clearView.classList.add('hidden');
+      if (antView) antView.classList.add('hidden');
+      if (studioView) studioView.classList.add('hidden');
       if (csView) csView.classList.remove('hidden');
 
       // Instant reset without touch-blocking animation:
@@ -1732,9 +2519,13 @@
     function showHomeView() {
       const csView = document.getElementById('casestudy-view');
       const clearView = document.getElementById('clearspend-view');
+      const antView = document.getElementById('antariksh-view');
+      const studioView = document.getElementById('studiodesk-view');
       const homeView = document.getElementById('homepage-view');
       if (csView) csView.classList.add('hidden');
       if (clearView) clearView.classList.add('hidden');
+      if (antView) antView.classList.add('hidden');
+      if (studioView) studioView.classList.add('hidden');
       if (homeView) homeView.classList.remove('hidden');
       
       // Instant reset without touch-blocking animation:
@@ -1754,8 +2545,12 @@
       const homeView = document.getElementById('homepage-view');
       const csView = document.getElementById('casestudy-view');
       const clearView = document.getElementById('clearspend-view');
+      const antView = document.getElementById('antariksh-view');
+      const studioView = document.getElementById('studiodesk-view');
       if (homeView) homeView.classList.add('hidden');
       if (csView) csView.classList.add('hidden');
+      if (antView) antView.classList.add('hidden');
+      if (studioView) studioView.classList.add('hidden');
       if (clearView) clearView.classList.remove('hidden');
 
       window.scrollTo(0, 0);
@@ -1765,12 +2560,66 @@
       }
     }
 
-    // 5. Clean Hash Router (Listens for #tracto and #clearspend)
+    // 4c. Instant Switch to Antariksh Case Study View
+    function showAntarikshView() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu) menu.classList.add('hidden');
+      if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+
+      const homeView = document.getElementById('homepage-view');
+      const csView = document.getElementById('casestudy-view');
+      const clearView = document.getElementById('clearspend-view');
+      const antView = document.getElementById('antariksh-view');
+      const studioView = document.getElementById('studiodesk-view');
+      if (homeView) homeView.classList.add('hidden');
+      if (csView) csView.classList.add('hidden');
+      if (clearView) clearView.classList.add('hidden');
+      if (studioView) studioView.classList.add('hidden');
+      if (antView) antView.classList.remove('hidden');
+
+      window.scrollTo(0, 0);
+
+      if (window.location.hash !== '#antariksh') {
+        history.pushState({ view: 'antariksh' }, '', '#antariksh');
+      }
+    }
+
+    // 4d. Instant Switch to StudioDesk Case Study View
+    function showStudioDeskView() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu) menu.classList.add('hidden');
+      if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+
+      const homeView = document.getElementById('homepage-view');
+      const csView = document.getElementById('casestudy-view');
+      const clearView = document.getElementById('clearspend-view');
+      const antView = document.getElementById('antariksh-view');
+      const studioView = document.getElementById('studiodesk-view');
+      if (homeView) homeView.classList.add('hidden');
+      if (csView) csView.classList.add('hidden');
+      if (clearView) clearView.classList.add('hidden');
+      if (antView) antView.classList.add('hidden');
+      if (studioView) studioView.classList.remove('hidden');
+
+      window.scrollTo(0, 0);
+
+      if (window.location.hash !== '#studiodesk') {
+        history.pushState({ view: 'studiodesk' }, '', '#studiodesk');
+      }
+    }
+
+    // 5. Clean Hash Router (Listens for #tracto, #clearspend, #antariksh and #studiodesk)
     window.addEventListener('popstate', () => {
       if (window.location.hash === '#tracto') {
         showCaseStudyView();
       } else if (window.location.hash === '#clearspend') {
         showClearSpendView();
+      } else if (window.location.hash === '#antariksh') {
+        showAntarikshView();
+      } else if (window.location.hash === '#studiodesk') {
+        showStudioDeskView();
       } else {
         showHomeView();
       }
@@ -1782,6 +2631,10 @@
         showCaseStudyView();
       } else if (window.location.hash === '#clearspend') {
         showClearSpendView();
+      } else if (window.location.hash === '#antariksh') {
+        showAntarikshView();
+      } else if (window.location.hash === '#studiodesk') {
+        showStudioDeskView();
       }
     });
 
