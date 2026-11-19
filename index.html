@@ -213,6 +213,13 @@
       background: #FF6B57;
       box-shadow: 2px 3px 0 rgba(32, 32, 30, 0.75);
     }
+    #homepage-view .wavy-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-decoration-color: #FF6B57;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 7px;
+    }
     #desk-loader {
       animation: deskLoaderHide 0.45s ease 1.15s forwards;
     }
@@ -475,7 +482,28 @@
             <article onclick="showCaseStudyView()" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCaseStudyView(); }" tabindex="0" role="button" aria-label="Open Tracto Mobile Application Case Study" class="project-card tilt-left group relative cursor-pointer bg-[#FFFDF7] ink-card p-4 sm:p-5 focus:outline-none">
               <span class="tape" aria-hidden="true"></span>
               <div class="w-full rounded-[20px_7px_22px_9px/9px_22px_8px_20px] overflow-hidden border-2 border-[#0f2d25] bg-[#dff7ef]">
-                <img src="important.jpg" alt="Tracto Showcase" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" onerror="this.parentElement.innerHTML='<div class=\'text-[#0f2d25] font-bold text-center py-20 px-6\'>Tracto UI Showcase Poster</div>'" />
+                <svg viewBox="0 0 400 225" class="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-300" role="img" aria-label="Tracto Showcase">
+                  <defs>
+                    <linearGradient id="trCardBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F2D25"/><stop offset="1" stop-color="#0A4F44"/></linearGradient>
+                  </defs>
+                  <rect width="400" height="225" fill="url(#trCardBg)"/>
+                  <g transform="rotate(-90 104 98)">
+                    <circle cx="104" cy="98" r="54" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="9"/>
+                    <circle cx="104" cy="98" r="54" fill="none" stroke="#1CB08A" stroke-width="9" stroke-linecap="round" stroke-dasharray="248 339"/>
+                    <circle cx="104" cy="98" r="40" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="9"/>
+                    <circle cx="104" cy="98" r="40" fill="none" stroke="#5EEAD4" stroke-width="9" stroke-linecap="round" stroke-dasharray="148 251"/>
+                    <circle cx="104" cy="98" r="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="9"/>
+                    <circle cx="104" cy="98" r="26" fill="none" stroke="#FF5733" stroke-width="9" stroke-linecap="round" stroke-dasharray="136 163"/>
+                  </g>
+                  <rect x="238" y="24" width="100" height="170" rx="16" fill="#08201A" stroke="#1CB08A" stroke-width="2"/>
+                  <rect x="245" y="32" width="86" height="154" rx="10" fill="#F7FAF7"/>
+                  <rect x="268" y="37" width="40" height="5" rx="2.5" fill="#0F2D25" opacity="0.2"/>
+                  <path d="M251 92 L272 92 L279 78 L287 106 L293 92 L325 92" fill="none" stroke="#2D7A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="253" y="116" width="70" height="9" rx="4.5" fill="#0F2D25" opacity="0.65"/>
+                  <rect x="253" y="133" width="52" height="9" rx="4.5" fill="#0F2D25" opacity="0.3"/>
+                  <rect x="253" y="156" width="70" height="16" rx="8" fill="#1CB08A"/>
+                  <text x="30" y="204" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2.5" fill="#7BE3C3">HEALTH &#183; VITALS &#183; CARE</text>
+                </svg>
               </div>
               <div class="px-2 sm:px-3 pt-6 pb-3">
                 <div class="flex items-center justify-between gap-4">
@@ -483,7 +511,7 @@
                 </div>
                 <h3 class="font-hand text-6xl font-bold leading-none mt-3">Tracto</h3>
                 <p class="mt-3 text-lg text-[#4B4B47] leading-relaxed">A calm, human-first health companion that empowers patients and elevates task success metrics from 40% to 81%.</p>
-                <p class="mt-5 inline-block font-doodle font-bold bg-[#CCFBF1] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</p>
+                <p class="mt-5 flex flex-wrap gap-3"><span class="font-doodle font-bold bg-[#0F2D25] text-white border-2 border-[#20201E] rounded-full px-4 py-1">Concept Project</span><span class="font-doodle font-bold bg-[#CCFBF1] border-2 border-[#20201E] rounded-full px-4 py-1">Open case study</span></p>
               </div>
             </article>
 
@@ -697,7 +725,7 @@
           <p class="font-doodle text-xl font-bold text-[#E65343]">Got a role, a project, or a messy problem that needs untangling?</p>
           <h2 class="font-hand text-6xl sm:text-8xl font-bold leading-[0.9] mt-4 -rotate-1">Let&rsquo;s make something clear.</h2>
 
-          <a href="mailto:prashantkumar.pr501@gmail.com" class="inline-block mt-10 font-hand font-bold leading-[1.05] text-[clamp(1.55rem,5vw,3.8rem)] break-all">
+          <a href="mailto:prashantkumar.pr501@gmail.com" class="inline-block mt-10 font-hand font-bold leading-[1.05] text-[clamp(1.55rem,5vw,3.8rem)] wavy-link break-all">
             prashantkumar.pr501@gmail.com
           </a>
 
@@ -720,44 +748,43 @@
 
   <div id="casestudy-view" class="hidden min-h-screen">
 <style data-cs-style="csTracto">
-#casestudy-view{background-color:#FFF8EC!important;background-image:radial-gradient(rgba(32,32,30,.055) 1px,transparent 1.15px),linear-gradient(rgba(32,32,30,.024) 1px,transparent 1px);background-size:24px 24px,100% 34px;color:#20201E!important;overflow-x:clip}
+#casestudy-view{background-color:#F7FAF7!important;background-image:radial-gradient(1000px 520px at 85% -5%,rgba(45,122,110,.13),transparent 60%),radial-gradient(820px 460px at -10% 30%,rgba(28,176,138,.09),transparent 55%);color:#12211B!important;overflow-x:clip}
 #casestudy-view main{background:transparent}
-#casestudy-view h1,#casestudy-view h2{font-family:'Caveat','Gaegu',cursive!important;letter-spacing:-.025em!important}
-#casestudy-view h1{font-size:clamp(3.4rem,8vw,6.4rem)!important;line-height:.92!important}
-#casestudy-view h2{font-size:clamp(2.7rem,6vw,4.7rem)!important;line-height:.95!important}
-#casestudy-view h3{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:0!important}
-#casestudy-view .font-mono{font-family:'Gaegu','Caveat',cursive!important;letter-spacing:.04em!important}
+#casestudy-view h1,#casestudy-view h2{font-family:'Bricolage Grotesque',sans-serif!important;letter-spacing:-.02em!important}
+#casestudy-view h3{font-family:'Bricolage Grotesque',sans-serif!important;letter-spacing:0!important}
+#casestudy-view .font-display{font-family:'Bricolage Grotesque',sans-serif!important}
+#casestudy-view .font-mono{font-family:'JetBrains Mono',monospace!important;letter-spacing:.04em!important}
 #casestudy-view section{position:relative}
-#casestudy-view .rounded-3xl{border-radius:28px 10px 30px 12px/12px 30px 11px 28px!important}
-#casestudy-view .rounded-2xl{border-radius:22px 8px 24px 10px/10px 24px 9px 22px!important}
-#casestudy-view .bg-white{border:2px solid #20201E!important;box-shadow:5px 6px 0 rgba(32,32,30,.88)}
-#casestudy-view .slide-placeholder{border:2px dashed rgba(32,32,30,.55)!important;background-color:rgba(255,253,247,.72)!important}
-#casestudy-view header{border-bottom:2px solid #20201E!important;box-shadow:0 4px 0 rgba(32,32,30,.18)}
+#casestudy-view .rounded-3xl{border-radius:24px!important}
+#casestudy-view .rounded-2xl{border-radius:18px!important}
+#casestudy-view div.bg-white{background:#FFFFFF!important;border:1px solid rgba(15,45,37,.09)!important;box-shadow:0 14px 34px rgba(15,45,37,.07)}
+#casestudy-view .slide-placeholder{border:1.5px dashed rgba(45,122,110,.35)!important;background-color:#EFF7F1!important}
+#casestudy-view div.bg-white.slide-placeholder{background:#EFF7F1!important;border:1.5px dashed rgba(45,122,110,.35)!important;box-shadow:none}
+#casestudy-view header{border-bottom:1px solid rgba(255,255,255,.12)!important;box-shadow:0 10px 30px rgba(15,45,37,.22)}
 #casestudy-view .cs-beat{margin:0 0 1.25rem}
-#casestudy-view .cs-kicker{display:inline-block;font-family:'Gaegu','Caveat',cursive;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:#0F2D25;background:#E6F4F0;border:2px solid #20201E;border-radius:999px 920px 980px 940px/920px 980px 940px 999px;box-shadow:3px 4px 0 #20201E;padding:.42rem .8rem;transform:rotate(-1deg)}
-#casestudy-view .cs-question{font-family:'Caveat','Gaegu',cursive;font-weight:700;font-size:clamp(2.15rem,5vw,4.2rem);line-height:.98;color:#20201E;margin-top:1rem;max-width:58rem}
-#casestudy-view .cs-goal,#casestudy-view .cs-note{position:relative;border:2px solid #20201E;border-radius:28px 10px 30px 12px/12px 30px 11px 28px;box-shadow:6px 7px 0 rgba(32,32,30,.92);padding:1.35rem 1.5rem;background:#FFFDF7;margin:1.5rem 0}
-#casestudy-view .cs-goal{background:#E6F4F0;transform:rotate(-.35deg)}
-#casestudy-view .cs-note{transform:rotate(.25deg)}
-#casestudy-view .cs-goal p,#casestudy-view .cs-note p{color:#20201E}
-#casestudy-view .cs-tape{position:absolute;width:92px;height:26px;background:rgba(255,211,77,.78);top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);border-left:1px dashed rgba(32,32,30,.35);border-right:1px dashed rgba(32,32,30,.35);z-index:2}
+#casestudy-view .cs-kicker{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:#0F2D25;background:#DFF2E7;border:1px solid rgba(45,122,110,.4);border-radius:999px;padding:.45rem .85rem}
+#casestudy-view .cs-question{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.85rem,4.2vw,3.1rem);line-height:1.14;color:#0F2D25;margin-top:1rem;max-width:58rem}
+#casestudy-view .cs-goal,#casestudy-view .cs-note{position:relative;border:1px solid rgba(45,122,110,.25);border-radius:24px;box-shadow:0 18px 40px rgba(15,45,37,.09);padding:1.5rem 1.6rem;background:#E7F5EC;margin:1.5rem 0}
+#casestudy-view .cs-note{background:#FFFFFF}
+#casestudy-view .cs-goal p,#casestudy-view .cs-note p{color:#12211B}
+#casestudy-view .cs-tape{display:none}
 #casestudy-view .cs-table-wrap{overflow-x:auto;margin-top:1.5rem}
-#casestudy-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;box-shadow:5px 6px 0 rgba(32,32,30,.9);background:#FFFDF7;overflow:hidden}
-#casestudy-view .cs-table th,#casestudy-view .cs-table td{border-bottom:2px solid rgba(32,32,30,.22);padding:1rem;text-align:left;vertical-align:top;color:#20201E}
-#casestudy-view .cs-table th{font-family:'Gaegu','Caveat',cursive;background:#E6F4F0;color:#0F2D25;font-size:1rem}
+#casestudy-view .cs-table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0;border:1px solid rgba(45,122,110,.25);border-radius:20px;box-shadow:0 18px 40px rgba(15,45,37,.09);background:#FFFFFF;overflow:hidden}
+#casestudy-view .cs-table th,#casestudy-view .cs-table td{border-bottom:1px solid rgba(15,45,37,.09);padding:1rem;text-align:left;vertical-align:top;color:#12211B}
+#casestudy-view .cs-table th{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;background:#E7F5EC;color:#0F2D25;font-size:1rem}
 #casestudy-view .cs-table tr:last-child td{border-bottom:0}
-#casestudy-view .cs-marquee{overflow:hidden;border-bottom:2px solid #20201E;background:#FFFDF7;padding:1rem 0 1.2rem}
+#casestudy-view .cs-marquee{overflow:hidden;border-bottom:1px solid rgba(45,122,110,.18);background:linear-gradient(180deg,#FFFFFF,#EFF7F1);padding:1rem 0 1.2rem}
 #casestudy-view .cs-track{display:flex;width:max-content;animation:csTractoScroll 32s linear infinite}
 #casestudy-view .cs-marquee:hover .cs-track{animation-play-state:paused}
 #casestudy-view .cs-strip-group{display:flex;gap:1rem;padding-right:1rem}
-#casestudy-view .cs-card{width:280px;flex:0 0 auto;border:2px solid #20201E;border-radius:24px 8px 26px 10px/10px 26px 9px 24px;overflow:hidden;background:#fff;box-shadow:4px 5px 0 #20201E;transform:rotate(-.6deg);margin:0}
-#casestudy-view .cs-strip-group .cs-card:nth-child(even){transform:rotate(.7deg)}
-#casestudy-view .cs-card img{width:100%;height:170px;object-fit:cover;display:block}
-#casestudy-view .cs-card figcaption{font-family:'Caveat','Gaegu',cursive;font-size:1.55rem;font-weight:700;line-height:1;padding:.65rem .8rem .8rem;color:#20201E}
-#casestudy-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:#E6F4F0;color:#20201E}
-#casestudy-view .cs-text-card strong{font-family:'Caveat','Gaegu',cursive;font-size:2rem;line-height:.95;color:#0F2D25}
+#casestudy-view .cs-card{width:280px;flex:0 0 auto;border:1px solid rgba(45,122,110,.22);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(15,45,37,.09);margin:0}
+#casestudy-view .cs-card svg.cs-mock{width:100%;height:170px;display:block}
+#casestudy-view .cs-card figcaption{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.25;padding:.7rem .85rem .85rem;color:#0F2D25}
+#casestudy-view .cs-text-card{min-height:238px;display:flex;flex-direction:column;justify-content:center;gap:.45rem;padding:1.1rem;background:#E7F5EC;color:#12211B}
+#casestudy-view .cs-text-card strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.7rem;line-height:1.05;color:#0F2D25}
 #casestudy-view .cs-text-card span{font-size:.95rem;line-height:1.35}
-#casestudy-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:2px solid #20201E;border-radius:999px;background:#0F2D25;color:#fff!important;font-weight:800;box-shadow:3px 4px 0 #20201E}
+#casestudy-view .cs-final-link{display:inline-flex;margin-top:1rem;padding:.8rem 1.25rem;border:1px solid #0F2D25;border-radius:999px;background:#0F2D25;color:#fff!important;font-weight:700;box-shadow:0 12px 26px rgba(15,45,37,.22)}
+#casestudy-view .cs-final-link--pdf{background:#FFFFFF;color:#0F2D25!important;border-color:rgba(45,122,110,.55);box-shadow:0 12px 26px rgba(15,45,37,.1)}
 @keyframes csTractoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){#casestudy-view .cs-track{animation:none}}
 </style>
@@ -809,7 +836,7 @@
 
       <!-- Right: Figma Prototype CTA -->
       <a 
-        href="https://www.figma.com/proto/h148aRBXVXXRIVFytQ0Akm/Switch?node-id=440-345&t=10UMIYysR7fuuc3C-1" 
+        href="https://www.figma.com/design/U6kzML3sXvXvYNKiWxcnkR" 
         target="_blank" 
         rel="noopener noreferrer" 
         class="bg-[#ff5733] hover:bg-[#e04826] text-white font-bold px-4 py-2 rounded-full transition-colors font-sans text-xs shrink-0"
@@ -826,6 +853,7 @@
           <div class="lg:col-span-7 space-y-5">
             
 
+            <span class="inline-block font-mono text-[11px] font-bold uppercase tracking-widest text-[#8FF0CD] bg-[#1cb08a]/15 border border-[#1cb08a]/40 rounded-full px-3.5 py-1.5">Concept Project</span>
             <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]">
               Tracto: Track every beat of your health.
             </h1>
@@ -882,7 +910,7 @@
       </div>
     </section>
 
-    <div class="cs-added cs-marquee" aria-label="Tracto screens and feature highlights"><div class="cs-track"><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><img src="important.jpg" alt="Tracto: Track every beat of your health — Hero Poster"><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><img src="mockup-1.png" alt="Know your rhythm - Vitals Dashboard"><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><img src="mockup-2.png" alt="Eat with intention - Meal Log"><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><img src="mockup-3.png" alt="Close your rings - Activity Tracking"><figcaption>Close your rings - Activity Tracking</figcaption></figure></div><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><img src="important.jpg" alt="Tracto: Track every beat of your health — Hero Poster"><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><img src="mockup-1.png" alt="Know your rhythm - Vitals Dashboard"><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><img src="mockup-2.png" alt="Eat with intention - Meal Log"><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><img src="mockup-3.png" alt="Close your rings - Activity Tracking"><figcaption>Close your rings - Activity Tracking</figcaption></figure></div></div></div>
+    <div class="cs-added cs-marquee" aria-label="Tracto screens and feature highlights"><div class="cs-track"><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Tracto: Track every beat of your health — Hero Poster"><rect width="280" height="170" fill="#0F2D25"/><circle cx="36" cy="28" r="17" fill="#1CB08A" opacity="0.14"/><circle cx="250" cy="142" r="21" fill="#2D7A6E" opacity="0.2"/><path d="M0 86 L52 86 L64 64 L78 108 L90 86 L190 86 L202 70 L214 102 L224 86 L280 86" fill="none" stroke="#1CB08A" stroke-width="2.5" opacity="0.4"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#08201A"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="62" r="10" fill="#FF5733"/><path d="M116 100 L132 100 L138 90 L145 110 L150 100 L164 100" fill="none" stroke="#2D7A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="118" y="122" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="133" width="32" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Know your rhythm - Vitals Dashboard"><rect width="280" height="170" fill="#DFF2E7"/><rect x="18" y="44" width="52" height="36" rx="8" fill="#FFFFFF" opacity="0.8"/><rect x="210" y="44" width="52" height="36" rx="8" fill="#FFFFFF" opacity="0.8"/><rect x="18" y="96" width="52" height="30" rx="8" fill="#FFFFFF" opacity="0.55"/><rect x="210" y="96" width="52" height="30" rx="8" fill="#FFFFFF" opacity="0.55"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#0F2D25"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="52" r="7" fill="none" stroke="#1CB08A" stroke-width="3"/><path d="M114 88 L128 88 L135 70 L143 104 L149 88 L166 88" fill="none" stroke="#2D7A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="118" y="118" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="129" width="30" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Eat with intention - Meal Log"><rect width="280" height="170" fill="#E7F5EC"/><circle cx="44" cy="68" r="15" fill="#FFFFFF" opacity="0.8"/><circle cx="236" cy="68" r="15" fill="#FFFFFF" opacity="0.8"/><rect x="22" y="104" width="44" height="8" rx="4" fill="#0F2D25" opacity="0.15"/><rect x="214" y="104" width="44" height="8" rx="4" fill="#0F2D25" opacity="0.15"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#0F2D25"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="76" r="21" fill="#E7F5EC" stroke="#2D7A6E" stroke-width="3.5"/><circle cx="140" cy="76" r="11" fill="#DFF2E7" stroke="#1CB08A" stroke-width="2"/><circle cx="140" cy="76" r="3.5" fill="#FF5733"/><rect x="118" y="112" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="123" width="34" height="6" rx="3" fill="#0F2D25" opacity="0.25"/><rect x="122" y="136" width="36" height="9" rx="4.5" fill="#1CB08A"/></svg><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Close your rings - Activity Tracking"><rect width="280" height="170" fill="#0F2D25"/><circle cx="34" cy="32" r="14" fill="#1CB08A" opacity="0.14"/><circle cx="248" cy="140" r="18" fill="#2D7A6E" opacity="0.22"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#08201A"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><g transform="rotate(-90 140 76)"><circle cx="140" cy="76" r="17" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="4.5"/><circle cx="140" cy="76" r="17" fill="none" stroke="#1CB08A" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="78 107"/><circle cx="140" cy="76" r="11" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="4.5"/><circle cx="140" cy="76" r="11" fill="none" stroke="#2D7A6E" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="44 69"/><circle cx="140" cy="76" r="5.5" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="3.5"/><circle cx="140" cy="76" r="5.5" fill="none" stroke="#FF5733" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="27 35"/></g><rect x="118" y="116" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="127" width="30" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Close your rings - Activity Tracking</figcaption></figure></div><div class="cs-strip-group" aria-hidden="false"><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Tracto: Track every beat of your health — Hero Poster"><rect width="280" height="170" fill="#0F2D25"/><circle cx="36" cy="28" r="17" fill="#1CB08A" opacity="0.14"/><circle cx="250" cy="142" r="21" fill="#2D7A6E" opacity="0.2"/><path d="M0 86 L52 86 L64 64 L78 108 L90 86 L190 86 L202 70 L214 102 L224 86 L280 86" fill="none" stroke="#1CB08A" stroke-width="2.5" opacity="0.4"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#08201A"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="62" r="10" fill="#FF5733"/><path d="M116 100 L132 100 L138 90 L145 110 L150 100 L164 100" fill="none" stroke="#2D7A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="118" y="122" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="133" width="32" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Tracto: Track every beat of your health.</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Know your rhythm - Vitals Dashboard"><rect width="280" height="170" fill="#DFF2E7"/><rect x="18" y="44" width="52" height="36" rx="8" fill="#FFFFFF" opacity="0.8"/><rect x="210" y="44" width="52" height="36" rx="8" fill="#FFFFFF" opacity="0.8"/><rect x="18" y="96" width="52" height="30" rx="8" fill="#FFFFFF" opacity="0.55"/><rect x="210" y="96" width="52" height="30" rx="8" fill="#FFFFFF" opacity="0.55"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#0F2D25"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="52" r="7" fill="none" stroke="#1CB08A" stroke-width="3"/><path d="M114 88 L128 88 L135 70 L143 104 L149 88 L166 88" fill="none" stroke="#2D7A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="118" y="118" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="129" width="30" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Know your rhythm - Vitals Dashboard</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Eat with intention - Meal Log"><rect width="280" height="170" fill="#E7F5EC"/><circle cx="44" cy="68" r="15" fill="#FFFFFF" opacity="0.8"/><circle cx="236" cy="68" r="15" fill="#FFFFFF" opacity="0.8"/><rect x="22" y="104" width="44" height="8" rx="4" fill="#0F2D25" opacity="0.15"/><rect x="214" y="104" width="44" height="8" rx="4" fill="#0F2D25" opacity="0.15"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#0F2D25"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><circle cx="140" cy="76" r="21" fill="#E7F5EC" stroke="#2D7A6E" stroke-width="3.5"/><circle cx="140" cy="76" r="11" fill="#DFF2E7" stroke="#1CB08A" stroke-width="2"/><circle cx="140" cy="76" r="3.5" fill="#FF5733"/><rect x="118" y="112" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="123" width="34" height="6" rx="3" fill="#0F2D25" opacity="0.25"/><rect x="122" y="136" width="36" height="9" rx="4.5" fill="#1CB08A"/></svg><figcaption>Eat with intention - Meal Log</figcaption></figure><figure class="cs-card"><svg class="cs-mock" viewBox="0 0 280 170" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Close your rings - Activity Tracking"><rect width="280" height="170" fill="#0F2D25"/><circle cx="34" cy="32" r="14" fill="#1CB08A" opacity="0.14"/><circle cx="248" cy="140" r="18" fill="#2D7A6E" opacity="0.22"/><rect x="106" y="14" width="68" height="142" rx="11" fill="#08201A"/><rect x="110.5" y="19" width="59" height="132" rx="7" fill="#F7FAF7"/><rect x="128" y="22.5" width="24" height="3.5" rx="1.75" fill="#0F2D25" opacity="0.2"/><g transform="rotate(-90 140 76)"><circle cx="140" cy="76" r="17" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="4.5"/><circle cx="140" cy="76" r="17" fill="none" stroke="#1CB08A" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="78 107"/><circle cx="140" cy="76" r="11" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="4.5"/><circle cx="140" cy="76" r="11" fill="none" stroke="#2D7A6E" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="44 69"/><circle cx="140" cy="76" r="5.5" fill="none" stroke="#0F2D25" stroke-opacity="0.1" stroke-width="3.5"/><circle cx="140" cy="76" r="5.5" fill="none" stroke="#FF5733" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="27 35"/></g><rect x="118" y="116" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.5"/><rect x="118" y="127" width="30" height="6" rx="3" fill="#0F2D25" opacity="0.25"/></svg><figcaption>Close your rings - Activity Tracking</figcaption></figure></div></div></div>
 
     <!-- MAIN 13-SLIDE CASE STUDY CONTENT -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
@@ -907,12 +935,43 @@
 
         <!-- AFTER: Edge-to-Edge 100% Hero Poster -->
 <div class="w-full rounded-3xl overflow-hidden shadow-sm border border-teal-900/10">
-  <img 
-    src="important.jpg" 
-    alt="Tracto: Track every beat of your health — Hero Poster" 
-    class="w-full h-auto block"
-    onerror="this.parentElement.innerHTML='<div class=\'aspect-video bg-[#063B3A] flex items-center justify-center text-teal-200 font-mono text-xs\'>tracto-poster.png not found</div>'"
-  />
+  <svg viewBox="0 0 1200 675" class="w-full h-auto block" role="img" aria-label="Tracto: Track every beat of your health — Hero Poster">
+    <defs>
+      <linearGradient id="trPosterBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F2D25"/><stop offset="1" stop-color="#0A4F44"/></linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#trPosterBg)"/>
+    <circle cx="140" cy="110" r="70" fill="#1CB08A" opacity="0.1"/>
+    <circle cx="1080" cy="580" r="110" fill="#2D7A6E" opacity="0.14"/>
+    <circle cx="1020" cy="120" r="42" fill="#1CB08A" opacity="0.1"/>
+    <path d="M0 360 L270 360 L310 285 L355 435 L395 360 L505 360" fill="none" stroke="#1CB08A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    <path d="M695 360 L880 360 L905 320 L935 400 L955 360 L1200 360" fill="none" stroke="#1CB08A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    <g fill="none" stroke="#5EEAD4" stroke-width="3" opacity="0.7">
+      <rect x="330" y="185" width="130" height="290" rx="22"/>
+      <line x1="352" y1="238" x2="438" y2="238" opacity="0.6"/>
+      <line x1="352" y1="266" x2="420" y2="266" opacity="0.45"/>
+      <line x1="352" y1="294" x2="430" y2="294" opacity="0.45"/>
+      <circle cx="395" cy="392" r="30" opacity="0.6"/>
+    </g>
+    <g fill="none" stroke="#5EEAD4" stroke-width="3" opacity="0.7">
+      <rect x="740" y="185" width="130" height="290" rx="22"/>
+      <circle cx="805" cy="298" r="34"/>
+      <circle cx="805" cy="298" r="21" opacity="0.65"/>
+      <circle cx="805" cy="298" r="9" opacity="0.45"/>
+      <line x1="762" y1="408" x2="848" y2="408" opacity="0.5"/>
+      <line x1="762" y1="433" x2="830" y2="433" opacity="0.35"/>
+    </g>
+    <rect x="505" y="120" width="190" height="400" rx="28" fill="#08201A" stroke="#1CB08A" stroke-width="2.5"/>
+    <rect x="517" y="133" width="166" height="374" rx="18" fill="#F7FAF7"/>
+    <rect x="565" y="142" width="70" height="8" rx="4" fill="#0F2D25" opacity="0.2"/>
+    <circle cx="600" cy="200" r="34" fill="#FFE9E3"/>
+    <path d="M600 226 C572 204 568 186 581 176 C591 168 600 176 600 187 C600 176 609 168 619 176 C632 186 628 204 600 226 Z" fill="#FF5733"/>
+    <path d="M533 292 L572 292 L582 272 L594 312 L602 292 L667 292" fill="none" stroke="#2D7A6E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="533" y="330" width="134" height="13" rx="6.5" fill="#0F2D25" opacity="0.65"/>
+    <rect x="533" y="355" width="96" height="13" rx="6.5" fill="#0F2D25" opacity="0.28"/>
+    <rect x="533" y="392" width="134" height="34" rx="17" fill="#1CB08A"/>
+    <rect x="533" y="440" width="60" height="40" rx="10" fill="#E7F5EC"/>
+    <rect x="607" y="440" width="60" height="40" rx="10" fill="#FFE9E3"/>
+  </svg>
 </div>
         <!-- 4 High-Impact Metrics Cards -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
@@ -984,30 +1043,18 @@
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
 
     <div class="rounded-2xl overflow-hidden bg-[#0A4F44] shadow-md">
-      <img 
-        src="mockup-1.png" 
-        alt="Know your rhythm - Vitals Dashboard" 
-        class="w-full h-auto block"
-        onerror="this.parentElement.innerHTML='<div class=\'aspect-[3/4] flex items-center justify-center p-4 text-center font-mono text-xs text-teal-200\'>mockup-1.png</div>'"
-      />
+      <svg viewBox="0 0 300 400" class="w-full h-auto block" role="img" aria-label="Know your rhythm - Vitals Dashboard"><rect width="300" height="400" fill="#0A4F44"/><circle cx="34" cy="40" r="20" fill="#1CB08A" opacity="0.14"/><circle cx="272" cy="362" r="26" fill="#2D7A6E" opacity="0.18"/><rect x="78" y="26" width="144" height="330" rx="22" fill="#0F2D25" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/><rect x="86" y="34" width="128" height="314" rx="15" fill="#F7FAF7"/><rect x="128" y="41" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.2"/><circle cx="150" cy="106" r="16" fill="none" stroke="#1CB08A" stroke-width="4"/><path d="M94 192 L126 192 L138 162 L152 220 L162 192 L206 192" fill="none" stroke="#2D7A6E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="98" y="252" width="104" height="10" rx="5" fill="#0F2D25" opacity="0.55"/><rect x="98" y="272" width="76" height="10" rx="5" fill="#0F2D25" opacity="0.28"/><rect x="98" y="302" width="104" height="26" rx="13" fill="#1CB08A"/></svg>
+      <p class="font-mono text-[11px] leading-snug text-teal-100/90 text-center px-3 py-2.5">Know your rhythm - Vitals Dashboard</p>
     </div>
 
     <div class="rounded-2xl overflow-hidden bg-[#0A4F44] shadow-md">
-      <img 
-        src="mockup-2.png" 
-        alt="Eat with intention - Meal Log" 
-        class="w-full h-auto block"
-        onerror="this.parentElement.innerHTML='<div class=\'aspect-[3/4] flex items-center justify-center p-4 text-center font-mono text-xs text-teal-200\'>mockup-2.png</div>'"
-      />
+      <svg viewBox="0 0 300 400" class="w-full h-auto block" role="img" aria-label="Eat with intention - Meal Log"><rect width="300" height="400" fill="#0A4F44"/><circle cx="34" cy="40" r="20" fill="#1CB08A" opacity="0.14"/><circle cx="272" cy="362" r="26" fill="#2D7A6E" opacity="0.18"/><rect x="78" y="26" width="144" height="330" rx="22" fill="#0F2D25" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/><rect x="86" y="34" width="128" height="314" rx="15" fill="#F7FAF7"/><rect x="128" y="41" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.2"/><circle cx="150" cy="168" r="52" fill="#E7F5EC" stroke="#2D7A6E" stroke-width="5"/><circle cx="150" cy="168" r="30" fill="#DFF2E7" stroke="#1CB08A" stroke-width="2.5"/><circle cx="150" cy="168" r="6" fill="#FF5733"/><rect x="98" y="252" width="104" height="10" rx="5" fill="#0F2D25" opacity="0.55"/><rect x="98" y="272" width="76" height="10" rx="5" fill="#0F2D25" opacity="0.28"/><rect x="98" y="302" width="104" height="26" rx="13" fill="#1CB08A"/></svg>
+      <p class="font-mono text-[11px] leading-snug text-teal-100/90 text-center px-3 py-2.5">Eat with intention - Meal Log</p>
     </div>
 
     <div class="rounded-2xl overflow-hidden bg-[#0A4F44] shadow-md">
-      <img 
-        src="mockup-3.png" 
-        alt="Close your rings - Activity Tracking" 
-        class="w-full h-auto block"
-        onerror="this.parentElement.innerHTML='<div class=\'aspect-[3/4] flex items-center justify-center p-4 text-center font-mono text-xs text-teal-200\'>mockup-3.png</div>'"
-      />
+      <svg viewBox="0 0 300 400" class="w-full h-auto block" role="img" aria-label="Close your rings - Activity Tracking"><rect width="300" height="400" fill="#0A4F44"/><circle cx="34" cy="40" r="20" fill="#1CB08A" opacity="0.14"/><circle cx="272" cy="362" r="26" fill="#2D7A6E" opacity="0.18"/><rect x="78" y="26" width="144" height="330" rx="22" fill="#0F2D25" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/><rect x="86" y="34" width="128" height="314" rx="15" fill="#F7FAF7"/><rect x="128" y="41" width="44" height="6" rx="3" fill="#0F2D25" opacity="0.2"/><g transform="rotate(-90 150 168)"><circle cx="150" cy="168" r="48" fill="none" stroke="#0F2D25" stroke-opacity="0.08" stroke-width="10"/><circle cx="150" cy="168" r="48" fill="none" stroke="#1CB08A" stroke-width="10" stroke-linecap="round" stroke-dasharray="224 302"/><circle cx="150" cy="168" r="33" fill="none" stroke="#0F2D25" stroke-opacity="0.08" stroke-width="10"/><circle cx="150" cy="168" r="33" fill="none" stroke="#2D7A6E" stroke-width="10" stroke-linecap="round" stroke-dasharray="128 207"/><circle cx="150" cy="168" r="18" fill="none" stroke="#0F2D25" stroke-opacity="0.08" stroke-width="10"/><circle cx="150" cy="168" r="18" fill="none" stroke="#FF5733" stroke-width="10" stroke-linecap="round" stroke-dasharray="94 113"/></g><rect x="98" y="252" width="104" height="10" rx="5" fill="#0F2D25" opacity="0.55"/><rect x="98" y="272" width="76" height="10" rx="5" fill="#0F2D25" opacity="0.28"/><rect x="98" y="302" width="104" height="26" rx="13" fill="#1CB08A"/></svg>
+      <p class="font-mono text-[11px] leading-snug text-teal-100/90 text-center px-3 py-2.5">Close your rings - Activity Tracking</p>
     </div>
 
   </div>
@@ -1262,8 +1309,11 @@
 
         </div>
 
-        <aside class="cs-added cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Final Product / Prototype</span><br>
-          <a href="https://www.figma.com/proto/h148aRBXVXXRIVFytQ0Akm/Switch?node-id=440-345&t=10UMIYysR7fuuc3C-1" target="_blank" rel="noopener noreferrer" class="cs-final-link">Figma Prototype &nearr;</a>
+        <aside class="cs-added cs-note"><span class="cs-tape" aria-hidden="true"></span><span class="cs-kicker">Final Product / Prototype</span>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://www.figma.com/design/U6kzML3sXvXvYNKiWxcnkR" target="_blank" rel="noopener noreferrer" class="cs-final-link">View Figma Prototype</a>
+            <a href="assets/case-studies/tracto-case-study.pdf" target="_blank" rel="noopener noreferrer" class="cs-final-link cs-final-link--pdf">View Case Study (PDF)</a>
+          </div>
         </aside>
 
         <!-- Bottom Return Banner with Working LinkedIn & Email Links -->
@@ -1390,7 +1440,7 @@
             </p>
             <div class="flex flex-wrap gap-3 pt-2">
               <a href="https://www.figma.com/design/7S9nkD4x8bOfyeH4QKpFJT" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2F6BFF] hover:bg-[#245BDB] text-white font-bold text-sm transition-colors">View in Figma &nearr;</a>
-              <a href="assets/case-studies/clearspend-case-study.pdf" class="px-6 py-3 rounded-full bg-white hover:bg-[#EEF4FF] text-[#0A1730] font-bold text-sm transition-colors">Download Case Study (PDF)</a>
+              <a href="assets/case-studies/clearspend-case-study.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-white hover:bg-[#EEF4FF] text-[#0A1730] font-bold text-sm transition-colors">View Case Study (PDF)</a>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-sky-100/80">
               <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
@@ -1699,7 +1749,7 @@
             </p>
             <div class="flex flex-wrap gap-3 pt-2">
               <a href="https://www.figma.com/design/VhqUjBsglUCwopi5lbeC7n" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#2DD4BF] hover:bg-[#5EEAD4] text-[#04211C] font-bold text-sm transition-colors">View in Figma &nearr;</a>
-              <a href="assets/case-studies/antariksh-vr-case-study.pdf" class="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-colors border border-white/25">Download Case Study (PDF)</a>
+              <a href="assets/case-studies/antariksh-vr-case-study.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-colors border border-white/25">View Case Study (PDF)</a>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-[#9D97D8]">
               <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
@@ -2132,7 +2182,7 @@
             </p>
             <div class="flex flex-wrap gap-3 pt-2">
               <a href="https://www.figma.com/design/XocK96VHmSTNIFDUfbGCrv" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#FF5C1A] hover:bg-[#E04E12] text-white font-bold text-sm transition-colors">View in Figma &nearr;</a>
-              <a href="assets/case-studies/studiodesk-case-study.pdf" class="px-6 py-3 rounded-full bg-[#FAF8F3] hover:bg-white text-[#1C1B1A] font-bold text-sm transition-colors">Download Case Study (PDF)</a>
+              <a href="assets/case-studies/studiodesk-case-study.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-[#FAF8F3] hover:bg-white text-[#1C1B1A] font-bold text-sm transition-colors">View Case Study (PDF)</a>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 font-mono text-xs text-[#B9B2A2]">
               <div><strong class="text-white block mb-0.5">DESIGNER</strong>Prashant Kumar</div>
