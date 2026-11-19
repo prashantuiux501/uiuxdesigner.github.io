@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Prashant — UI/UX Designer & Product Thinker</title>
   <meta name="description" content="Portfolio of Prashant, a UI/UX Designer & Product Thinker transforming complex digital ecosystems into calm, intuitive, and accessible experiences." />
 
@@ -24,6 +25,11 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
+            brand: {
+              DEFAULT: '#0E7C66',
+              dark: '#0A5F4F',
+              soft: '#E6F4F0',
+            },
             tracto: {
               canvas: '#2d7a6e',
               deep: '#0f2d25',
@@ -43,8 +49,8 @@
   <style>
     body {
       font-family: 'Figtree', sans-serif;
-      background-color: #f4f4f4;
-      color: #0a0a0a;
+      background-color: #f7f7f5;
+      color: #171717;
       overflow-x: hidden;
     }
 
@@ -74,6 +80,55 @@
       animation: pulseLine 4s linear infinite;
     }
 
+
+    /* ===== Modern clean theme (2026 redesign) ===== */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f7f7f5;
+      color: #171717;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Visible keyboard focus everywhere */
+    :focus-visible {
+      outline: 2px solid #0E7C66 !important;
+      outline-offset: 3px;
+    }
+
+    /* Hero: soft accent glow + gentle depth */
+    #hero {
+      background:
+        radial-gradient(560px 300px at 50% -60px, rgba(14, 124, 102, 0.10), rgba(14, 124, 102, 0) 70%);
+    }
+
+    /* Case-study cards: gentle lift + deeper soft shadow on hover */
+    #case-studies article {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #case-studies article:hover {
+      transform: translateY(-4px);
+    }
+    #case-studies article > div:first-child {
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 10px 28px -14px rgba(16, 24, 40, 0.16);
+      transition: box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #case-studies article:hover > div:first-child {
+      box-shadow: 0 2px 4px rgba(16, 24, 40, 0.06), 0 24px 44px -18px rgba(14, 124, 102, 0.30);
+    }
+
+    /* Primary buttons: subtle lift on hover */
+    .btn-lift {
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease, box-shadow 0.25s ease;
+      box-shadow: 0 8px 20px -10px rgba(14, 124, 102, 0.55);
+    }
+    .btn-lift:hover {
+      transform: translateY(-1px);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
         animation-duration: 0.01ms !important;
@@ -84,20 +139,20 @@
     }
   </style>
 </head>
-<body class="antialiased selection:bg-neutral-950 selection:text-white">
+<body class="antialiased selection:bg-[#0E7C66] selection:text-white">
 
   <!-- =========================================================================
        VIEW 1: HOMEPAGE VIEW (#homepage-view)
        Strictly high-contrast minimalist light mode (#f4f4f4 outer canvas,
        #ffffff inner container, neutral-950 headings, neutral-600 body).
        ========================================================================= -->
-  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#f4f4f4] text-neutral-950">
+  <div id="homepage-view" class="min-h-screen flex flex-col bg-[#f7f7f5] text-neutral-950">
 
     <!-- Pure White Inner Container -->
-    <div class="w-full bg-white min-h-screen flex flex-col shadow-sm">
+    <div class="w-full bg-white min-h-screen flex flex-col">
 
       <!-- A. NAVIGATION BAR -->
-      <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-neutral-100 z-50 relative">
+      <header class="sticky top-0 bg-white/85 backdrop-blur-xl border-b border-neutral-200/80 z-50 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
           
           <!-- Left: Minimal Circular Monogram Icon + Bold Text "Prashant" -->
@@ -106,7 +161,7 @@
             onclick="scrollToSection('hero')" 
             class="flex items-center gap-2.5 group focus:outline-none shrink-0 cursor-pointer"
           >
-            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-950 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
+            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#0E7C66] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center group-hover:scale-105 transition-transform shadow-[0_6px_16px_-6px_rgba(14,124,102,0.6)]">
               P
             </span>
             <span class="font-bold text-base sm:text-lg tracking-tight text-neutral-950">
@@ -125,7 +180,7 @@
             <button type="button" onclick="scrollToSection('about-me')" class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer">
               About Me
             </button>
-            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all shrink-0">
+            <a href="Prashant_CV.pdf" download class="px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all shrink-0">
               Resume
             </a>
           </nav>
@@ -151,7 +206,7 @@
         <nav 
           id="mobile-menu" 
           aria-label="Mobile Navigation"
-          class="hidden md:hidden absolute top-full left-0 right-0 bg-white border border-neutral-100 rounded-b-3xl shadow-lg py-6 px-6 text-center z-50"
+          class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border border-neutral-200/80 rounded-b-2xl shadow-[0_24px_48px_-20px_rgba(16,24,40,0.25)] py-6 px-6 text-center z-50"
         >
           <div class="flex flex-col items-center space-y-5">
             <button type="button" onclick="scrollToSection('hero')" class="text-base font-medium text-neutral-700 hover:text-neutral-950 transition-colors w-full py-1 cursor-pointer">
@@ -164,7 +219,7 @@
               About Me
             </button>
             <div class="pt-1">
-              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white transition-all">
+              <a href="Prashant_CV.pdf" download class="inline-block px-6 py-2 rounded-full border border-neutral-300 text-sm font-semibold text-neutral-800 hover:border-[#0E7C66] hover:bg-[#0E7C66] hover:text-white transition-all">
                 Resume
               </a>
             </div>
@@ -176,8 +231,12 @@
 
         <!-- B. HERO SECTION (id="hero") -->
         <section id="hero" class="scroll-mt-24 py-20 sm:py-28 md:py-36 px-4 sm:px-6 max-w-4xl mx-auto text-center">
-          
-          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-neutral-950 leading-[1.15]">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-6">
+            Prashant Kumar &mdash; UI/UX Designer
+          </p>
+
+          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-neutral-950 leading-[1.04]">
             <span>Hi, <span> I'm Prashant!</span></span>
           </h1>
 
@@ -185,13 +244,31 @@
             A UI/UX Designer &amp; Product Thinker passionate about transforming complex digital ecosystems into calm, intuitive, and accessible experiences. Specializing in user research, design systems, and interaction design, I bridge human empathy with measurable business outcomes. Currently crafting digital solutions that make critical health information easier to find, understand, and act upon.
           </p>
 
+          <!-- Hero CTAs -->
+          <div class="mt-10 sm:mt-12 flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+            <button
+              type="button"
+              onclick="scrollToSection('case-studies')"
+              class="btn-lift bg-[#0E7C66] hover:bg-[#0A5F4F] text-white px-7 py-3 rounded-full text-sm font-semibold cursor-pointer"
+            >
+              View Case Studies
+            </button>
+            <a
+              href="Prashant_CV.pdf"
+              download
+              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
+            >
+              Download Resume
+            </a>
+          </div>
+
           <!-- Centered Downward Arrow Scroll Indicator -->
           <div class="mt-10 sm:mt-14 flex justify-center">
             <button 
               type="button" 
               onclick="scrollToSection('case-studies')" 
               aria-label="Scroll to Case Studies" 
-              class="text-neutral-400 hover:text-neutral-950 text-lg animate-bounce transition-colors p-2 cursor-pointer focus:outline-none"
+              class="text-neutral-400 hover:text-[#0E7C66] text-lg animate-bounce transition-colors p-2 cursor-pointer"
             >
               &darr;
             </button>
@@ -202,6 +279,9 @@
         <!-- C. CASE STUDIES SECTION (id="case-studies") -->
         <section id="case-studies" class="scroll-mt-24 max-w-6xl mx-auto px-4 sm:px-6 pb-24">
           
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] text-center mb-4">
+            Selected Work
+          </p>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 text-center mb-12 sm:mb-16">
             Case Studies
           </h2>
@@ -218,7 +298,7 @@
               class="cursor-pointer group flex flex-col focus:outline-none"
             >
               <!-- Image Canvas (Top) -->
-              <div class="w-full rounded-3xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
+              <div class="w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
   <img 
     src="important.jpg" 
     alt="Tracto Showcase" 
@@ -232,7 +312,7 @@
                 <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
                   MOBILE APPLICATION
                 </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0E7C66] transition-colors">
                   Tracto
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
@@ -247,7 +327,7 @@
               class="opacity-75 select-none transition-all flex flex-col"
             >
               <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row: Category & Coming Soon Pill -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-sky-400/90 font-medium">Web Platform</span>
@@ -297,7 +377,7 @@
               class="opacity-75 select-none transition-all flex flex-col"
             >
               <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#2a1215] via-[#1a0a0c] to-[#0d0405] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-rose-400/90 font-medium">iOS &amp; WatchOS</span>
@@ -347,7 +427,7 @@
               class="opacity-75 select-none transition-all flex flex-col"
             >
               <!-- Full-Frame 16:9 Canvas Matching Tracto Poster Height -->
-              <div class="relative w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1c1917] via-[#0f0e0d] to-[#000000] border border-neutral-200/60 shadow-sm flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-400/90 font-medium">Design System</span>
@@ -401,7 +481,7 @@
               class="cursor-pointer group flex flex-col focus:outline-none"
             >
               <!-- Full-Frame 16:9 Canvas Matching Other Cards -->
-              <div class="relative w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0e7c66] via-[#0b3d31] to-[#06231c] border border-neutral-200/60 shadow-sm group-hover:shadow-md transition-shadow flex flex-col justify-between p-5 sm:p-6">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#0e7c66] via-[#0b3d31] to-[#06231c] border border-neutral-200/60 shadow-sm group-hover:shadow-md transition-shadow flex flex-col justify-between p-5 sm:p-6">
                 <!-- Top Row: Category & Concept Pill -->
                 <div class="flex items-center justify-between z-10">
                   <span class="text-[11px] font-mono tracking-widest uppercase text-emerald-200/90 font-medium">Fintech &bull; UPI</span>
@@ -436,7 +516,7 @@
                 <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 mt-5 mb-2">
                   MOBILE APPLICATION / FINTECH
                 </p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                <h3 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2 group-hover:text-[#0E7C66] transition-colors">
                   ClearSpend
                 </h3>
                 <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
@@ -448,8 +528,11 @@
         </section>
 
         <!-- D. ABOUT ME SECTION (id="about-me") -->
-        <section id="about-me" class="scroll-mt-24 max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-100">
-          
+        <section id="about-me" class="scroll-mt-24 max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 border-t border-neutral-200/70">
+
+          <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-4">
+            About
+          </p>
           <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 mb-8">
             About Me
           </h2>
@@ -457,7 +540,7 @@
           <div class="clearfix text-base sm:text-lg text-neutral-600 leading-relaxed space-y-6">
             
             <!-- Right Float Photo -->
-            <div class="float-right w-48 sm:w-64 md:w-72 aspect-[4/5] rounded-3xl overflow-hidden ml-6 mb-6 shadow-sm border border-neutral-200">
+            <div class="float-right w-48 sm:w-64 md:w-72 aspect-[4/5] rounded-2xl overflow-hidden ml-6 mb-6 shadow-[0_16px_36px_-18px_rgba(16,24,40,0.3)] border border-neutral-200">
               <img 
                 src="img.jpg" 
                 alt="Prashant" 
@@ -484,10 +567,10 @@
       </main>
 
       <!-- E. FOOTER / CONTACT SECTION (id="contact") -->
-      <footer id="contact" class="scroll-mt-24 py-20 sm:py-28 border-t border-neutral-100 text-center px-4 sm:px-6 bg-white">
+      <footer id="contact" class="scroll-mt-24 py-20 sm:py-28 border-t border-neutral-200/70 text-center px-4 sm:px-6 bg-[#fafaf9]">
         <div class="max-w-3xl mx-auto">
           
-          <span class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3 block text-center">
+          <span class="text-xs font-bold uppercase tracking-[0.24em] text-[#0E7C66] mb-3 block text-center">
             LIKE WHAT YOU SEE?
           </span>
 
@@ -500,7 +583,7 @@
             <a 
               href="Prashant_CV.pdf" 
               download 
-              class="bg-neutral-950 text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-neutral-800 transition-colors"
+              class="btn-lift bg-[#0E7C66] text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-[#0A5F4F]"
             >
               Resume
             </a>
@@ -508,7 +591,7 @@
               href="https://www.linkedin.com/in/prashant-kumar-89b822142/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:bg-neutral-50 hover:border-neutral-900 transition-colors"
+              class="bg-white border border-neutral-300 text-neutral-900 px-7 py-3 rounded-full text-sm font-semibold hover:bg-white hover:border-[#0E7C66] hover:text-[#0E7C66] transition-colors"
             >
               LinkedIn
             </a>
